@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8605393386718025147}
   - component: {fileID: -4261759062799893387}
   - component: {fileID: 3960832036949490085}
+  - component: {fileID: -2657889438180415626}
   m_Layer: 0
-  m_Name: Bullet 3
+  m_Name: AK bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,3 +159,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.125, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &-2657889438180415626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3412337420019354117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6241ff4e829ad4894742f7c743402f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 2
