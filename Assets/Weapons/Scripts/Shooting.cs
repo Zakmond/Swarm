@@ -8,7 +8,8 @@ using UnityEngine.Rendering;
 public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
-    public ObjectPool bulletPool;
+    public ObjectPool poolManager;
+    public GameObject bulletPrefab;
     public float bulletForce = 20f;
     public Camera cam;
     public float fireRate = 0.2f; // This can be dynamically changed
@@ -16,20 +17,31 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
-        UpdateBulletPoolSize();
+        poolManager.IncreasePoolSize(bulletPrefab, GetBulletPoolSize(fireRate));
     }
 
     public void SetFireRate(float newFireRate)
     {
+        float oldFireRate = fireRate;
         fireRate = newFireRate;
-        UpdateBulletPoolSize();
+
+        int poolSizeDifference = GetBulletPoolSize(oldFireRate) - GetBulletPoolSize(fireRate);
+
+        if (poolSizeDifference > 0)
+        {
+            poolManager.IncreasePoolSize(bulletPrefab, poolSizeDifference);
+        }
+        else if (poolSizeDifference < 0)
+        {
+            poolManager.DecreasePoolSize(bulletPrefab, -poolSizeDifference);
+        }
     }
 
-    private void UpdateBulletPoolSize()
+    private int GetBulletPoolSize(float FR)
     {
-        float maxSeconds = 2f;
-        int maxBulletsInTwoSeconds = Mathf.CeilToInt(maxSeconds / fireRate);
-        bulletPool.SetPoolSize(maxBulletsInTwoSeconds);
+        float maxSeconds = bulletPrefab.GetComponent<Bullet>().TTL;
+        int maxBulletsInSeconds = Mathf.CeilToInt(maxSeconds / FR);
+        return maxBulletsInSeconds;
     }
 
     void Update()
@@ -43,11 +55,10 @@ public class Shooting : MonoBehaviour
 
     void Fire()
     {
-        GameObject bullet = bulletPool.GetPooledObject();
+        GameObject bullet = poolManager.GetPooledObject(bulletPrefab);
         if (bullet != null)
         {
-            bullet.transform.position = firePoint.position;
-            bullet.transform.rotation = firePoint.rotation;
+            bullet.transform.SetPositionAndRotation(firePoint.position, firePoint.rotation);
             bullet.SetActive(true);
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
