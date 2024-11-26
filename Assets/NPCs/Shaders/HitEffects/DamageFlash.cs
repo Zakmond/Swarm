@@ -24,13 +24,15 @@ public class DamageFlash : MonoBehaviour
 
     public void CallFlash()
     {
-        Debug.Log("Calling Flash");
+        // resets the flash
+        if (_damageFlashCoroutine != null)
+        {
+            StopCoroutine(_damageFlashCoroutine);
+        }
         _damageFlashCoroutine = StartCoroutine(Flash());
     }
     private IEnumerator Flash()
     {
-        Debug.Log("Called Flash");
-
         SetFlashColor();
 
         float currentFlashAmount = 0f;
