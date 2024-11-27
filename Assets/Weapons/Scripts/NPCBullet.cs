@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class NPCBullet : MonoBehaviour
 {
     public float bulletDamage = 50f;
     public int TTL = 3;  // Time to live in seconds
     private bool objectHit = false;
+
     void OnEnable()
     {
         // disable the hit flag if this is a reused object
@@ -25,23 +26,19 @@ public class Bullet : MonoBehaviour
     {
         if (objectHit) return;
 
-        RangedNPC rangedCharacter = null;
-
-        // Check if the collided object is an NPC or RangedNPC
-        if (collision.TryGetComponent<NPC>(out NPC character) || collision.TryGetComponent<RangedNPC>(out rangedCharacter))
+        // check if the collided object is the main character
+        if (collision.TryGetComponent<PlayerController>(out var mainCharacter))
         {
-            if (character != null)
-            {
-                character.OnHit(bulletDamage);
-            }
-            else if (rangedCharacter != null)
-            {
-                rangedCharacter.OnHit(bulletDamage);
-            }
+            mainCharacter.OnHit(bulletDamage);
             objectHit = true;
+            // Deactivate the bullet
+            gameObject.SetActive(false);
         }
-
-        // Deactivate the bullet
-        gameObject.SetActive(false);
+        // Allow the bullet to pass through other NPCs and bullets
+        else if (!collision.TryGetComponent<NPC>(out _) && !collision.TryGetComponent<NPCBullet>(out _))
+        {
+            // Deactivate the bullet if it hits any other object
+            gameObject.SetActive(false);
+        }
     }
 }

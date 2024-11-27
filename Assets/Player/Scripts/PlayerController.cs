@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float health = 100f;
     public float moveSpeed = 7f;
     private Rigidbody2D rb;
     private Transform tr;
@@ -63,4 +64,8 @@ public class PlayerController : MonoBehaviour
         an.SetBool("isMoving", moveX != 0 || moveY != 0);
     }
 
+    public void OnHit(float bulletDamage){
+        health -= bulletDamage;
+        Debug.Log("Player hit");
+    }
 }
