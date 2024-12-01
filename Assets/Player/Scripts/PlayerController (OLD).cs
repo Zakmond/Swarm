@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerOLD : MonoBehaviour
 {
     public float health = 100f;
     public float moveSpeed = 7f;
@@ -56,13 +56,15 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = (mousePos - (Vector2)tr.position).normalized;
-        an.SetFloat("DirectionX", lookDir.x);
-        an.SetFloat("DirectionY", lookDir.y);
+        Vector2 lookDirTest = (mousePos - (Vector2)tr.position);
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        // Debug.Log("looKDir" + lookDir + "lookDirTest" + lookDirTest);
+        // Debug.Log("looKDirTest" + lookDirTest);
+        an.SetFloat("Angle", angle);
         an.SetBool("isMoving", moveX != 0 || moveY != 0);
     }
 
-    public void OnHit(float bulletDamage)
-    {
+    public void OnHit(float bulletDamage){
         health -= bulletDamage;
         Debug.Log("Player hit");
     }
