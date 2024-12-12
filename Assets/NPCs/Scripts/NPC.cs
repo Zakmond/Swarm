@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, IDamageable
 {
     [SerializeField] private float health = 100f;
     [SerializeField] private Transform player;
@@ -21,6 +21,11 @@ public class NPC : MonoBehaviour
     {
         damageFlash = GetComponent<DamageFlash>();
         animator = GetComponent<Animator>();
+        PlayerController playerController = FindObjectOfType<PlayerController>();
+        if (playerController != null)
+        {
+            player = playerController.transform;
+        }
     }
 
     private void Update()
@@ -122,7 +127,7 @@ public class NPC : MonoBehaviour
         if (distance <= attackDistance)
         {
             // Apply damage to the player if they are still within range
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();  // Assume there's a PlayerHealth component
+            PlayerController playerHealth = player.GetComponent<PlayerController>();  // Assume there's a PlayerHealth component
             if (playerHealth != null)
             {
                 playerHealth.OnHit(attackDamage);

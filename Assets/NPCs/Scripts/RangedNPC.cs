@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
-public class RangedNPC : MonoBehaviour
+public class RangedNPC : MonoBehaviour, IDamageable
 {
     [SerializeField] private float health = 100f;
     [SerializeField] private Transform player;
@@ -125,7 +125,7 @@ public class RangedNPC : MonoBehaviour
         if (distance <= attackDistance)
         {
             // Apply damage to the player if they are still within range
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();  // Assume there's a PlayerHealth component
+            PlayerController playerHealth = player.GetComponent<PlayerController>();  // Assume there's a PlayerHealth component
             if (playerHealth != null)
             {
                 playerHealth.OnHit(attackDamage);

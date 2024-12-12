@@ -3,19 +3,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float maxHealth = 100f;
+    // this can be changed over the course of the game to provide extra health 
     public float health = 100f;
+    // player's current health
     public float moveSpeed = 7f;
     private Rigidbody2D rb;
     private Transform tr;
     public Camera cam;
 
     private Animator an;
+    private DamageFlash damageFlash;
 
     void Start()
     {
+        damageFlash = GetComponent<DamageFlash>();
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
         an = GetComponent<Animator>();
+        cam = Camera.main;
     }
 
     void Update()
@@ -63,6 +69,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnHit(float bulletDamage)
     {
+        if (damageFlash != null)
+        {
+            damageFlash.CallFlash();
+        }
         health -= bulletDamage;
         Debug.Log("Player hit");
     }
