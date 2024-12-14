@@ -4,23 +4,31 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, IDamageable
 {
-    [SerializeField] private float health = 100f;
+    [SerializeField] private float _health = 100f;
     [SerializeField] private Transform player;
-    [SerializeField] private float speed = 2.0f;
-    [SerializeField] private float attackDistance = 1.0f;
+    [SerializeField] private float _speed = 2.0f;
+    [SerializeField] private float _attackDistance = 1.0f;
+    [SerializeField] private float _attackDamage = 10f;
+    [SerializeField] private bool _canMove = true;
+    private DamageFlash _damageFlash;
+    private Animator _animator;
     [SerializeField] public float separationDistance = 0.2f;  // Distance to maintain between NPCs
+    [SerializeField] public float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
     [SerializeField] public LayerMask npcLayer;
-    [SerializeField] private float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
-    [SerializeField] private float attackDamage = 10f;
-    [SerializeField] private bool canMove = true;
-    private DamageFlash damageFlash;
-    private Animator animator;
 
+
+    public void UpdateNPC(float health, float speed, float attackDistance, float attackDamage)
+    {
+        _health = health;
+        _speed = speed;
+        _attackDistance = attackDistance;
+        _attackDamage = attackDamage;
+    }
 
     private void Start()
     {
-        damageFlash = GetComponent<DamageFlash>();
-        animator = GetComponent<Animator>();
+        _damageFlash = GetComponent<DamageFlash>();
+        _animator = GetComponent<Animator>();
         PlayerController playerController = FindObjectOfType<PlayerController>();
         if (playerController != null)
         {
@@ -35,18 +43,18 @@ public class NPC : MonoBehaviour, IDamageable
 
     private void FollowAndAttackPlayer()
     {
-        if (!canMove) return;
+        if (!_canMove) return;
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (distance > attackDistance)
+        if (distance > _attackDistance)
         {
             MoveTowardsPlayer();
-            animator.SetBool("isWalking", true);
+            _animator.SetBool("isWalking", true);
         }
         else
         {
-            animator.SetBool("isWalking", false);
-            animator.SetTrigger("attack");
+            _animator.SetBool("isWalking", false);
+            _animator.SetTrigger("attack");
         }
     }
 
@@ -64,7 +72,7 @@ public class NPC : MonoBehaviour, IDamageable
         Vector2 moveDirection = ((targetPosition - (Vector2)transform.position).normalized + separationForce).normalized;
 
         // Move the NPC using the combined force
-        transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + moveDirection, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + moveDirection, _speed * Time.deltaTime);
 
         // Flip NPC based on its movement direction
         float playerXPos = player.position.x;
@@ -107,14 +115,14 @@ public class NPC : MonoBehaviour, IDamageable
 
     public void OnHit(float damage)
     {
-        if (damageFlash != null)
+        if (_damageFlash != null)
         {
-            damageFlash.CallFlash();
+            _damageFlash.CallFlash();
         }
 
-        health -= damage;
+        _health -= damage;
 
-        if (health <= 0)
+        if (_health <= 0)
         {
             Destroy(gameObject);
         }
@@ -124,13 +132,13 @@ public class NPC : MonoBehaviour, IDamageable
     {
         // Check if the player is still within attack range when the hit happens
         float distance = Vector2.Distance(transform.position, player.position);
-        if (distance <= attackDistance)
+        if (distance <= _attackDistance)
         {
             // Apply damage to the player if they are still within range
-            PlayerController playerHealth = player.GetComponent<PlayerController>();  // Assume there's a PlayerHealth component
-            if (playerHealth != null)
+            PlayerController player_health = player.GetComponent<PlayerController>();  // Assume there's a Player_health component
+            if (player_health != null)
             {
-                playerHealth.OnHit(attackDamage);
+                player_health.OnHit(_attackDamage);
             }
         }
     }

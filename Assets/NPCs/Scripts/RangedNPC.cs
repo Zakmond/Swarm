@@ -5,18 +5,24 @@ using UnityEngine;
 
 public class RangedNPC : MonoBehaviour, IDamageable
 {
-    [SerializeField] private float health = 100f;
+    [SerializeField] private float _health = 100f;
     [SerializeField] private Transform player;
-    [SerializeField] private float speed = 2.0f;
-    [SerializeField] private float attackDistance = 10.0f;
-    [SerializeField] public float separationDistance = 0.2f;  // Distance to maintain between NPCs
-    [SerializeField] public LayerMask npcLayer;
-    [SerializeField] private float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
-    [SerializeField] private float attackDamage = 10f;
-    [SerializeField] private bool canMove = true;
+    [SerializeField] private float _speed = 2.0f;
+    [SerializeField] private float _attackDistance = 1.0f;
+    [SerializeField] private float _attackDamage = 10f;
+    [SerializeField] private bool _canMove = true;
     private DamageFlash damageFlash;
     private Animator animator;
-
+    [SerializeField] public float separationDistance = 0.2f;  // Distance to maintain between NPCs
+    [SerializeField] public float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
+    [SerializeField] public LayerMask npcLayer;
+    public void UpdateNPC(float health, float speed, float attackDistance, float attackDamage)
+    {
+        _health = health;
+        _speed = speed;
+        _attackDistance = attackDistance;
+        _attackDamage = attackDamage;
+    }
 
     private void Start()
     {
@@ -37,16 +43,16 @@ public class RangedNPC : MonoBehaviour, IDamageable
         {
             transform.localScale = new Vector3(-1, 1, 1); // Face left
         }
-        
+
         FollowAndAttackPlayer();
     }
 
     private void FollowAndAttackPlayer()
     {
-        if (!canMove) return;
+        if (!_canMove) return;
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (distance > attackDistance)
+        if (distance > _attackDistance)
         {
             MoveTowardsPlayer();
             animator.SetBool("isAttacking", false);
@@ -72,7 +78,7 @@ public class RangedNPC : MonoBehaviour, IDamageable
         Vector2 moveDirection = ((targetPosition - (Vector2)transform.position).normalized + separationForce).normalized;
 
         // Move the NPC using the combined force
-        transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + moveDirection, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + moveDirection, _speed * Time.deltaTime);
 
 
     }
@@ -110,9 +116,9 @@ public class RangedNPC : MonoBehaviour, IDamageable
             damageFlash.CallFlash();
         }
 
-        health -= damage;
+        _health -= damage;
 
-        if (health <= 0)
+        if (_health <= 0)
         {
             Destroy(gameObject);
         }
@@ -122,13 +128,13 @@ public class RangedNPC : MonoBehaviour, IDamageable
     {
         // Check if the player is still within attack range when the hit happens
         float distance = Vector2.Distance(transform.position, player.position);
-        if (distance <= attackDistance)
+        if (distance <= _attackDistance)
         {
             // Apply damage to the player if they are still within range
             PlayerController playerHealth = player.GetComponent<PlayerController>();  // Assume there's a PlayerHealth component
             if (playerHealth != null)
             {
-                playerHealth.OnHit(attackDamage);
+                playerHealth.OnHit(_attackDamage);
             }
         }
     }
@@ -145,6 +151,6 @@ public class RangedNPC : MonoBehaviour, IDamageable
 
     public float getAttackDistance()
     {
-        return attackDistance;
+        return _attackDistance;
     }
 }

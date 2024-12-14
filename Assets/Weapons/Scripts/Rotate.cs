@@ -13,12 +13,21 @@ public class Rotate : MonoBehaviour
 
     void Start()
     {
+        PlayerController playerController = FindObjectOfType<PlayerController>();
+        if (playerController != null)
+        {
+            playerPos = playerController.transform;
+        }
+        else
+        {
+            Debug.LogError("PlayerController not found in the scene!");
+        }
         pos = GetComponent<Transform>();
         cam = Camera.main;
 
         Transform weaponTransform = transform.GetChild(0);
         weaponSR = weaponTransform.GetComponent<SpriteRenderer>();
-        
+
         Transform handsTransform = weaponTransform.Find("hands");
         handsSR = handsTransform.GetComponent<SpriteRenderer>();
 

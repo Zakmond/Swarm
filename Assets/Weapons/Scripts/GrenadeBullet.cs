@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Grenade : MonoBehaviour
+public class GrenadeBullet : MonoBehaviour
 {
     public float explosionDamage = 0f;
     public float explosionRadius = 1f;
@@ -61,7 +61,10 @@ public class Grenade : MonoBehaviour
             }
         }
     }
-
+    public void modifyDamage(float damageModifier)
+    {
+        explosionDamage *= damageModifier;
+    }
     private void OnHitGround()
     {
         isLaunched = false; // Stop the grenade movement
@@ -86,11 +89,8 @@ public class Grenade : MonoBehaviour
         {
             // Try to get the IDamageable component on each object
             IDamageable damageable = hit.GetComponent<IDamageable>();
-            if (damageable != null)
-            {
-                // Apply damage
-                damageable.OnHit(explosionDamage);
-            }
+            // Apply damage
+            damageable?.OnHit(explosionDamage);
         }
 
         // Optional: Add visual or sound effects for the explosion
@@ -98,7 +98,7 @@ public class Grenade : MonoBehaviour
     }
     private void ExplosionEffect()
     {
-        GameObject explosionEffect = Instantiate(Resources.Load<GameObject>("GrenadeExplosion"), transform.position, Quaternion.identity);
+        GameObject explosionEffect = Instantiate(Resources.Load<GameObject>("Weapons/Explosion/GrenadeExplosion"), transform.position, Quaternion.identity);
 
         // Scale the explosion to match the radius
         explosionEffect.transform.localScale = Vector3.one;

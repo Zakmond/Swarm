@@ -1,0 +1,94 @@
+{
+    "levelNumber": 1,
+    "levelDuration": 120,
+    "monsterWaves": [
+      {
+        "spawnTime": 5,
+        "monsters": [
+          {
+            "type": "monster1",
+            "count": 5,
+            "health": 100,
+            "speed": 1.0,
+            "damage": 10,
+            "attackDistance": 2.0
+          },
+          {
+            "type": "monster2",
+            "count": 3,
+            "health": 150,
+            "speed": 0.8,
+            "damage": 15,
+            "attackDistance": 1.5
+          },
+          {
+            "type": "monster3",
+            "count": 2,
+            "health": 200,
+            "speed": 0.6,
+            "damage": 20,
+            "attackDistance": 3.0
+          }
+        ]
+      },
+      {
+        "spawnTime": 30,
+        "monsters": [
+          {
+            "type": "monster1",
+            "count": 6,
+            "health": 120,
+            "speed": 1.2,
+            "damage": 12,
+            "attackDistance": 2.5
+          },
+          {
+            "type": "monster2",
+            "count": 4,
+            "health": 180,
+            "speed": 0.9,
+            "damage": 18,
+            "attackDistance": 1.7
+          },
+          {
+            "type": "monster4",
+            "count": 3,
+            "health": 250,
+            "speed": 0.7,
+            "damage": 25,
+            "attackDistance": 2.8
+          }
+        ]
+      },
+      {
+        "spawnTime": 60,
+        "monsters": [
+          {
+            "type": "monster2",
+            "count": 7,
+            "health": 140,
+            "speed": 1.1,
+            "damage": 14,
+            "attackDistance": 2.0
+          },
+          {
+            "type": "monster3",
+            "count": 5,
+            "health": 220,
+            "speed": 0.7,
+            "damage": 22,
+            "attackDistance": 3.2
+          },
+          {
+            "type": "monster5",
+            "count": 2,
+            "health": 300,
+            "speed": 0.5,
+            "damage": 30,
+            "attackDistance": 4.0
+          }
+        ]
+      }
+    ]
+  }
+  

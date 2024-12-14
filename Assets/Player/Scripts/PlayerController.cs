@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float maxHealth = 100f;
-    // this can be changed over the course of the game to provide extra health 
-    public float health = 100f;
-    // player's current health
-    public float moveSpeed = 7f;
+    private float _maxHealth = 100f;
+    // this can be changed over the course of the game to provide extra _health 
+    private float _health = 100f;
+    // player's current _health
+    private float _speed = 7f;
+    private float _fireRate = 0.5f;
+    private float _dodgeChance = 0f;
+    private int _maxAmmo = 30;
     private Rigidbody2D rb;
     private Transform tr;
     public Camera cam;
@@ -50,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
         if (movement != Vector2.zero)
         {
-            rb.velocity = movement.normalized * moveSpeed;
+            rb.velocity = movement.normalized * _speed;
         }
         else
         {
@@ -73,7 +76,16 @@ public class PlayerController : MonoBehaviour
         {
             damageFlash.CallFlash();
         }
-        health -= bulletDamage;
+        _health -= bulletDamage;
         Debug.Log("Player hit");
+    }
+
+    public void UpdateNPC(float maxHealthModifier, float speedModifier, float fireRateModifier, float dodgeChanceModifier, float maxAmmoModifier)
+    {
+        _maxHealth *= maxHealthModifier;
+        _speed *= speedModifier;
+        _fireRate *= fireRateModifier;
+        _dodgeChance *= dodgeChanceModifier;
+        _maxAmmo = Mathf.RoundToInt(_maxAmmo * maxAmmoModifier);
     }
 }

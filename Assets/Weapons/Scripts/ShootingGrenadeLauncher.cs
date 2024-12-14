@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ShootingGrenadeLauncher : MonoBehaviour
+public class ShootingGrenadeLauncher : MonoBehaviour, IShooting
 {
     public Transform firePoint;               // Where the grenade is launched from
     public GameObject grenadePrefab;          // Grenade prefab
@@ -9,7 +9,8 @@ public class ShootingGrenadeLauncher : MonoBehaviour
     public Camera cam;                        // Reference to the camera for mouse aiming
     public float fireSpeed = 10f;             // Horizontal speed of the grenade
     public float maxLobHeight = 2f;           // Maximum height of the lob
-    public float fireRate = 0.2f; // This can be dynamically changed
+    public float fireRate = 0.2f;             // This can be dynamically changed
+    public float damageModifier;
     private float nextFireTime = 0f;
 
     void Update()
@@ -21,6 +22,14 @@ public class ShootingGrenadeLauncher : MonoBehaviour
             nextFireTime = Time.time + fireRate;
         }
     }
+    public void setDamageModifier(float newDamageModifier)
+    {
+        damageModifier = newDamageModifier;
+    }
+    public void setFireRate(float fireRate)
+    {
+
+    }
 
     void Fire()
     {
@@ -29,6 +38,9 @@ public class ShootingGrenadeLauncher : MonoBehaviour
 
         // Get a grenade from the pool
         GameObject grenade = poolManager.GetPooledObject(grenadePrefab);
+        GrenadeBullet grenadeBullet = grenade.GetComponent<GrenadeBullet>();
+        grenadeBullet.modifyDamage(damageModifier);
+
         if (grenade != null)
         {
             grenade.transform.position = firePoint.position;
@@ -36,7 +48,7 @@ public class ShootingGrenadeLauncher : MonoBehaviour
             grenade.SetActive(true);
 
             // Start the arc movement for the grenade
-            Grenade grenadeScript = grenade.GetComponent<Grenade>();
+            GrenadeBullet grenadeScript = grenade.GetComponent<GrenadeBullet>();
             if (grenadeScript != null)
             {
                 grenadeScript.Launch(firePoint.position, mousePos, fireSpeed, maxLobHeight);

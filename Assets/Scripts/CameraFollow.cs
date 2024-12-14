@@ -6,6 +6,15 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
-        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
+        if (playerTransform != null)
+        {
+            // Follow the player's position
+            transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
+        }
+    }
+
+    public void SetPlayerTransform(Transform newPlayerTransform)
+    {
+        playerTransform = newPlayerTransform;
     }
 }

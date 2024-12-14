@@ -20,6 +20,10 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(TTL);
         gameObject.SetActive(false);
     }
+    public void modifyDamage(float damageModifier)
+    {
+        bulletDamage *= damageModifier;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
