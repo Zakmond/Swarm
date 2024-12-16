@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a7033b45cee2fe459c25bb6bd5d3bff
+guid: b15e8f0be861dbe4d8b838b6e1e742e8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_0
+      name: Cozy Cute UI Asset Pack - Kopya_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
-        width: 48
-        height: 64
+        y: 218
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d405413d41ce3364d8dfe4fea7929032
-      internalID: -2067283394
+      spriteID: 0d0dde91c1bf94542b629019d8735410
+      internalID: 1998422619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_1
+      name: Cozy Cute UI Asset Pack - Kopya_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 320
-        width: 48
-        height: 64
+        x: 10
+        y: 218
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,19 +132,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd0acc645ac8ff0428e472c550f766e0
-      internalID: -140364530
+      spriteID: e3a54231c5809e34388a29810001ab03
+      internalID: -251675267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_2
+      name: Cozy Cute UI Asset Pack - Kopya_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 320
-        width: 48
+        x: 17
+        y: 160
+        width: 78
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,125 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b032c4434afa6924e940cf7487e65cbe
-      internalID: 679775237
+      spriteID: 12fef9f41015f9541b048261ace1a406
+      internalID: 530821987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 320
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e503dbadbd9d1994787036873444486a
-      internalID: 872042021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 320
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3048022cd5b4135428c3717acd0cf10b
-      internalID: -605177684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 320
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d3b9d2d1fbf124428fa883a6c9e4370
-      internalID: 1656447825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 320
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ddd8088afc196b4299a14bfaf4176e5
-      internalID: 1966779631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_7
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 320
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7e841fdc837d434b91dc459f25ecdbf
-      internalID: 1656847667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_8
+      name: Cozy Cute UI Asset Pack - Kopya_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 48
-        height: 64
+        y: 208
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8992b9b8afec63d49ab4d9876159d737
-      internalID: -1763592511
+      spriteID: 0d1baadf83aec9a46ac9cdf68e2cc9c1
+      internalID: -1385251138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_9
+      name: Cozy Cute UI Asset Pack - Kopya_4
       rect:
         serializedVersion: 2
-        x: 48
-        y: 256
-        width: 48
-        height: 64
+        x: 10
+        y: 208
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd985bb2f1793f45b0ef613552a3f85
-      internalID: 1459092737
+      spriteID: f5a1c5c65eddcbd45b782d34f2e4d998
+      internalID: 1652688544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_10
+      name: Cozy Cute UI Asset Pack - Kopya_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
-        width: 48
-        height: 64
+        x: 2
+        y: 194
+        width: 5
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87aa102eea8606041b44e3a5d9be058a
-      internalID: -1014995874
+      spriteID: f53567ceda32f8e4387f6946e6a20ae4
+      internalID: 851483599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_11
+      name: Cozy Cute UI Asset Pack - Kopya_6
       rect:
         serializedVersion: 2
-        x: 144
-        y: 256
-        width: 48
-        height: 64
+        x: 9
+        y: 194
+        width: 5
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a792173d33174fe458b2242e6fdf6fbd
-      internalID: -736596322
+      spriteID: 891b51f205a804043b9e36e8cfd4587b
+      internalID: -522687677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_12
+      name: Cozy Cute UI Asset Pack - Kopya_7
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
-        width: 48
-        height: 64
+        x: 2
+        y: 178
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00e33e58e3e994d45b2d676fbd71e0c6
-      internalID: 2120765996
+      spriteID: 5072c63554d0bd044bba68fe6bce6c35
+      internalID: 821573814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_13
+      name: Cozy Cute UI Asset Pack - Kopya_8
       rect:
         serializedVersion: 2
-        x: 240
-        y: 256
-        width: 48
-        height: 64
+        x: 1
+        y: 160
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,230 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1808b1e71e3d3ea4e91a5d728190053f
-      internalID: 1014278626
+      spriteID: 7a2dcbe821402f0469e5c5659b91f1d4
+      internalID: 1613400286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_14
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 256
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e00d0747dde8d2743adfad46e2d3e991
-      internalID: 1509734386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_15
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 256
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 249e67fe944ee714eafcfd9e2be1b1ff
-      internalID: -576742089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c322d3fb357753f4aa9d1160c1503a98
-      internalID: -1842798279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_17
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60a8715e51763124e94f598b6a8c7af9
-      internalID: -1086068309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_18
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96af1a0d7e2d7ee4eb7b9de0dc8a7e19
-      internalID: -1317952407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_19
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d53aebc661ef4a409fd55f56ccd6b45
-      internalID: -350033373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_20
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6743482cf362b0f41805534d70fa53b8
-      internalID: 1671567451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_21
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d7f34ce83fd6a540a4fce2b9a5befc7
-      internalID: -1489203639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_22
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: facf1f0363335144e91210c532889a48
-      internalID: -596552544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_23
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 192
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfeb40bfb753b954ba0bdd8d7e2070a4
-      internalID: -1935692236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_24
+      name: Cozy Cute UI Asset Pack - Kopya_9
       rect:
         serializedVersion: 2
         x: 0
         y: 128
-        width: 48
-        height: 64
+        width: 21
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,20 +300,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca4e8e285f57a9f44ab76c508c046589
-      internalID: -963281131
+      spriteID: d051198437a5c7043b65eda4413f440d
+      internalID: -1126807495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_25
+      name: Cozy Cute UI Asset Pack - Kopya_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 128
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a2e2898a1a21e4e864f8821d5fcd80
+      internalID: -79313510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_11
       rect:
         serializedVersion: 2
         x: 48
         y: 128
-        width: 48
-        height: 64
+        width: 20
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c01960237afa0f54db4c04db4e8b2544
-      internalID: -709114050
+      spriteID: 533698446d99cea4e8cb788267469f25
+      internalID: 30871239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_26
+      name: Cozy Cute UI Asset Pack - Kopya_12
       rect:
         serializedVersion: 2
-        x: 96
+        x: 70
         y: 128
-        width: 48
-        height: 64
+        width: 23
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,125 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 007d3c3b89e5fd245bb177a977e8d852
-      internalID: 934699358
+      spriteID: 1abf2401c37e82446b5ed5b2406439a7
+      internalID: 1103775211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_27
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99ddc589661a001419c7393dc6a69674
-      internalID: 314457778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_28
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b5edced5cd4c6542bd6784db1abdd74
-      internalID: 1404455602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_29
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81e608f855bafcb47891f2c301dfe544
-      internalID: 2037924134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_30
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b63b373506bb5e4abdd046667891d29
-      internalID: 432378086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_31
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 128
-        width: 48
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65b00ff76bae7e1498774bc4b35b3657
-      internalID: 697132022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_32
+      name: Cozy Cute UI Asset Pack - Kopya_13
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 48
-        height: 64
+        y: 114
+        width: 96
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -783,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 460eeb88e36b597469ace9bfc444e6c2
-      internalID: 1616425832
+      spriteID: 0e244611663cfd94db61d60f5fb9daa0
+      internalID: -1327215070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_33
+      name: Cozy Cute UI Asset Pack - Kopya_14
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
-        width: 48
-        height: 64
+        x: 0
+        y: 98
+        width: 96
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -804,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b34991b00416cc440bb04476710b8a65
-      internalID: -2033774416
+      spriteID: e3191f3051328064495e1a54a37de8b1
+      internalID: 417000477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_34
+      name: Cozy Cute UI Asset Pack - Kopya_15
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 48
-        height: 64
+        x: 0
+        y: 82
+        width: 96
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed417fddacdd0674db870efbe66fe715
-      internalID: -1166145085
+      spriteID: 827f0c59d1bb7b442a9a9541e6d9248f
+      internalID: 1514023801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_35
+      name: Cozy Cute UI Asset Pack - Kopya_16
       rect:
         serializedVersion: 2
-        x: 144
-        y: 64
-        width: 48
-        height: 64
+        x: 3
+        y: 65
+        width: 9
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9d82b111ee598d47bfb6b46261b38ec
-      internalID: 1682418363
+      spriteID: 4702f5ffc5ef2234d8be63b5bdacb74d
+      internalID: -210093686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_36
+      name: Cozy Cute UI Asset Pack - Kopya_17
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 48
-        height: 64
+        x: 19
+        y: 65
+        width: 9
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,20 +468,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50c796b80c7341445bef079a8584d013
-      internalID: 1114213760
+      spriteID: 4bade417800dd81439f025c6a25bde0f
+      internalID: 1872660553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_37
+      name: Cozy Cute UI Asset Pack - Kopya_18
       rect:
         serializedVersion: 2
-        x: 240
-        y: 64
-        width: 48
-        height: 64
+        x: 33
+        y: 67
+        width: 13
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -888,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 368fea53bf7f28444921afe4669d7801
-      internalID: -784620642
+      spriteID: f46e59dec57dea149b5762607c810b05
+      internalID: 1525256613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_38
+      name: Cozy Cute UI Asset Pack - Kopya_19
       rect:
         serializedVersion: 2
-        x: 288
-        y: 64
-        width: 48
-        height: 64
+        x: 50
+        y: 67
+        width: 13
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,20 +510,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5159d32c8bb32749aa3874d30557b06
-      internalID: 1212832246
+      spriteID: 187d9dfa4e980304384ba77e3533f0ea
+      internalID: -1747427955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_39
+      name: Cozy Cute UI Asset Pack - Kopya_20
       rect:
         serializedVersion: 2
-        x: 336
+        x: 65
         y: 64
-        width: 48
-        height: 64
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -930,20 +531,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97499c8ad66f23468d85b96c997e1db
-      internalID: -1967407353
+      spriteID: 9524d1772136ceb4c879961d792fb987
+      internalID: 1986880492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_40
+      name: Cozy Cute UI Asset Pack - Kopya_21
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 66
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1019b2f6711ec9a47a85c5fe0ea6aac6
+      internalID: 1634316433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 49
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd64f0544fe0d1b4ca041b25abb9c262
+      internalID: -1921108226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_23
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 49
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9c879b711c7bc42b11b5a018f0f9d4
+      internalID: 481403101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_24
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 50
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74519821e7f21bd4f81bfece5a8dde17
+      internalID: 1013324019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c016fcae246b848a15c33c8d4398fe
+      internalID: -916312173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1542afddf2e8474e8a1cc77fd406bc0
+      internalID: 276159099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_27
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 50
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb246c92c295bc04680221c67d8f462d
+      internalID: 646345414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_28
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 48
-        height: 64
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -951,20 +699,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afb5dbdd3c15c7846bef0c6543953ffa
-      internalID: -1623083333
+      spriteID: 09d57099bb7e0d44ebf6433050b78008
+      internalID: -414822632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_41
+      name: Cozy Cute UI Asset Pack - Kopya_29
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 64
+        x: 49
+        y: 33
+        width: 14
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -972,20 +720,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f37478733cc7d9f45bb9ffa892709cfc
-      internalID: 1989919464
+      spriteID: 7d4f56e918202d44380be1354bac0cf9
+      internalID: 600496601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_42
+      name: Cozy Cute UI Asset Pack - Kopya_30
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 64
+        x: 65
+        y: 33
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -993,20 +741,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5ee3e565cd436546944fc0e28c878a3
-      internalID: 2063037029
+      spriteID: d19328441d90d424f873ba1244f17eb5
+      internalID: -382074593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_43
+      name: Cozy Cute UI Asset Pack - Kopya_31
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 64
+        x: 83
+        y: 17
+        width: 9
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1014,20 +762,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edd106bde7d990148ab17091e00a321f
-      internalID: -587898178
+      spriteID: 0c64694ea291c944894091d1841e7831
+      internalID: -1942564742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_44
+      name: Cozy Cute UI Asset Pack - Kopya_32
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 64
+        x: 49
+        y: 16
+        width: 15
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1035,20 +783,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ed2294a345e05479cf48bc67ea3c50
-      internalID: -1344976450
+      spriteID: 9a2a383967ed3f947a95bc7b3e3b2a6b
+      internalID: 1921748035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_45
+      name: Cozy Cute UI Asset Pack - Kopya_33
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 64
+        x: 65
+        y: 17
+        width: 15
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1056,20 +804,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 402d4f9579a8bdd4798be9f167fd27c0
-      internalID: 1837434214
+      spriteID: 9a1d42fcd7ebce14698cb50af39ff4f9
+      internalID: -2019361927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_46
+      name: Cozy Cute UI Asset Pack - Kopya_34
       rect:
         serializedVersion: 2
-        x: 288
+        x: 49
         y: 0
-        width: 48
-        height: 64
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1077,20 +825,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7d343462e6df794e8cc96969d5f15b6
-      internalID: -1850834588
+      spriteID: bde1f0783e23450438e9591f039ee342
+      internalID: -1346939085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_47
+      name: Cozy Cute UI Asset Pack - Kopya_35
       rect:
         serializedVersion: 2
-        x: 336
-        y: 0
-        width: 48
-        height: 64
+        x: 66
+        y: 5
+        width: 14
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1098,8 +846,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f2cb43ec249b4e458b0be30252cf7b6
-      internalID: -978932182
+      spriteID: eb9d715a99abfcd41b92ea87519c50b8
+      internalID: 830007055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cozy Cute UI Asset Pack - Kopya_36
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7b59cd923e6084993dc64425cddc2c
+      internalID: 890242722
       vertices: []
       indices: 
       edges: []
@@ -1115,54 +884,43 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_0: -2067283394
-      walk_1: -140364530
-      walk_10: -1014995874
-      walk_11: -736596322
-      walk_12: 2120765996
-      walk_13: 1014278626
-      walk_14: 1509734386
-      walk_15: -576742089
-      walk_16: -1842798279
-      walk_17: -1086068309
-      walk_18: -1317952407
-      walk_19: -350033373
-      walk_2: 679775237
-      walk_20: 1671567451
-      walk_21: -1489203639
-      walk_22: -596552544
-      walk_23: -1935692236
-      walk_24: -963281131
-      walk_25: -709114050
-      walk_26: 934699358
-      walk_27: 314457778
-      walk_28: 1404455602
-      walk_29: 2037924134
-      walk_3: 872042021
-      walk_30: 432378086
-      walk_31: 697132022
-      walk_32: 1616425832
-      walk_33: -2033774416
-      walk_34: -1166145085
-      walk_35: 1682418363
-      walk_36: 1114213760
-      walk_37: -784620642
-      walk_38: 1212832246
-      walk_39: -1967407353
-      walk_4: -605177684
-      walk_40: -1623083333
-      walk_41: 1989919464
-      walk_42: 2063037029
-      walk_43: -587898178
-      walk_44: -1344976450
-      walk_45: 1837434214
-      walk_46: -1850834588
-      walk_47: -978932182
-      walk_5: 1656447825
-      walk_6: 1966779631
-      walk_7: 1656847667
-      walk_8: -1763592511
-      walk_9: 1459092737
+      Cozy Cute UI Asset Pack - Kopya_0: 1998422619
+      Cozy Cute UI Asset Pack - Kopya_1: -251675267
+      Cozy Cute UI Asset Pack - Kopya_10: -79313510
+      Cozy Cute UI Asset Pack - Kopya_11: 30871239
+      Cozy Cute UI Asset Pack - Kopya_12: 1103775211
+      Cozy Cute UI Asset Pack - Kopya_13: -1327215070
+      Cozy Cute UI Asset Pack - Kopya_14: 417000477
+      Cozy Cute UI Asset Pack - Kopya_15: 1514023801
+      Cozy Cute UI Asset Pack - Kopya_16: -210093686
+      Cozy Cute UI Asset Pack - Kopya_17: 1872660553
+      Cozy Cute UI Asset Pack - Kopya_18: 1525256613
+      Cozy Cute UI Asset Pack - Kopya_19: -1747427955
+      Cozy Cute UI Asset Pack - Kopya_2: 530821987
+      Cozy Cute UI Asset Pack - Kopya_20: 1986880492
+      Cozy Cute UI Asset Pack - Kopya_21: 1634316433
+      Cozy Cute UI Asset Pack - Kopya_22: -1921108226
+      Cozy Cute UI Asset Pack - Kopya_23: 481403101
+      Cozy Cute UI Asset Pack - Kopya_24: 1013324019
+      Cozy Cute UI Asset Pack - Kopya_25: -916312173
+      Cozy Cute UI Asset Pack - Kopya_26: 276159099
+      Cozy Cute UI Asset Pack - Kopya_27: 646345414
+      Cozy Cute UI Asset Pack - Kopya_28: -414822632
+      Cozy Cute UI Asset Pack - Kopya_29: 600496601
+      Cozy Cute UI Asset Pack - Kopya_3: -1385251138
+      Cozy Cute UI Asset Pack - Kopya_30: -382074593
+      Cozy Cute UI Asset Pack - Kopya_31: -1942564742
+      Cozy Cute UI Asset Pack - Kopya_32: 1921748035
+      Cozy Cute UI Asset Pack - Kopya_33: -2019361927
+      Cozy Cute UI Asset Pack - Kopya_34: -1346939085
+      Cozy Cute UI Asset Pack - Kopya_35: 830007055
+      Cozy Cute UI Asset Pack - Kopya_36: 890242722
+      Cozy Cute UI Asset Pack - Kopya_4: 1652688544
+      Cozy Cute UI Asset Pack - Kopya_5: 851483599
+      Cozy Cute UI Asset Pack - Kopya_6: -522687677
+      Cozy Cute UI Asset Pack - Kopya_7: 821573814
+      Cozy Cute UI Asset Pack - Kopya_8: 1613400286
+      Cozy Cute UI Asset Pack - Kopya_9: -1126807495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
