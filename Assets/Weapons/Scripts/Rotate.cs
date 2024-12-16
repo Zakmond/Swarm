@@ -8,6 +8,7 @@ public class Rotate : MonoBehaviour
 
     public SpriteRenderer weaponSR;
     public SpriteRenderer handsSR;
+    public SpriteRenderer secondHandsSR;
     public Transform playerPos;
     private Transform pos;
 
@@ -28,11 +29,15 @@ public class Rotate : MonoBehaviour
         Transform weaponTransform = transform.GetChild(0);
         weaponSR = weaponTransform.GetComponent<SpriteRenderer>();
 
-        Transform handsTransform = weaponTransform.Find("hands");
+        Transform handsTransform = weaponTransform.Find("Hands");
         handsSR = handsTransform.GetComponent<SpriteRenderer>();
 
-
-
+        // Check if secondHandsSR exists
+        Transform secondHandsTransform = weaponTransform.Find("secondHands");
+        if (secondHandsTransform != null)
+        {
+            secondHandsSR = secondHandsTransform.GetComponent<SpriteRenderer>();
+        }
     }
 
     void Update()
@@ -51,7 +56,6 @@ public class Rotate : MonoBehaviour
         // Check rotation and adjust the y scale
         float zRotation = pos.rotation.eulerAngles.z;
 
-
         // Mouse direction according to player (to get accurate animation change state)
         Vector2 lookDirPlayer = (mousePos - (Vector2)playerPos.position).normalized;
         float anglePlayer = Mathf.Atan2(lookDirPlayer.y, lookDirPlayer.x) * Mathf.Rad2Deg;
@@ -62,14 +66,21 @@ public class Rotate : MonoBehaviour
             // position the hands and the weapon behind the player
             weaponSR.sortingOrder = 1;
             handsSR.sortingOrder = 1;
+            if (secondHandsSR != null)
+            {
+                secondHandsSR.sortingOrder = 1;
+            }
         }
         else
         {
             // position the hands and the weapon in front of the player
             weaponSR.sortingOrder = 3;
-            handsSR.sortingOrder = 3;
+            handsSR.sortingOrder = 4;
+            if (secondHandsSR != null)
+            {
+                secondHandsSR.sortingOrder = 4;
+            }
         }
-
 
         // Normalize the angle
         if (zRotation > 180) zRotation -= 360;
@@ -87,11 +98,19 @@ public class Rotate : MonoBehaviour
         {
             weaponSR.enabled = true; // Enable rendering
             handsSR.enabled = true; // Enable rendering
+            if (secondHandsSR != null)
+            {
+                secondHandsSR.enabled = true; // Enable rendering
+            }
         }
         else
         {
             weaponSR.enabled = false; // Disable rendering
             handsSR.enabled = false; // Disable rendering
+            if (secondHandsSR != null)
+            {
+                secondHandsSR.enabled = false; // Disable rendering
+            }
         }
     }
 }
