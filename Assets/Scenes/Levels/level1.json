@@ -7,7 +7,7 @@
       "monsters": [
         {
           "type": "SkeletonNPC",
-          "count": 20,
+          "count": 10,
           "healthModifier": 1.0,
           "speedModifier": 1.0,
           "damageModifier": 1.0,
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "spawnTime": 60,
+      "spawnTime": 20,
       "monsters": [
         {
           "type": "FlyingEyeNPC",

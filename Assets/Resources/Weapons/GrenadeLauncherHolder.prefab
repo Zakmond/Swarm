@@ -99,6 +99,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b874748a46a1384682fbc05c5effae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firePoint: {fileID: 8054934053266345591}
+  grenadePrefab: {fileID: 1562562203034964844, guid: 9d20dc14c8dded542b05217b892c6913, type: 3}
+  poolManager: {fileID: 0}
+  cam: {fileID: 0}
+  fireSpeed: 10
+  maxLobHeight: 2
+  fireRate: 0.2
+  damageModifier: 0
 --- !u!1 &4287195962810786283
 GameObject:
   m_ObjectHideFlags: 0

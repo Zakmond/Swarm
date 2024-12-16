@@ -171,7 +171,7 @@ public class PlayerLevelManager : MonoBehaviour
         }
 
         // Load the weapon prefab
-        string weaponToLoad = playerData.weapon == "none" ? "RifleHolder" : playerData.weapon;
+        string weaponToLoad = playerData.weapon == "none" ? "GrenadeLauncherHolder" : playerData.weapon;
         GameObject weaponPrefab = Resources.Load<GameObject>($"{weaponPrefabsPath}/{weaponToLoad}");
         if (weaponPrefab == null)
         {

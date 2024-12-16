@@ -6,7 +6,7 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         // Load Level1 scene
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Character Selection");
     }
 
     public void QuitGame()

@@ -12,7 +12,28 @@ public class ShootingGrenadeLauncher : MonoBehaviour, IShooting
     public float fireRate = 0.2f;             // This can be dynamically changed
     public float damageModifier;
     private float nextFireTime = 0f;
+    void Awake()
+    {
+        // Automatically find the ObjectPool in the scene if not assigned
+        if (poolManager == null)
+        {
+            poolManager = FindObjectOfType<ObjectPool>();
+            if (poolManager == null)
+            {
+                Debug.LogError("No ObjectPool found in the scene. Please ensure there is an ObjectPool in the scene.");
+            }
+        }
 
+        // Automatically find the Camera if not assigned
+        if (cam == null)
+        {
+            cam = Camera.main;
+            if (cam == null)
+            {
+                Debug.LogError("No Camera tagged as 'MainCamera' found. Please tag your main camera as 'MainCamera'.");
+            }
+        }
+    }
     void Update()
     {
         // Check for fire input
