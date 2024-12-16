@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NPCBehavior : MonoBehaviour
 {
-    [SerializeField] public float _attackDistance = 1.0f;
-    [SerializeField] public float _attackDamage = 10f;
-    [SerializeField] public float _health = 100f;
-    [SerializeField] public float _speed = 2.0f;
+    [SerializeField] public float _attackDistanceModifier = 1.0f;
+    [SerializeField] public float _attackDamageModifier = 1.0f;
+    [SerializeField] public float _healthModifier = 1.0f;
+    [SerializeField] public float _speedModifier = 1.0f;
     private IDamageable npcComponent;
 
     private void Start()
@@ -27,15 +27,15 @@ public class NPCBehavior : MonoBehaviour
             Debug.LogError("Neither NPC nor RangedNPC component found on the GameObject.");
         }
 
-        npcComponent.UpdateNPC(_health, _speed, _attackDistance, _attackDamage);
+        npcComponent.UpdateNPC(_healthModifier, _speedModifier, _attackDistanceModifier, _attackDamageModifier);
     }
 
-    public void UpdateNPC(float health, float speed, float attackDistance, float attackDamage)
+    public void UpdateNPC(float healthModifier, float speedModifier, float attackDistanceModifier, float attackDamageModifier)
     {
-        _health = health * _health;
-        _speed = speed * _speed;
-        _attackDistance = attackDistance * _attackDistance;
-        _attackDamage = attackDamage * _attackDamage;
-        npcComponent.UpdateNPC(_health, _speed, _attackDistance, _attackDamage);
+        _healthModifier = healthModifier;
+        _speedModifier = speedModifier ;
+        _attackDistanceModifier = attackDistanceModifier ;
+        _attackDamageModifier = attackDamageModifier;
+        npcComponent.UpdateNPC(_healthModifier, _speedModifier, _attackDistanceModifier, _attackDamageModifier);
     }
 }

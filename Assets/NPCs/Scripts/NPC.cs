@@ -17,12 +17,12 @@ public class NPC : MonoBehaviour, IDamageable
     [SerializeField] public LayerMask npcLayer;
 
 
-    public void UpdateNPC(float health, float speed, float attackDistance, float attackDamage)
+    public void UpdateNPC(float healthModifier, float speedModifier, float attackDistanceModifier, float attackDamageModifier)
     {
-        _health = health;
-        _speed = speed;
-        _attackDistance = attackDistance;
-        _attackDamage = attackDamage;
+        _health *= healthModifier;
+        _speed *= speedModifier;
+        _attackDistance *= attackDistanceModifier;
+        _attackDamage *= attackDamageModifier;
     }
 
     private void Start()

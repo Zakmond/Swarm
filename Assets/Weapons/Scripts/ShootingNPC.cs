@@ -14,13 +14,34 @@ public class ShootingNPC : MonoBehaviour
     public float fireRate = 1f; // This can be dynamically changed
     private float nextFireTime = 0f;
     public RangedNPC rangedNPC;
-    public Transform npcPos;
+    // public Transform npcPos;
 
+    void Awake()
+    {
+        // Automatically find the ObjectPool in the scene if not assigned
+        if (poolManager == null)
+        {
+            poolManager = FindObjectOfType<ObjectPool>();
+            if (poolManager == null)
+            {
+                Debug.LogError("No ObjectPool found in the scene. Please ensure there is an ObjectPool in the scene.");
+            }
+        }
+        // PlayerController playerController = FindObjectOfType<PlayerController>();
+        // if (playerController != null)
+        // {
+        //     npcPos = playerController.transform;
+        // }
+        // else
+        // {
+        //     Debug.LogError("PlayerController not found in the scene!");
+        // }
+    }
     void Start()
     {
         poolManager.IncreasePoolSize(bulletPrefab, GetBulletPoolSize(fireRate));
         rangedNPC = GetComponent<RangedNPC>();
-        npcPos = GetComponent<Transform>();
+        // npcPos = GetComponent<Transform>();
     }
 
     public void SetFireRate(float newFireRate)

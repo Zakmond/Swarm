@@ -8,7 +8,7 @@ public class RangedNPC : MonoBehaviour, IDamageable
     [SerializeField] private float _health = 100f;
     [SerializeField] private Transform player;
     [SerializeField] private float _speed = 2.0f;
-    [SerializeField] private float _attackDistance = 1.0f;
+    [SerializeField] private float _attackDistance = 15.0f;
     [SerializeField] private float _attackDamage = 10f;
     [SerializeField] private bool _canMove = true;
     private DamageFlash damageFlash;
@@ -18,16 +18,21 @@ public class RangedNPC : MonoBehaviour, IDamageable
     [SerializeField] public LayerMask npcLayer;
     public void UpdateNPC(float health, float speed, float attackDistance, float attackDamage)
     {
-        _health = health;
-        _speed = speed;
-        _attackDistance = attackDistance;
-        _attackDamage = attackDamage;
+        _health *= health;
+        _speed *= speed;
+        _attackDistance *= attackDistance;
+        _attackDamage *= attackDamage;
     }
 
     private void Start()
     {
         damageFlash = GetComponent<DamageFlash>();
         animator = GetComponent<Animator>();
+        PlayerController playerController = FindObjectOfType<PlayerController>();
+        if (playerController != null)
+        {
+            player = playerController.transform;
+        }
     }
 
     private void Update()

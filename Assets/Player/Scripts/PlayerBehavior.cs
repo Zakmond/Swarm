@@ -13,10 +13,19 @@ public class PlayerBehavior : MonoBehaviour
 
     private PlayerController playerComponent;
 
+    private void Awake()
+    {
+        // Initialize playerComponent in Awake so it’s ready before UpdateNPC is called
+        playerComponent = GetComponent<PlayerController>();
+        if (playerComponent == null)
+        {
+            Debug.LogError("PlayerController component not found on PlayerBehavior's GameObject!");
+        }
+    }
+
     private void Start()
     {
-        playerComponent = GetComponent<PlayerController>();
-
+        // Apply modifiers during Start
         playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _fireRateModifier, _dodgeChanceModifier, _maxAmmoModifier);
     }
 

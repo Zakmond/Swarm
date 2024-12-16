@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,11 @@ public class NPCLevelManager : MonoBehaviour
     {
         public string type; // Prefab name
         public int count; // Number of monsters
-        public float health; // Health modifier
-        public float speed; // Speed modifier
-        public float damage; // Damage modifier
-        public float attackDistance; // Attack distance modifier
+        public float healthModifier; // Health modifier
+        public float speedModifier; // Speed modifier
+        public float damageModifier; // Damage modifier
+        public float attackDistanceModifier; // Attack distance modifier
+        public String[] spawnPoints;
     }
 
     [System.Serializable]
@@ -31,10 +33,17 @@ public class NPCLevelManager : MonoBehaviour
     }
 
     public TextAsset levelConfigFile; // JSON file with NPC data
-    public Transform spawnPoint; // Spawn point for monsters
     public ObjectPool objectPool; // Reference to the object pool
     public LevelConfig levelConfig;
+    public Dictionary<string, Transform> spawnPoints = new();
 
+    private void Awake()
+    {
+        foreach (Transform child in GameObject.Find("SpawnPoints").transform)
+        {
+            spawnPoints[child.name] = child;
+        }
+    }
     private void Start()
     {
         // Load level configuration
@@ -46,7 +55,13 @@ public class NPCLevelManager : MonoBehaviour
         // Start spawning NPCs
         StartCoroutine(SpawnNPCs());
     }
-
+    private Vector2 GetRandomPositionNearPoint(Transform spawnPoint, float offset)
+    {
+        return new Vector2(
+            spawnPoint.position.x + UnityEngine.Random.Range(-offset, offset),
+            spawnPoint.position.y + UnityEngine.Random.Range(-offset, offset)
+        );
+    }
     private void LoadLevelConfig()
     {
         if (levelConfigFile != null)
@@ -67,7 +82,9 @@ public class NPCLevelManager : MonoBehaviour
         {
             foreach (var monster in wave.monsters)
             {
-                GameObject prefab = Resources.Load<GameObject>(monster.type);
+                string path = $"Monsters/{monster.type}";
+
+                GameObject prefab = Resources.Load<GameObject>(path);
                 if (prefab == null)
                 {
                     Debug.LogError($"Prefab for {monster.type} not found in Resources!");
@@ -90,33 +107,48 @@ public class NPCLevelManager : MonoBehaviour
 
             foreach (var monster in wave.monsters)
             {
-                GameObject prefab = Resources.Load<GameObject>(monster.type);
+                string path = $"Monsters/{monster.type}";
+                Debug.Log($"Attempting to load prefab at path: {path}");
+                GameObject prefab = Resources.Load<GameObject>(path);
                 if (prefab == null)
                 {
-                    Debug.LogError($"Prefab for {monster.type} not found in Resources!");
+                    Debug.LogError($"Prefab for {monster.type} not found!");
                     continue;
                 }
 
                 for (int i = 0; i < monster.count; i++)
                 {
+                    // Randomly select a spawn point from the list of possible spawn points
+                    string randomSpawnPointName = monster.spawnPoints[UnityEngine.Random.Range(0, monster.spawnPoints.Length)];
+
+                    if (!spawnPoints.ContainsKey(randomSpawnPointName))
+                    {
+                        Debug.LogError($"Spawn point {randomSpawnPointName} not found!");
+                        continue;
+                    }
+
+                    Transform spawnPoint = spawnPoints[randomSpawnPointName];
+
                     GameObject instance = objectPool.GetPooledObject(prefab);
                     if (instance != null)
                     {
-                        // Update the monster's stats based on the wave
-                        NPCBehavior behavior = instance.GetComponent<NPCBehavior>();
-                        if (behavior != null)
-                        {
-                            behavior.UpdateNPC(monster.health, monster.speed, monster.attackDistance, monster.damage);
-                        }
+                        // Update the monster's stats
+                        // NPCBehavior behavior = instance.GetComponent<NPCBehavior>();
+                        // if (behavior != null)
+                        // {
+                        //     behavior.UpdateNPC(monster.healthModifier, monster.speedModifier, monster.attackDistanceModifier, monster.damageModifier);
+                        // }
 
-                        // Activate and position the monster
-                        instance.transform.position = spawnPoint.position;
+                        // Spawn the monster near the selected point
+                        Vector2 spawnPosition = GetRandomPositionNearPoint(spawnPoint, 2f); // 2f = +/- 2 blocks
+                        instance.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, 0);
                         instance.SetActive(true);
                     }
 
-                    yield return new WaitForSeconds(0.5f); // Delay between spawns
+                    yield return new WaitForSeconds(0.1f); // Delay between spawns
                 }
             }
         }
     }
+
 }
