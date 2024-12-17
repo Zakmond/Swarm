@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator an;
     private DamageFlash damageFlash;
+    public event Action<float> OnHealthChanged;
 
     void Start()
     {
@@ -78,6 +79,12 @@ public class PlayerController : MonoBehaviour
         }
         _health -= bulletDamage;
         Debug.Log("Player hit");
+        OnHealthChanged?.Invoke(GetHealthPercentage());
+    }
+
+    public float GetHealthPercentage()
+    {
+        return _health / _maxHealth;
     }
 
     public void UpdateNPC(float maxHealthModifier, float speedModifier, float fireRateModifier, float dodgeChanceModifier, float maxAmmoModifier)
