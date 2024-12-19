@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2608a3ac05edfea44950276848849dbf
+guid: f2d97a77b720d86428b04186b1dd9269
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 45
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,54 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_0
+      name: DarkSamurai (64x64)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 218
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d0dde91c1bf94542b629019d8735410
-      internalID: 1998422619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 218
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3a54231c5809e34388a29810001ab03
-      internalID: -251675267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_2
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 160
-        width: 78
+        y: 448
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,503 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12fef9f41015f9541b048261ace1a406
-      internalID: 530821987
+      spriteID: 663c35783cb92144a82feacb0c7071b1
+      internalID: 623007847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 208
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d1baadf83aec9a46ac9cdf68e2cc9c1
-      internalID: -1385251138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_4
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 208
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5a1c5c65eddcbd45b782d34f2e4d998
-      internalID: 1652688544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_5
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 194
-        width: 5
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f53567ceda32f8e4387f6946e6a20ae4
-      internalID: 851483599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_6
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 194
-        width: 5
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 891b51f205a804043b9e36e8cfd4587b
-      internalID: -522687677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_7
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 178
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5072c63554d0bd044bba68fe6bce6c35
-      internalID: 821573814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_8
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 160
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a2dcbe821402f0469e5c5659b91f1d4
-      internalID: 1613400286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 21
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d051198437a5c7043b65eda4413f440d
-      internalID: -1126807495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_10
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 128
-        width: 23
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98a2e2898a1a21e4e864f8821d5fcd80
-      internalID: -79313510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 128
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 533698446d99cea4e8cb788267469f25
-      internalID: 30871239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_12
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 128
-        width: 23
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1abf2401c37e82446b5ed5b2406439a7
-      internalID: 1103775211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_13
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 114
-        width: 96
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e244611663cfd94db61d60f5fb9daa0
-      internalID: -1327215070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 98
-        width: 96
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3191f3051328064495e1a54a37de8b1
-      internalID: 417000477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 82
-        width: 96
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 827f0c59d1bb7b442a9a9541e6d9248f
-      internalID: 1514023801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_16
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 65
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4702f5ffc5ef2234d8be63b5bdacb74d
-      internalID: -210093686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_17
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 65
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bade417800dd81439f025c6a25bde0f
-      internalID: 1872660553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_18
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 67
-        width: 13
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f46e59dec57dea149b5762607c810b05
-      internalID: 1525256613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_19
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 67
-        width: 13
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 187d9dfa4e980304384ba77e3533f0ea
-      internalID: -1747427955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_20
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 64
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9524d1772136ceb4c879961d792fb987
-      internalID: 1986880492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_21
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 66
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1019b2f6711ec9a47a85c5fe0ea6aac6
-      internalID: 1634316433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_22
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 49
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd64f0544fe0d1b4ca041b25abb9c262
-      internalID: -1921108226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_23
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 49
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a9c879b711c7bc42b11b5a018f0f9d4
-      internalID: 481403101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_24
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 50
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74519821e7f21bd4f81bfece5a8dde17
-      internalID: 1013324019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_25
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 50
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53c016fcae246b848a15c33c8d4398fe
-      internalID: -916312173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_26
+      name: DarkSamurai (64x64)_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 48
-        width: 16
-        height: 13
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1542afddf2e8474e8a1cc77fd406bc0
-      internalID: 276159099
+      spriteID: 15d8783a03a11954382795b252f6864b
+      internalID: -2133986201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_27
+      name: DarkSamurai (64x64)_2
       rect:
         serializedVersion: 2
-        x: 82
-        y: 50
-        width: 12
-        height: 11
+        x: 128
+        y: 448
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -678,20 +153,650 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb246c92c295bc04680221c67d8f462d
-      internalID: 646345414
+      spriteID: 39d9e1d5a97a83b49a5fbc1229a784d0
+      internalID: -277247054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_28
+      name: DarkSamurai (64x64)_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3814415fc072a1b419479abf136cc952
+      internalID: -985453801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf52c2973c8a23459d594b58c558b0d
+      internalID: -449148441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378fcbd463ac55445aa7d0c2864e261f
+      internalID: 2018530880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0002edf994efaa4e8da92995bc27930
+      internalID: -51466698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed28f4d58251af4db59a4e34b4543b6
+      internalID: 2087601277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a1fdf453debe34a87cdfe7efea5db8
+      internalID: 165476193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b3c0e0bf3c0604389f19b0b3d86380
+      internalID: -158684328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11caaba98fbd28941ba5558af7649bb2
+      internalID: -297926545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6983db569253b1942a02adfcde69c894
+      internalID: -1307686856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35688179269b8234f89c215b8d7c840c
+      internalID: 372605854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45728259ca846fa48b80a446bdf94132
+      internalID: -1749294485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fde328f7ec7d5409ae703c11e7437e
+      internalID: 245758614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2710c8854ad8944afd8547dde85932
+      internalID: -1395556556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d46875632c2d96489120402967b20fc
+      internalID: -1893276238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97843668657fbd9468365c9a58ccdc8b
+      internalID: 1241504792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e2da131e668ef418d5345d2bd01da1
+      internalID: 668778560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cce2d8d5f380d4796f28f6ec0c0819
+      internalID: -887347211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6a8254ffdb95347a5c2b1ac50bd33a
+      internalID: 1282107828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc73abb2cf7bd4d4593f4a49797a464f
+      internalID: -116962291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1402e7ae7848d42a946d9e70f7a205
+      internalID: -1099525155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27482b78cccf7e4b85f5cebe172826f
+      internalID: -1656281161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb422a101cf678f449bbaf26544e1546
+      internalID: -902567908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ca653d236d3754b8933c835797376d
+      internalID: -2955092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0d83aa0a82d5b4e99a470fef4d990d
+      internalID: -1484682118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78b589331a1c794e9d553a91d22e52e
+      internalID: 1433200198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4c73f97e3281d44a3af2b0b8bb19e2
+      internalID: 891382870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8d256c7c817d140bbc0708c96dacd8
+      internalID: -1428796230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa60cc64d602b8409f22008e03242a9
+      internalID: 589865907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824e9569fb168ae479c6addc06ade413
+      internalID: 1979190988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07225d8c2ac2b97499abaf70d10f1dee
+      internalID: 515879498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_33
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 47
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,125 +804,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09d57099bb7e0d44ebf6433050b78008
-      internalID: -414822632
+      spriteID: eb3715b3ef2df52439f2a98dfbf492cf
+      internalID: -764399664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_29
+      name: DarkSamurai (64x64)_34
       rect:
         serializedVersion: 2
-        x: 49
-        y: 33
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d4f56e918202d44380be1354bac0cf9
-      internalID: 600496601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_30
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 33
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d19328441d90d424f873ba1244f17eb5
-      internalID: -382074593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_31
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 17
-        width: 9
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c64694ea291c944894091d1841e7831
-      internalID: -1942564742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_32
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 16
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a2a383967ed3f947a95bc7b3e3b2a6b
-      internalID: 1921748035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_33
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 17
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a1d42fcd7ebce14698cb50af39ff4f9
-      internalID: -2019361927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_34
-      rect:
-        serializedVersion: 2
-        x: 49
+        x: 64
         y: 0
-        width: 15
-        height: 15
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,20 +825,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bde1f0783e23450438e9591f039ee342
-      internalID: -1346939085
+      spriteID: 0e3ee90ceba219e438373f698dee61fd
+      internalID: -1945541031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_35
+      name: DarkSamurai (64x64)_35
       rect:
         serializedVersion: 2
-        x: 66
-        y: 5
-        width: 14
-        height: 5
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -846,20 +846,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9d715a99abfcd41b92ea87519c50b8
-      internalID: 830007055
+      spriteID: beab2149d35e4f14bacfa81e30e8812f
+      internalID: 426732558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cozy Cute UI Asset Pack - Kopya_36
+      name: DarkSamurai (64x64)_36
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1
-        width: 14
-        height: 14
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,8 +867,218 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7b59cd923e6084993dc64425cddc2c
-      internalID: 890242722
+      spriteID: 3e48edc50e340d94b98513bac50ac084
+      internalID: 981159292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_37
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21487373a350754685b3daa033e0ecd
+      internalID: 1650793659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_38
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340400bc4fd81dc48acebccfef31109d
+      internalID: -1144421587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e07b0d8154a4848bf79b3e71a1ba17
+      internalID: 448856882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_40
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b176df2b4dbb2418c73df762dd2484
+      internalID: -1741754287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_41
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f047d16eb322c4840aecd234afa45345
+      internalID: -1755869022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_42
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bd7e35b99181640b182f4cf8e59d70
+      internalID: -1944729601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1420d11a084f5847af17994287d1cc2
+      internalID: 592389969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_44
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8e13114ed2dc44bb6a0c0fae1559f8
+      internalID: 670032746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_45
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde02a1bcf8e9a84da8a192a0324a457
+      internalID: 753863081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSamurai (64x64)_46
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f725aabe3b8e24a8e08fad05fd2a4b
+      internalID: -457109150
       vertices: []
       indices: 
       edges: []
@@ -884,43 +1094,53 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cozy Cute UI Asset Pack - Kopya_0: 1998422619
-      Cozy Cute UI Asset Pack - Kopya_1: -251675267
-      Cozy Cute UI Asset Pack - Kopya_10: -79313510
-      Cozy Cute UI Asset Pack - Kopya_11: 30871239
-      Cozy Cute UI Asset Pack - Kopya_12: 1103775211
-      Cozy Cute UI Asset Pack - Kopya_13: -1327215070
-      Cozy Cute UI Asset Pack - Kopya_14: 417000477
-      Cozy Cute UI Asset Pack - Kopya_15: 1514023801
-      Cozy Cute UI Asset Pack - Kopya_16: -210093686
-      Cozy Cute UI Asset Pack - Kopya_17: 1872660553
-      Cozy Cute UI Asset Pack - Kopya_18: 1525256613
-      Cozy Cute UI Asset Pack - Kopya_19: -1747427955
-      Cozy Cute UI Asset Pack - Kopya_2: 530821987
-      Cozy Cute UI Asset Pack - Kopya_20: 1986880492
-      Cozy Cute UI Asset Pack - Kopya_21: 1634316433
-      Cozy Cute UI Asset Pack - Kopya_22: -1921108226
-      Cozy Cute UI Asset Pack - Kopya_23: 481403101
-      Cozy Cute UI Asset Pack - Kopya_24: 1013324019
-      Cozy Cute UI Asset Pack - Kopya_25: -916312173
-      Cozy Cute UI Asset Pack - Kopya_26: 276159099
-      Cozy Cute UI Asset Pack - Kopya_27: 646345414
-      Cozy Cute UI Asset Pack - Kopya_28: -414822632
-      Cozy Cute UI Asset Pack - Kopya_29: 600496601
-      Cozy Cute UI Asset Pack - Kopya_3: -1385251138
-      Cozy Cute UI Asset Pack - Kopya_30: -382074593
-      Cozy Cute UI Asset Pack - Kopya_31: -1942564742
-      Cozy Cute UI Asset Pack - Kopya_32: 1921748035
-      Cozy Cute UI Asset Pack - Kopya_33: -2019361927
-      Cozy Cute UI Asset Pack - Kopya_34: -1346939085
-      Cozy Cute UI Asset Pack - Kopya_35: 830007055
-      Cozy Cute UI Asset Pack - Kopya_36: 890242722
-      Cozy Cute UI Asset Pack - Kopya_4: 1652688544
-      Cozy Cute UI Asset Pack - Kopya_5: 851483599
-      Cozy Cute UI Asset Pack - Kopya_6: -522687677
-      Cozy Cute UI Asset Pack - Kopya_7: 821573814
-      Cozy Cute UI Asset Pack - Kopya_8: 1613400286
-      Cozy Cute UI Asset Pack - Kopya_9: -1126807495
+      DarkSamurai (64x64)_0: 623007847
+      DarkSamurai (64x64)_1: -2133986201
+      DarkSamurai (64x64)_10: -297926545
+      DarkSamurai (64x64)_11: -1307686856
+      DarkSamurai (64x64)_12: 372605854
+      DarkSamurai (64x64)_13: -1749294485
+      DarkSamurai (64x64)_14: 245758614
+      DarkSamurai (64x64)_15: -1395556556
+      DarkSamurai (64x64)_16: -1893276238
+      DarkSamurai (64x64)_17: 1241504792
+      DarkSamurai (64x64)_18: 668778560
+      DarkSamurai (64x64)_19: -887347211
+      DarkSamurai (64x64)_2: -277247054
+      DarkSamurai (64x64)_20: 1282107828
+      DarkSamurai (64x64)_21: -116962291
+      DarkSamurai (64x64)_22: -1099525155
+      DarkSamurai (64x64)_23: -1656281161
+      DarkSamurai (64x64)_24: -902567908
+      DarkSamurai (64x64)_25: -2955092
+      DarkSamurai (64x64)_26: -1484682118
+      DarkSamurai (64x64)_27: 1433200198
+      DarkSamurai (64x64)_28: 891382870
+      DarkSamurai (64x64)_29: -1428796230
+      DarkSamurai (64x64)_3: -985453801
+      DarkSamurai (64x64)_30: 589865907
+      DarkSamurai (64x64)_31: 1979190988
+      DarkSamurai (64x64)_32: 515879498
+      DarkSamurai (64x64)_33: -764399664
+      DarkSamurai (64x64)_34: -1945541031
+      DarkSamurai (64x64)_35: 426732558
+      DarkSamurai (64x64)_36: 981159292
+      DarkSamurai (64x64)_37: 1650793659
+      DarkSamurai (64x64)_38: -1144421587
+      DarkSamurai (64x64)_39: 448856882
+      DarkSamurai (64x64)_4: -449148441
+      DarkSamurai (64x64)_40: -1741754287
+      DarkSamurai (64x64)_41: -1755869022
+      DarkSamurai (64x64)_42: -1944729601
+      DarkSamurai (64x64)_43: 592389969
+      DarkSamurai (64x64)_44: 670032746
+      DarkSamurai (64x64)_45: 753863081
+      DarkSamurai (64x64)_46: -457109150
+      DarkSamurai (64x64)_5: 2018530880
+      DarkSamurai (64x64)_6: -51466698
+      DarkSamurai (64x64)_7: 2087601277
+      DarkSamurai (64x64)_8: 165476193
+      DarkSamurai (64x64)_9: -158684328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
