@@ -36,9 +36,20 @@ public class NPCLevelManager : MonoBehaviour
     public ObjectPool objectPool; // Reference to the object pool
     public LevelConfig levelConfig;
     public Dictionary<string, Transform> spawnPoints = new();
-
+    public static NPCLevelManager Instance;
     private void Awake()
     {
+        // Singleton pattern to persist across scenes
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Keep alive across scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         foreach (Transform child in GameObject.Find("SpawnPoints").transform)
         {
             spawnPoints[child.name] = child;
