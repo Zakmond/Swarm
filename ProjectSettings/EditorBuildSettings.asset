@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/level1.unity
     guid: 9cddf7e06f83ce94b9f36d13cf7eef0d
+  - enabled: 1
+    path: Assets/Scenes/Menu/LevelTransitionMenu.unity
+    guid: cd3fe33b092057348a26f60c38822987
   m_configObjects: {}

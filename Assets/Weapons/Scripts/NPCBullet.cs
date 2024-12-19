@@ -24,8 +24,9 @@ public class NPCBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (objectHit) return;
+        Debug.Log("Collision detected");
 
+        if (objectHit) return;
         // check if the collided object is the main character
         if (collision.TryGetComponent<PlayerController>(out var mainCharacter))
         {

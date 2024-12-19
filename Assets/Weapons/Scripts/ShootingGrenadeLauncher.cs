@@ -10,7 +10,7 @@ public class ShootingGrenadeLauncher : MonoBehaviour, IShooting
     public float fireSpeed = 10f;             // Horizontal speed of the grenade
     public float maxLobHeight = 2f;           // Maximum height of the lob
     public float fireRate = 0.2f;             // This can be dynamically changed
-    public float damageModifier;
+    public float damageModifier = 1f;
     private float nextFireTime = 0f;
     void Awake()
     {
@@ -60,7 +60,7 @@ public class ShootingGrenadeLauncher : MonoBehaviour, IShooting
         // Get a grenade from the pool
         GameObject grenade = poolManager.GetPooledObject(grenadePrefab);
         GrenadeBullet grenadeBullet = grenade.GetComponent<GrenadeBullet>();
-        grenadeBullet.modifyDamage(damageModifier);
+        grenadeBullet.ModifyDamage(damageModifier);
 
         if (grenade != null)
         {

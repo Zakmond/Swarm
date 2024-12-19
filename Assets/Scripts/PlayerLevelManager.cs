@@ -125,7 +125,7 @@ public class PlayerLevelManager : MonoBehaviour
 
         // Determine the player prefab to load
         string characterToLoad = playerData.character == "none" ? "Ares" : playerData.character;
-
+        playerData.character = characterToLoad;
         GameObject playerPrefab = Resources.Load<GameObject>($"{playerPrefabsPath}/{characterToLoad}");
         if (playerPrefab == null)
         {
@@ -172,6 +172,7 @@ public class PlayerLevelManager : MonoBehaviour
 
         // Load the weapon prefab
         string weaponToLoad = playerData.weapon == "none" ? "GrenadeLauncherHolder" : playerData.weapon;
+        playerData.weapon = weaponToLoad;
         GameObject weaponPrefab = Resources.Load<GameObject>($"{weaponPrefabsPath}/{weaponToLoad}");
         if (weaponPrefab == null)
         {
@@ -205,4 +206,5 @@ public class PlayerStats
     public float fireRateModifier;
     public float dodgeChanceModifier;
     public float maxAmmoModifier;
+    public float damageModifier;
 }

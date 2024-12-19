@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour, IDamageable
     [SerializeField] public float separationDistance = 0.2f;  // Distance to maintain between NPCs
     [SerializeField] public float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
     [SerializeField] public LayerMask npcLayer;
+    public NPCLevelManager npcLevelManager;
 
 
     public void UpdateNPC(float healthModifier, float speedModifier, float attackDistanceModifier, float attackDamageModifier)
@@ -30,6 +31,7 @@ public class NPC : MonoBehaviour, IDamageable
         _damageFlash = GetComponent<DamageFlash>();
         _animator = GetComponent<Animator>();
         PlayerController playerController = FindObjectOfType<PlayerController>();
+        npcLevelManager = NPCLevelManager.Instance;
         if (playerController != null)
         {
             player = playerController.transform;
@@ -125,6 +127,7 @@ public class NPC : MonoBehaviour, IDamageable
         if (_health <= 0)
         {
             Destroy(gameObject);
+            npcLevelManager.OnNPCKilled();
         }
     }
 

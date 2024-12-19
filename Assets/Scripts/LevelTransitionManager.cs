@@ -15,15 +15,36 @@ public class LevelTransitionManager : MonoBehaviour
     public TMP_Text modifiersLabelText;
     public TMP_Text timeRemainingLabelText;
     public TMP_Text nextStageLabelText;
-    public int level;
+
+    public GameManager gameManager;
     void Start()
     {
-        
+        gameManager = GameManager.Instance;
+
+
+        levelSummaryLabelText.text = "Level " + gameManager.level + " Summary";
+        resultLabelText.text = gameManager.levelWon == 1 ? "Victory!" : "Defeat!";
+        if (gameManager.levelWon == 1)
+        {
+            resultLabelText.color = Color.green;
+        }
+        else
+        {
+            resultLabelText.color = Color.red;
+        }
+
+        characterLabelText.text = gameManager.characterName;
+        gunLabelText.text = gameManager.gunName;
+        mobCountLabelText.text = gameManager.mobCount.ToString();
+        modifiersLabelText.text = "Max Health: " + gameManager.maxHealthModifier + "\n" +
+            "Speed: " + gameManager.speedModifier + "\n" +
+            "Damage: " + gameManager.damageModifier + "\n" +
+            "Fire Rate: " + gameManager.fireRateModifier + "\n" +
+            "Dodge Chance: " + gameManager.dodgeChanceModifier + "\n" +
+            "Max Ammo: " + gameManager.maxAmmoModifier;
+        timeRemainingLabelText.text = gameManager.timeRemaining.ToString();
+        nextStageLabelText.text = gameManager.levelWon == 1 ? "Next Stage" : "Retry";
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

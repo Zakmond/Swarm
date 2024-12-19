@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Animator an;
     private DamageFlash damageFlash;
     public event Action<float> OnHealthChanged;
+    public event Action<bool> OnLoss; 
 
     void Start()
     {
@@ -80,6 +81,12 @@ public class PlayerController : MonoBehaviour
         _health -= bulletDamage;
         Debug.Log("Player hit");
         OnHealthChanged?.Invoke(GetHealthPercentage());
+
+        if (_health <= 0)
+        {
+            
+            OnLoss?.Invoke(true);
+        }
     }
 
     public float GetHealthPercentage()

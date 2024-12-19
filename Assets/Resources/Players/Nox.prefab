@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5571619666913225117}
   - component: {fileID: 8542082566985961372}
   - component: {fileID: 6220077359716334790}
+  - component: {fileID: 1715336080639492077}
   m_Layer: 9
   m_Name: Nox
   m_TagString: Untagged
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d5247268307c6b549afa6c1657414a47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -212,3 +213,17 @@ MonoBehaviour:
   _fireRateModifier: 1
   _dodgeChanceModifier: 1
   _maxAmmoModifier: 1
+--- !u!114 &1715336080639492077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447603910604818412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa47025187f13f41b56a0516b5fdb0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashTime: 0.5

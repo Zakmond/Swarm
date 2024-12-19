@@ -36,7 +36,13 @@ public class NPCLevelManager : MonoBehaviour
     public ObjectPool objectPool; // Reference to the object pool
     public LevelConfig levelConfig;
     public Dictionary<string, Transform> spawnPoints = new();
+    public int monsterCount = 0;
     public static NPCLevelManager Instance;
+    public int mobsKilled = 0;
+    public event Action<bool> OnWin;
+    public event Action<bool> OnLoss;
+    public float levelTimer;
+
     private void Awake()
     {
         // Singleton pattern to persist across scenes
@@ -78,12 +84,26 @@ public class NPCLevelManager : MonoBehaviour
         if (levelConfigFile != null)
         {
             levelConfig = JsonUtility.FromJson<LevelConfig>(levelConfigFile.text);
+            levelTimer = levelConfig.levelDuration;
             Debug.Log("Level configuration loaded.");
         }
         else
         {
             Debug.LogError("No level configuration file assigned!");
         }
+    }
+
+    private void Update()
+    {
+
+        levelTimer -= Time.deltaTime;
+
+        if (levelTimer <= 0)
+        {
+            OnLoss?.Invoke(true);
+
+        }
+
     }
 
     private void PreloadMonsters()
@@ -93,6 +113,7 @@ public class NPCLevelManager : MonoBehaviour
         {
             foreach (var monster in wave.monsters)
             {
+                monsterCount += monster.count;
                 string path = $"Monsters/{monster.type}";
 
                 GameObject prefab = Resources.Load<GameObject>(path);
@@ -108,6 +129,7 @@ public class NPCLevelManager : MonoBehaviour
         }
 
         Debug.Log("All monsters preloaded into the pool.");
+        Debug.Log($"Total monsters: {monsterCount}");
     }
 
     private IEnumerator SpawnNPCs()
@@ -144,11 +166,11 @@ public class NPCLevelManager : MonoBehaviour
                     if (instance != null)
                     {
                         // Update the monster's stats
-                        // NPCBehavior behavior = instance.GetComponent<NPCBehavior>();
-                        // if (behavior != null)
-                        // {
-                        //     behavior.UpdateNPC(monster.healthModifier, monster.speedModifier, monster.attackDistanceModifier, monster.damageModifier);
-                        // }
+                        NPCBehavior behavior = instance.GetComponent<NPCBehavior>();
+                        if (behavior != null)
+                        {
+                            behavior.UpdateNPC(monster.healthModifier, monster.speedModifier, monster.attackDistanceModifier, monster.damageModifier);
+                        }
 
                         // Spawn the monster near the selected point
                         Vector2 spawnPosition = GetRandomPositionNearPoint(spawnPoint, 2f); // 2f = +/- 2 blocks
@@ -162,4 +184,15 @@ public class NPCLevelManager : MonoBehaviour
         }
     }
 
+
+    public void OnNPCKilled()
+    {
+        mobsKilled += 1;
+        Debug.Log($"Mobs killed: {mobsKilled}");
+        Debug.Log($"Monster count: {monsterCount}");
+        if (mobsKilled >= monsterCount)
+        {
+            OnWin?.Invoke(true);
+        }
+    }
 }

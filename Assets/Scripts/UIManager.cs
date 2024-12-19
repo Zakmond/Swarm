@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public RectTransform healthFill;          // Reference to HealthFill RectTransform
     private PlayerController playerController; // Reference to PlayerController
-
+    public TMP_Text timerText;
     void Start()
     {
         // Find PlayerController in the scene at runtime
@@ -25,6 +26,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (NPCLevelManager.Instance != null)
+        {
+            timerText.text = NPCLevelManager.Instance.levelTimer.ToString("F0");
+        }
+    }
     void UpdateHealthBar(float healthPercent)
     {
         // Change the width of the health fill based on the health percentage

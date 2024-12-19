@@ -61,14 +61,16 @@ public class GrenadeBullet : MonoBehaviour
             }
         }
     }
-    public void modifyDamage(float damageModifier)
+    public void ModifyDamage(float damageModifier)
     {
+        Debug.Log("Damage modifier: " + damageModifier);
         explosionDamage *= damageModifier;
+        Debug.Log("Modified explosion damage: " + explosionDamage);
     }
     private void OnHitGround()
     {
         isLaunched = false; // Stop the grenade movement
-        Debug.Log("Grenade hit the ground!");
+        // Debug.Log("Grenade hit the ground!");
         // OnDrawGizmosSelected();
 
         Explode();
@@ -80,7 +82,7 @@ public class GrenadeBullet : MonoBehaviour
     private void Explode()
     {
         ExplosionEffect();
-        Debug.Log("Explosion triggered!");
+        // Debug.Log("Explosion triggered!");
 
         // Detect all colliders in the explosion radius
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius, damageableLayer);
@@ -94,7 +96,7 @@ public class GrenadeBullet : MonoBehaviour
         }
 
         // Optional: Add visual or sound effects for the explosion
-        Debug.Log("Explosion affected " + hits.Length + " objects.");
+        // Debug.Log("Explosion affected " + hits.Length + " objects.");
     }
     private void ExplosionEffect()
     {
