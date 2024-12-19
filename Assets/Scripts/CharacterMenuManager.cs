@@ -7,6 +7,6 @@ public class CharacterMenuManager : MonoBehaviour
     {
         PlayerLevelManager.Instance.UpdateCharacter(characterName);
 
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("level1");
     }
 }

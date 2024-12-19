@@ -112,7 +112,7 @@ public class PlayerLevelManager : MonoBehaviour
     private bool IsGameplayScene(string sceneName)
     {
         // Check if the scene name starts with "Level"
-        return sceneName.StartsWith("Level"); // Adjust this to match your naming convention
+        return sceneName.StartsWith("level"); // Adjust this to match your naming convention
     }
 
     public void SpawnPlayer()

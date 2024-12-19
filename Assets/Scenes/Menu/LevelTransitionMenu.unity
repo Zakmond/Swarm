@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 52293488}
   - component: {fileID: 52293487}
   m_Layer: 5
-  m_Name: levelSummaryText
+  m_Name: nextStageLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 53663352}
   - component: {fileID: 53663351}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: characterLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 77738751}
   - component: {fileID: 77738750}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: modifiersLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 441046203}
   - component: {fileID: 441046202}
   m_Layer: 5
-  m_Name: Character Text (2)
+  m_Name: Next stage text container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1639,7 +1639,7 @@ GameObject:
   - component: {fileID: 787773172}
   - component: {fileID: 787773171}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: gunLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1849,7 +1849,7 @@ GameObject:
   - component: {fileID: 910111287}
   - component: {fileID: 910111286}
   m_Layer: 5
-  m_Name: levelSummaryText
+  m_Name: levelSummaryLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2464,7 +2464,7 @@ GameObject:
   - component: {fileID: 1542441679}
   - component: {fileID: 1542441678}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: resultLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2749,6 +2749,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e0756f8b78c99478c4c169004fa4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSummaryLabelText: {fileID: 910111286}
+  resultLabelText: {fileID: 1542441678}
+  characterLabelText: {fileID: 53663351}
+  gunLabelText: {fileID: 787773171}
+  mobCountLabelText: {fileID: 1983703533}
+  modifiersLabelText: {fileID: 77738750}
+  timeRemainingLabelText: {fileID: 1962659015}
+  nextStageLabelText: {fileID: 52293487}
+  level: 0
 --- !u!4 &1769044836
 Transform:
   m_ObjectHideFlags: 0
@@ -3063,7 +3072,7 @@ GameObject:
   - component: {fileID: 1962659016}
   - component: {fileID: 1962659015}
   m_Layer: 5
-  m_Name: Text (TMP) (9)
+  m_Name: timeRemainingLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3331,7 +3340,7 @@ GameObject:
   - component: {fileID: 1983703534}
   - component: {fileID: 1983703533}
   m_Layer: 5
-  m_Name: Text (TMP) (8)
+  m_Name: mobCounterLabelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
