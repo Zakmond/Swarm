@@ -63,7 +63,7 @@ public class ShootingNPC : MonoBehaviour
 
     private int GetBulletPoolSize(float FR)
     {
-        float maxSeconds = bulletPrefab.GetComponent<Bullet>().TTL;
+        float maxSeconds = bulletPrefab.GetComponent<NPCBullet>().TTL;
         int maxBulletsInSeconds = Mathf.CeilToInt(maxSeconds / FR);
         return maxBulletsInSeconds;
     }
