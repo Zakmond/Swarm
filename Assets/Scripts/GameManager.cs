@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public string characterName;
     public string gunName;
     public int mobCount;
-    public Modifiers modifiers;
+    public PlayerStats modifiers;
     public float timeRemaining;
     public float mobsKilled = 0;
     private void Awake()
@@ -40,12 +40,7 @@ public class GameManager : MonoBehaviour
 
         characterName = playerLevelManager.playerData.character;
         gunName = playerLevelManager.playerData.weapon;
-        modifiers.maxHealthModifier = playerLevelManager.playerData.stats.maxHealthModifier;
-        modifiers.speedModifier = playerLevelManager.playerData.stats.speedModifier;
-        modifiers.damageModifier = playerLevelManager.playerData.stats.damageModifier;
-        modifiers.fireRateModifier = playerLevelManager.playerData.stats.fireRateModifier;
-        modifiers.dodgeChanceModifier = playerLevelManager.playerData.stats.dodgeChanceModifier;
-        modifiers.maxAmmoModifier = playerLevelManager.playerData.stats.maxAmmoModifier;
+        modifiers = playerLevelManager.playerData.stats;
         level = npcLevelManager.levelConfig.levelNumber;
 
         playerController = FindObjectOfType<PlayerController>();
@@ -89,14 +84,4 @@ public class GameManager : MonoBehaviour
         mobCount = npcLevelManager.mobsKilled;
         SceneManager.LoadScene("LevelTransitionMenu");
     }
-}
-
-public class Modifiers
-{
-    public float maxHealthModifier;
-    public float speedModifier;
-    public float damageModifier;
-    public float fireRateModifier;
-    public float dodgeChanceModifier;
-    public float maxAmmoModifier;
 }

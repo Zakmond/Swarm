@@ -51,11 +51,11 @@ public class LevelTransitionManager : MonoBehaviour
         {
             if (value > 1f)
             {
-                return $"<color=#55BB5A>+{Mathf.RoundToInt((value - 1f) * 100)}%</color> {label}";
+                return $"<color=#55BB5A>+{Mathf.RoundToInt((value - 1f) * 100)}% {label}</color>";
             }
             else if (value < 1f)
             {
-                return $"<color=#D72048>-{Mathf.RoundToInt((value - 1f) * 100)}%</color> {label}";
+                return $"<color=#D72048>-{Mathf.RoundToInt((value - 1f) * 100)}% {label}</color>";
             }
             return null; // No display for neutral modifiers
         }

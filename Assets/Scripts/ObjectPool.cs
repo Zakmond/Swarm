@@ -67,7 +67,7 @@ public class ObjectPool : MonoBehaviour
         {
             foreach (GameObject obj in poolDictionary[poolKey])
             {
-                if (!obj.activeInHierarchy)
+                if (obj != null && !obj.activeInHierarchy)
                 {
                     return obj;
                 }

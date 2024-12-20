@@ -7,9 +7,9 @@
       "monsters": [
         {
           "type": "SkeletonNPC",
-          "count": 30,
+          "count": 10,
           "healthModifier": 1.0,
-          "speedModifier": 2.0,
+          "speedModifier": 1.5,
           "damageModifier": 1.0,
           "attackDistanceModifier": 1.5,
           "spawnPoints": [

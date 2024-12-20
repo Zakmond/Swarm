@@ -36,7 +36,7 @@ public class NPCLevelManager : MonoBehaviour
     public ObjectPool objectPool; // Reference to the object pool
     public LevelConfig levelConfig;
     public Dictionary<string, Transform> spawnPoints = new();
-    public int monsterCount = 0;
+    public int mobCount = 0;
     public static NPCLevelManager Instance;
     public int mobsKilled = 0;
     public event Action<bool> OnWin;
@@ -113,7 +113,7 @@ public class NPCLevelManager : MonoBehaviour
         {
             foreach (var monster in wave.monsters)
             {
-                monsterCount += monster.count;
+                mobCount += monster.count;
                 string path = $"Monsters/{monster.type}";
 
                 GameObject prefab = Resources.Load<GameObject>(path);
@@ -129,7 +129,7 @@ public class NPCLevelManager : MonoBehaviour
         }
 
         Debug.Log("All monsters preloaded into the pool.");
-        Debug.Log($"Total monsters: {monsterCount}");
+        Debug.Log($"Total monsters: {mobCount}");
     }
 
     private IEnumerator SpawnNPCs()
@@ -189,8 +189,8 @@ public class NPCLevelManager : MonoBehaviour
     {
         mobsKilled += 1;
         Debug.Log($"Mobs killed: {mobsKilled}");
-        Debug.Log($"Monster count: {monsterCount}");
-        if (mobsKilled >= monsterCount)
+        Debug.Log($"Monster count: {mobCount}");
+        if (mobsKilled >= mobCount)
         {
             OnWin?.Invoke(true);
         }

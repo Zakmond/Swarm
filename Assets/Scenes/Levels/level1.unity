@@ -368,12 +368,6 @@ MonoBehaviour:
   gunName: 
   mobCount: 0
   timeRemaining: 0
-  maxHealthModifier: 0
-  speedModifier: 0
-  damageModifier: 0
-  fireRateModifier: 0
-  dodgeChanceModifier: 0
-  maxAmmoModifier: 0
   mobsKilled: 0
 --- !u!4 &401266896
 Transform:
@@ -14677,6 +14671,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7521766694154818398, guid: 318836e8c95177e4cb0666ffa81af121, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1878146888}
     - target: {fileID: 7521766694154818398, guid: 318836e8c95177e4cb0666ffa81af121, type: 3}
       propertyPath: healthFill
       value: 
