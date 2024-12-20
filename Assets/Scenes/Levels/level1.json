@@ -1,17 +1,17 @@
 {
   "levelNumber": 1,
-  "levelDuration": 5,
+  "levelDuration": 120,
   "monsterWaves": [
     {
-      "spawnTime": 1,
+      "spawnTime": 5,
       "monsters": [
         {
           "type": "SkeletonNPC",
-          "count": 10,
+          "count": 30,
           "healthModifier": 1.0,
-          "speedModifier": 1.0,
+          "speedModifier": 2.0,
           "damageModifier": 1.0,
-          "attackDistanceModifier": 1.0,
+          "attackDistanceModifier": 1.5,
           "spawnPoints": [
             "1",
             "2",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "spawnTime": 1,
+      "spawnTime": 10,
       "monsters": [
         {
           "type": "FlyingEyeNPC",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "spawnTime": 1,
+      "spawnTime": 5,
       "monsters": [
         {
           "type": "FlyingEyeNPC",
