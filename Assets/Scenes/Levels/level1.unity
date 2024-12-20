@@ -367,6 +367,13 @@ MonoBehaviour:
   characterName: 
   gunName: 
   mobCount: 0
+  modifiers:
+    maxHealthModifier: 0
+    speedModifier: 0
+    fireRateModifier: 0
+    dodgeChanceModifier: 0
+    maxAmmoModifier: 0
+    damageModifier: 0
   timeRemaining: 0
   mobsKilled: 0
 --- !u!4 &401266896
@@ -14290,7 +14297,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.906552
+  orthographic size: 8.66982
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

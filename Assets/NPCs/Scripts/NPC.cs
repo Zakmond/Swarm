@@ -47,10 +47,15 @@ public class NPC : MonoBehaviour, IDamageable
     {
         if (!_canMove) return;
         float distance = Vector2.Distance(transform.position, player.position);
-
+        
+        if (distance > 0.1)
+        {
+            // to not make it glitch when it is exactly where the player is
+            MoveTowardsPlayer();
+        
+        }
         if (distance > _attackDistance)
         {
-            MoveTowardsPlayer();
             _animator.SetBool("isWalking", true);
         }
         else
@@ -63,17 +68,13 @@ public class NPC : MonoBehaviour, IDamageable
     // Modified MoveTowardsPlayer to add separation and target offsetting
     private void MoveTowardsPlayer()
     {
-        // Calculate the separation force to avoid NPCs stacking
         Vector2 separationForce = GetSeparationForce();
 
-        // Calculate the offset target position to avoid all NPCs targeting the exact same point
         Vector2 offset = GetOffsetPosition();
         Vector2 targetPosition = (Vector2)player.position + offset;
 
-        // Combine the direction towards the player and the separation force
         Vector2 moveDirection = ((targetPosition - (Vector2)transform.position).normalized + separationForce).normalized;
 
-        // Move the NPC using the combined force
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + moveDirection, _speed * Time.deltaTime);
 
         // Flip NPC based on its movement direction

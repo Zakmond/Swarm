@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7408708032988155165}
   - component: {fileID: 8850208534335681373}
   - component: {fileID: -2666387083653262997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MushroomNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,15 +138,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   player: {fileID: 0}
-  _speed: 2
-  _attackDistance: 1
-  _attackDamage: 10
+  _speed: 1
+  _attackDistance: 2
+  _attackDamage: 25
   _canMove: 1
   separationDistance: 0.05
   targetOffsetRadius: 0.05
   npcLayer:
     serializedVersion: 2
     m_Bits: 64
+  npcLevelManager: {fileID: 0}
 --- !u!61 &8850208534335681373
 BoxCollider2D:
   m_ObjectHideFlags: 0
