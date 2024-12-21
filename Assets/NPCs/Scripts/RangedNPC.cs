@@ -129,8 +129,10 @@ public class RangedNPC : MonoBehaviour, IDamageable
 
         if (_health <= 0)
         {
+
             Destroy(gameObject);
             npcLevelManager.OnNPCKilled();
+
 
         }
     }

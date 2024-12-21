@@ -61,11 +61,9 @@ public class GrenadeBullet : MonoBehaviour
             }
         }
     }
-    public void ModifyDamage(float damageModifier)
+    public void modifyDamage(float damageModifier)
     {
-        Debug.Log("Damage modifier: " + damageModifier);
         explosionDamage *= damageModifier;
-        Debug.Log("Modified explosion damage: " + explosionDamage);
     }
     private void OnHitGround()
     {

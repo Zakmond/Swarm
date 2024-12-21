@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1761556219013759900}
   - component: {fileID: 4042194736716546914}
-  - component: {fileID: 6411337095054975870}
+  - component: {fileID: 7052883763569922918}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6411337095054975870
+--- !u!114 &7052883763569922918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,15 +96,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1008652918303978774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7abb4e9269821c04dbfcb2f812006f42, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dee47725c5f93e4fa0abe8dd6029bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 5016234150990984181}
+  reloadTime: 2
+  fireRate: 1
   poolManager: {fileID: 0}
   bulletPrefab: {fileID: 3412337420019354117, guid: a491f6643ea628345970d48e08c34dfa, type: 3}
+  cam: {fileID: 0}
   bulletForce: 20
   cam: {fileID: 0}
-  fireRate: 0.2
+  numberOfPellets: 5
+  spreadAngle: 30
 --- !u!1 &1612889966000040581
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +157,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   weaponSR: {fileID: 4042194736716546914}
   handsSR: {fileID: 6297192257450401137}
+  secondHandsSR: {fileID: 0}
   playerPos: {fileID: 0}
 --- !u!1 &7356002125919900989
 GameObject:
@@ -210,13 +215,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8717328818061073073}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0010399652, y: 0.0018226495, z: -0.007177892, w: 0.9999721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.181, y: -0.034, z: -0.156}
   m_LocalScale: {x: 0.95681, y: 0.83465, z: 0.69966996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1761556219013759900}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60.822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6297192257450401137
 SpriteRenderer:
   m_ObjectHideFlags: 0

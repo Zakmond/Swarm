@@ -1,26 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingShotgun : MonoBehaviour
+public class ShootingShotgun : WeaponBase
 {
-    public Transform firePoint;
-    public ObjectPool poolManager;
-    public GameObject bulletPrefab;
     public float bulletForce = 20f;
-    public Camera cam;
-    public float fireRate = 1.0f; // Fire rate in seconds
     public int numberOfPellets = 5; // Number of bullets per shot
     public float spreadAngle = 30f; // Total spread angle (degrees)
-
-    private float nextFireTime = 0f;
-
-    void Start()
+    protected override void Start()
     {
         poolManager.IncreasePoolSize(bulletPrefab, GetBulletPoolSize(fireRate, numberOfPellets));
+        ammo = maxAmmo;
     }
-
-    public void SetFireRate(float newFireRate)
+    public override void SetFireRate(float newFireRate)
     {
         float oldFireRate = fireRate;
         fireRate = newFireRate;
@@ -37,7 +27,7 @@ public class ShootingShotgun : MonoBehaviour
         }
     }
 
-    private int GetBulletPoolSize(float FR, int pelletsPerShot)
+    protected int GetBulletPoolSize(float FR, int pelletsPerShot)
     {
         float maxSeconds = bulletPrefab.GetComponent<Bullet>().TTL;
         int maxBulletsInSeconds = Mathf.CeilToInt(maxSeconds / FR) * pelletsPerShot;
@@ -53,7 +43,7 @@ public class ShootingShotgun : MonoBehaviour
         }
     }
 
-    void Fire()
+    protected override void Fire()
     {
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos - (Vector2)firePoint.position;
