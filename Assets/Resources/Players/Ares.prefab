@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  dustPrefab: {fileID: 7000707693843644579, guid: 1f12087191f692143bf3f1e4d676e6a2, type: 3}
 --- !u!114 &8794076148708029089
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6241ff4e829ad4894742f7c743402f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 150
+  bulletDamage: 10
   TTL: 3

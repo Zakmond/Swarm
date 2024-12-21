@@ -287,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &277080598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +550,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.66982
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb48bb26f4ea224da025d8f8bf107ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 1483730583}
 --- !u!1 &570219673
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +684,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!1001 &614536180
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26301306
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.396874
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 760112850021863053, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366096942714051617, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_Name
+      value: FlyingEyeNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366096942714051617, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b788df20ba33c041b1ed48a6b16e566, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoblinNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 2978302463617973303, guid: 0487ed40f7ffd28439dde7ff7ce6ca10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6784183913804640283, guid: 0487ed40f7ffd28439dde7ff7ce6ca10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.405276
@@ -1107,7 +1172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1760036570383866274, guid: ff1ac3754a437c4419bd9c93e2c6c37b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4005041552004272010, guid: ff1ac3754a437c4419bd9c93e2c6c37b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17141,8 +17206,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8447603910604818412, guid: 002d8e44dc5a6f646b264924238f0240, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8542082566985961372, guid: 002d8e44dc5a6f646b264924238f0240, type: 3}
+      propertyPath: dustPrefab
+      value: 
+      objectReference: {fileID: 7000707693843644579, guid: 1f12087191f692143bf3f1e4d676e6a2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17204,6 +17273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonNPC
       objectReference: {fileID: 0}
+    - target: {fileID: 9191456230333065919, guid: f4b24965298da844f8c720107d32f1a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17220,6 +17293,10 @@ PrefabInstance:
     - target: {fileID: 678046085674889117, guid: 63aed1b323919a14c9bcd4ecaa0dc2a9, type: 3}
       propertyPath: m_Name
       value: MushroomNPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 678046085674889117, guid: 63aed1b323919a14c9bcd4ecaa0dc2a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2172389886834482799, guid: 63aed1b323919a14c9bcd4ecaa0dc2a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17439,3 +17516,4 @@ SceneRoots:
   - {fileID: 2029317328}
   - {fileID: 2114830218}
   - {fileID: 829606940}
+  - {fileID: 614536180}

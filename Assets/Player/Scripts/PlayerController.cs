@@ -18,8 +18,15 @@ public class PlayerController : MonoBehaviour
     private Animator an;
     private DamageFlash damageFlash;
     public event Action<float> OnHealthChanged;
-    public event Action<bool> OnLoss; 
-
+    public event Action<bool> OnLoss;
+    private float dashSpeed = 15f; // Speed of the dash
+    private float dashDuration = 0.5f; // Duration of the dash
+    private bool isDashing = false; // Flag to prevent other actions during dash
+    private Vector2 dashDirection;
+    public GameObject dustPrefab; // Assign the dust prefab in the Inspector
+    // Cooldown variables
+    private float dashCooldown = 3f; // Cooldown duration in seconds
+    private float dashCooldownTimer = 0f; // Timer to track cooldown
     void Start()
     {
         damageFlash = GetComponent<DamageFlash>();
@@ -28,25 +35,97 @@ public class PlayerController : MonoBehaviour
         an = GetComponent<Animator>();
         cam = Camera.main;
     }
-
     void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-        MovePlayer(moveX, moveY);
-        AnimatePlayer(moveX, moveY);
+
+        if (!isDashing)
+        {
+            MovePlayer(moveX, moveY);
+            AnimatePlayer(moveX, moveY);
+        }
 
         if (Input.GetMouseButton(0))
         {
             an.SetBool("isShooting", true);
-
         }
         else
         {
             an.SetBool("isShooting", false);
         }
+
+        // Handle cooldown timer
+        if (dashCooldownTimer > 0)
+        {
+            dashCooldownTimer -= Time.deltaTime;
+        }
+
+        // Check for dash input and cooldown
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && dashCooldownTimer <= 0)
+        {
+            StartDash();
+        }
     }
 
+    void StartDash()
+    {
+        isDashing = true;
+
+        // Calculate dash direction based on keyboard input
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+        dashDirection = new Vector2(moveX, moveY).normalized;
+
+        // Ensure there's a valid direction to dash
+        if (dashDirection == Vector2.zero)
+        {
+            dashDirection = new Vector2(an.GetFloat("DirectionX"), an.GetFloat("DirectionY")).normalized;
+        }
+
+        // Set animator parameters for the dash
+        an.SetFloat("DirectionX", dashDirection.x);
+        an.SetFloat("DirectionY", dashDirection.y);
+        an.SetTrigger("Dash");
+
+        SpawnDust(dashDirection);
+
+        // Start cooldown
+        dashCooldownTimer = dashCooldown;
+
+        // Start dash coroutine
+        StartCoroutine(DashCoroutine());
+    }
+    void SpawnDust(Vector2 direction)
+    {
+        if (dustPrefab != null)
+        {
+            // Instantiate the dust prefab
+            GameObject dust = Instantiate(dustPrefab, tr.position, Quaternion.identity);
+
+            // Set the dust object's animator direction
+            Animator dustAnimator = dust.GetComponent<Animator>();
+            if (dustAnimator != null)
+            {
+                dustAnimator.SetFloat("DirectionX", direction.x);
+                dustAnimator.SetFloat("DirectionY", direction.y);
+            }
+        }
+    }
+    private System.Collections.IEnumerator DashCoroutine()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < dashDuration)
+        {
+            rb.velocity = dashDirection * dashSpeed;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        rb.velocity = Vector2.zero;
+        isDashing = false;
+    }
     void MovePlayer(float moveX, float moveY)
     {
 
@@ -84,7 +163,7 @@ public class PlayerController : MonoBehaviour
 
         if (_health <= 0)
         {
-            
+
             OnLoss?.Invoke(true);
         }
     }
