@@ -4,9 +4,9 @@ public class ShootingGrenadeLauncher : WeaponBase
 {
     public float fireSpeed = 10f;             // Horizontal speed of the grenade
     public float maxLobHeight = 2f;           // Maximum height of the lob
-
     protected override void Fire()
     {
+        Debug.Log("Fire Grenade");
         // Get the target position based on the mouse cursor
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 

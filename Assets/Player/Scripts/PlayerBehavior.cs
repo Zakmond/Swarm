@@ -9,6 +9,7 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] public float _fireRateModifier = 1f;
     [SerializeField] public float _dodgeChanceModifier = 1f;
     [SerializeField] public float _maxAmmoModifier = 1f;
+    [SerializeField] public float _damageModifier = 1f;
 
 
     private PlayerController playerComponent;
@@ -26,16 +27,18 @@ public class PlayerBehavior : MonoBehaviour
     private void Start()
     {
         // Apply modifiers during Start
-        playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _fireRateModifier, _dodgeChanceModifier, _maxAmmoModifier);
+        playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _dodgeChanceModifier);
     }
 
-    public void UpdateNPC(float maxHealthModifier, float speedModifier, float fireRateModifier, float dodgeChanceModifier, float maxAmmoModifier)
+    public void UpdateNPC(float maxHealthModifier, float speedModifier, float fireRateModifier, float dodgeChanceModifier, float maxAmmoModifier, float damageModifier)
     {
         _maxHealthModifier = maxHealthModifier;
         _speedModifier = speedModifier;
-        _fireRateModifier = fireRateModifier;
         _dodgeChanceModifier = dodgeChanceModifier;
+        _fireRateModifier = fireRateModifier;
         _maxAmmoModifier = maxAmmoModifier;
-        playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _fireRateModifier, _dodgeChanceModifier, _maxAmmoModifier);
+        _damageModifier = damageModifier;
+        playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _dodgeChanceModifier);
+        playerComponent.UpdateWeapon(_damageModifier, _fireRateModifier, _maxAmmoModifier);
     }
 }

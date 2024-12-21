@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
     private float _health = 100f;
     // player's current _health
     private float _speed = 7f;
-    private float _fireRate = 0.5f;
-    private float _dodgeChance = 0f;
-    private int _maxAmmo = 30;
+
+    private float _dodgeChance = 0.1f;
+    private float _maxAmmoModifier = 1f;
+    private float _damageModifier = 1f;
+    private float _fireRateModifier = 1f;
     private Rigidbody2D rb;
     private Transform tr;
     public Camera cam;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private DamageFlash damageFlash;
     public event Action<float> OnHealthChanged;
     public event Action<bool> OnLoss;
+    public event Action<bool> OnDodge;
     private float dashSpeed = 15f; // Speed of the dash
     private float dashDuration = 0.5f; // Duration of the dash
     private bool isDashing = false; // Flag to prevent other actions during dash
@@ -27,6 +30,7 @@ public class PlayerController : MonoBehaviour
     // Cooldown variables
     private float dashCooldown = 3f; // Cooldown duration in seconds
     private float dashCooldownTimer = 0f; // Timer to track cooldown
+    private WeaponBase weaponBase;
     void Start()
     {
         damageFlash = GetComponent<DamageFlash>();
@@ -34,6 +38,10 @@ public class PlayerController : MonoBehaviour
         tr = GetComponent<Transform>();
         an = GetComponent<Animator>();
         cam = Camera.main;
+
+        weaponBase = GetComponentInChildren<WeaponBase>();
+
+
     }
     void Update()
     {
@@ -153,12 +161,19 @@ public class PlayerController : MonoBehaviour
 
     public void OnHit(float bulletDamage)
     {
+
+        if (UnityEngine.Random.value < _dodgeChance)
+        {
+            Debug.Log("Dodge");
+            OnDodge?.Invoke(true);
+            return;
+        }
+
         if (damageFlash != null)
         {
             damageFlash.CallFlash();
         }
         _health -= bulletDamage;
-        Debug.Log("Player hit");
         OnHealthChanged?.Invoke(GetHealthPercentage());
 
         if (_health <= 0)
@@ -173,12 +188,18 @@ public class PlayerController : MonoBehaviour
         return _health / _maxHealth;
     }
 
-    public void UpdateNPC(float maxHealthModifier, float speedModifier, float fireRateModifier, float dodgeChanceModifier, float maxAmmoModifier)
+    public void UpdateNPC(float maxHealthModifier, float speedModifier, float dodgeChanceModifier)
     {
         _maxHealth *= maxHealthModifier;
         _speed *= speedModifier;
-        _fireRate *= fireRateModifier;
         _dodgeChance *= dodgeChanceModifier;
-        _maxAmmo = Mathf.RoundToInt(_maxAmmo * maxAmmoModifier);
     }
+
+    public void UpdateWeapon(float damageModifier, float fireRateModifier, float maxAmmoModifier)
+    {
+        weaponBase.SetFireRate(fireRateModifier);
+        weaponBase.SetDamageModifier(damageModifier);
+        weaponBase.SetMaxAmmo(maxAmmoModifier);
+    }
+
 }

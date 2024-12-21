@@ -137,17 +137,7 @@ public class PlayerLevelManager : MonoBehaviour
         currentPlayerInstance = Instantiate(playerPrefab, playerSpawnPoint, Quaternion.identity);
 
         // Apply stats to the player (if necessary)
-        // PlayerBehavior playerBehavior = currentPlayerInstance.GetComponent<PlayerBehavior>();
-        // if (playerBehavior != null)
-        // {
-        //     playerBehavior.UpdateNPC(
-        //         playerData.stats.maxHealthModifier,
-        //         playerData.stats.speedModifier,
-        //         playerData.stats.fireRateModifier,
-        //         playerData.stats.dodgeChanceModifier,
-        //         playerData.stats.maxAmmoModifier
-        //     );
-        // }
+
 
         Debug.Log($"Player {characterToLoad} spawned.");
 
@@ -160,6 +150,19 @@ public class PlayerLevelManager : MonoBehaviour
 
         // Spawn and attach the weapon
         SpawnWeapon();
+
+        PlayerBehavior playerBehavior = currentPlayerInstance.GetComponent<PlayerBehavior>();
+        if (playerBehavior != null)
+        {
+            playerBehavior.UpdateNPC(
+                playerData.stats.maxHealthModifier,
+                playerData.stats.speedModifier,
+                playerData.stats.fireRateModifier,
+                playerData.stats.dodgeChanceModifier,
+                playerData.stats.maxAmmoModifier,
+                playerData.stats.damageModifier
+            );
+        }
     }
 
     private void SpawnWeapon()

@@ -6,11 +6,12 @@ public abstract class WeaponBase : MonoBehaviour
     public Transform firePoint;
     public float reloadTime = 2f;
     public event Action<float> OnReloadStarted;
+    public event Action<int, int> OnAmmoChange;
     public float fireRate = 1.0f; // Fire rate in seconds
     protected float nextFireTime = 0f;
     protected float damageModifier = 1f;
-    protected int ammo = 0;
-    protected int maxAmmo = 15;
+    public int ammo = 0;
+    public int maxAmmo = 15;
     public ObjectPool poolManager;
     public GameObject bulletPrefab;
     public Camera cam;
@@ -37,37 +38,68 @@ public abstract class WeaponBase : MonoBehaviour
                 Debug.LogError("No Camera tagged as 'MainCamera' found. Please tag your main camera as 'MainCamera'.");
             }
         }
+
+        ammo = maxAmmo;
+        OnAmmoChange?.Invoke(ammo, maxAmmo);
+
+
     }
     protected virtual void Start()
     {
         poolManager.IncreasePoolSize(bulletPrefab, GetBulletPoolSize(fireRate));
         ammo = maxAmmo;
+        OnAmmoChange?.Invoke(ammo, maxAmmo);
+
+    }
+    public (int, int) GetAmmo()
+    {
+        return (ammo, maxAmmo);
     }
     void Update()
     {
         if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
-            Fire();
-            nextFireTime = Time.time + fireRate;
+            if (ammo > 0)
+            {
+                Fire();
+                ammo--;
+                OnAmmoChange?.Invoke(ammo, maxAmmo);
+                nextFireTime = Time.time + fireRate;
+            }
+            else
+            {
+                Reload();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (ammo < maxAmmo)
+            {
+                Reload();
+            }
         }
     }
+
     private void Reload()
     {
+        if (ammo == maxAmmo) return;
         OnReloadStarted?.Invoke(reloadTime);
-
         StartCoroutine(ReloadCoroutine());
     }
 
     private System.Collections.IEnumerator ReloadCoroutine()
     {
         yield return new WaitForSeconds(reloadTime);
+        ammo = maxAmmo; // Refill ammo
+        OnAmmoChange?.Invoke(ammo, maxAmmo);
 
-        Debug.Log($"{gameObject.name} has finished reloading.");
     }
-    public virtual void SetFireRate(float newFireRate)
+
+    public virtual void SetFireRate(float fireRateModifier)
     {
         float oldFireRate = fireRate;
-        fireRate = newFireRate;
+        fireRate *= fireRateModifier;
 
         int poolSizeDifference = GetBulletPoolSize(oldFireRate) - GetBulletPoolSize(fireRate);
 
@@ -79,6 +111,18 @@ public abstract class WeaponBase : MonoBehaviour
         {
             poolManager.DecreasePoolSize(bulletPrefab, -poolSizeDifference);
         }
+    }
+
+    public void SetDamageModifier(float newDamageModifier)
+    {
+        damageModifier = newDamageModifier;
+    }
+
+    public void SetMaxAmmo(float maxAmmoModifier)
+    {
+        maxAmmo = (int)(maxAmmo * maxAmmoModifier);
+        ammo = maxAmmo;
+        OnAmmoChange?.Invoke(ammo, maxAmmo);
     }
     protected int GetBulletPoolSize(float FR)
     {

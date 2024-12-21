@@ -68,14 +68,6 @@ public class ShootingNPC : MonoBehaviour
         return maxBulletsInSeconds;
     }
 
-    // void Update()
-    // {
-    //     if (Vector2.Distance(npcPos.position, rangedNPC.getPlayer().position) < rangedNPC.getAttackDistance() && Time.time >= nextFireTime)
-    //     {
-    //         Fire();
-    //         nextFireTime = Time.time + fireRate;
-    //     }
-    // }
     private void Fire()
     {
         GameObject bullet = poolManager.GetPooledObject(bulletPrefab);

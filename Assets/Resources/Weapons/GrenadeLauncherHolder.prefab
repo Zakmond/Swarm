@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8054934053266345591}
   reloadTime: 2
-  fireRate: 0.2
+  fireRate: 0.75
   poolManager: {fileID: 0}
   bulletPrefab: {fileID: 1562562203034964844, guid: 9d20dc14c8dded542b05217b892c6913, type: 3}
   cam: {fileID: 0}
