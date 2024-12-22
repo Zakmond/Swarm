@@ -34,7 +34,9 @@ public class LocalizationEN : ILocalization
         { "dodge-skill_name", "Dodge Skill" },
         { "dodge-skill_description", "Improves your chance to dodge attacks." },
         { "firerate-skill_name", "Firerate Skill" },
-        { "firerate-skill_description", "Speeds up your weapon's firing rate." }
+        { "firerate-skill_description", "Speeds up your weapon's firing rate." },
+        {"maxammo-skill_name", "Max Ammo Skill"},
+        {"maxammo-skill_description", "Increases your maximum ammo capacity."}
     };
 
     public string GetValue(string key)

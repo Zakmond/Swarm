@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
     void FinishLevel()
     {
         mobCount = npcLevelManager.mobsKilled;
+        timeRemaining = npcLevelManager.levelTimer;
         SceneManager.LoadScene("LevelTransitionMenu");
     }
 }

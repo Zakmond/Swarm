@@ -17,13 +17,12 @@ public class WeaponHoverInfo : MonoBehaviour
     private static bool isPanelLocked = false;
     private static WeaponHoverInfo lockedItem = null;
 
-    public MarketConfig marketConfig; // Reference to market-config.json loader
+    public MarketConfig marketConfig;
     [SerializeField] private LocalizationManager localizationManager;
     [SerializeField] private PlayerLevelManager playerLevelManager;
     public MarketManager marketManager;
     private void Start()
     {
-        // Initialize dependencies
         marketConfig = MarketConfig.Instance;
         localizationManager = LocalizationManager.Instance;
         playerLevelManager = PlayerLevelManager.Instance;
@@ -90,7 +89,7 @@ public class WeaponHoverInfo : MonoBehaviour
         itemDescriptionText.text = itemDescription;
         itemPriceText.text = itemPrice;
         Sprite currentIcon = GetComponent<Image>().sprite;
-        itemImage.sprite = currentIcon; // Update this based on your setup, if needed
+        itemImage.sprite = currentIcon;
         marketManager.SetItemKey(itemKey);
         infoPanel.SetActive(true);
     }

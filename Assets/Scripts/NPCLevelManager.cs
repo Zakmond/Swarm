@@ -8,32 +8,32 @@ public class NPCLevelManager : MonoBehaviour
     [System.Serializable]
     public class MonsterData
     {
-        public string type; // Prefab name
-        public int count; // Number of monsters
-        public float healthModifier; // Health modifier
-        public float speedModifier; // Speed modifier
-        public float damageModifier; // Damage modifier
-        public float attackDistanceModifier; // Attack distance modifier
+        public string type;
+        public int count; 
+        public float healthModifier; 
+        public float speedModifier;
+        public float damageModifier; 
+        public float attackDistanceModifier; 
         public String[] spawnPoints;
     }
 
     [System.Serializable]
     public class MonsterWave
     {
-        public float spawnTime; // Time to spawn the wave
-        public MonsterData[] monsters; // Array of monsters in the wave
+        public float spawnTime;
+        public MonsterData[] monsters; 
     }
 
     [System.Serializable]
     public class LevelConfig
     {
         public int levelNumber;
-        public float levelDuration; // Level time limit
-        public MonsterWave[] monsterWaves; // Array of waves
+        public float levelDuration;
+        public MonsterWave[] monsterWaves;
     }
 
-    public TextAsset levelConfigFile; // JSON file with NPC data
-    public ObjectPool objectPool; // Reference to the object pool
+    public TextAsset levelConfigFile; 
+    public ObjectPool objectPool;
     public LevelConfig levelConfig;
     public Dictionary<string, Transform> spawnPoints = new();
     public int mobCount = 0;
@@ -65,13 +65,10 @@ public class NPCLevelManager : MonoBehaviour
             gameManager.npcLevelManager = this;
             gameManager.OnLevelStartNPC();
         }
-        // Load level configuration
         LoadLevelConfig();
 
-        // Preload the monsters into the pool
         PreloadMonsters();
 
-        // Start spawning NPCs
         StartCoroutine(SpawnNPCs());
     }
     private Vector2 GetRandomPositionNearPoint(Transform spawnPoint, float offset)
@@ -113,7 +110,6 @@ public class NPCLevelManager : MonoBehaviour
 
     private void PreloadMonsters()
     {
-        // Loop through all waves and preload the required number of monsters
         foreach (var wave in levelConfig.monsterWaves)
         {
             foreach (var monster in wave.monsters)
@@ -128,7 +124,6 @@ public class NPCLevelManager : MonoBehaviour
                     continue;
                 }
 
-                // Calculate the total number of monsters needed for this type
                 objectPool.IncreasePoolSize(prefab, monster.count);
             }
         }
@@ -156,7 +151,6 @@ public class NPCLevelManager : MonoBehaviour
 
                 for (int i = 0; i < monster.count; i++)
                 {
-                    // Randomly select a spawn point from the list of possible spawn points
                     string randomSpawnPointName = monster.spawnPoints[UnityEngine.Random.Range(0, monster.spawnPoints.Length)];
 
                     if (!spawnPoints.ContainsKey(randomSpawnPointName))
@@ -170,20 +164,18 @@ public class NPCLevelManager : MonoBehaviour
                     GameObject instance = objectPool.GetPooledObject(prefab);
                     if (instance != null)
                     {
-                        // Update the monster's stats
                         NPCBehavior behavior = instance.GetComponent<NPCBehavior>();
                         if (behavior != null)
                         {
                             behavior.UpdateNPC(monster.healthModifier, monster.speedModifier, monster.attackDistanceModifier, monster.damageModifier);
                         }
 
-                        // Spawn the monster near the selected point
                         Vector2 spawnPosition = GetRandomPositionNearPoint(spawnPoint, 2f); // 2f = +/- 2 blocks
                         instance.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, 0);
                         instance.SetActive(true);
                     }
 
-                    yield return new WaitForSeconds(0.1f); // Delay between spawns
+                    yield return new WaitForSeconds(0.1f); 
                 }
             }
         }

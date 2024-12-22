@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class LevelTransitionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public TMP_Text levelSummaryLabelText;
     public TMP_Text resultLabelText;
     public TMP_Text characterLabelText;
@@ -45,10 +44,8 @@ public class LevelTransitionManager : MonoBehaviour
 
     private void DisplayActiveModifiers()
     {
-        // List of active modifiers with their labels and values
         var activeModifiers = new List<string>();
 
-        // Helper function to format and colorize modifiers
         static string FormatModifier(float value, string label)
         {
             Debug.Log($"Value: {value} Label: {label}");
@@ -83,17 +80,16 @@ public class LevelTransitionManager : MonoBehaviour
         modifier = FormatModifier(gameManager.modifiers.maxAmmoModifier, "Max Ammo");
         if (modifier != null) activeModifiers.Add(modifier);
 
-        // Assign active modifiers to placeholders
         for (int i = 0; i < modifierPlaceholders.Count; i++)
         {
             if (i < activeModifiers.Count)
             {
                 modifierPlaceholders[i].text = activeModifiers[i];
-                modifierPlaceholders[i].gameObject.SetActive(true); // Show the placeholder
+                modifierPlaceholders[i].gameObject.SetActive(true); 
             }
             else
             {
-                modifierPlaceholders[i].gameObject.SetActive(false); // Hide unused placeholders
+                modifierPlaceholders[i].gameObject.SetActive(false); 
             }
         }
     }
