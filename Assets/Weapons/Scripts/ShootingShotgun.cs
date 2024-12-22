@@ -67,7 +67,7 @@ public class ShootingShotgun : WeaponBase
             // Set bullet's position and rotation
             bullet.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, angle - 90f));
             bullet.SetActive(true);
-
+            bullet.GetComponent<Bullet>().modifyDamage(damageModifier);
             // Apply velocity to the bullet
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             Vector2 direction = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));

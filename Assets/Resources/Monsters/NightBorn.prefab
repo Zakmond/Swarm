@@ -115,12 +115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750f7e4c612f5a14b84502b9f93fa40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossMaxHealth: 1000
-  _health: 1000
+  bossMaxHealth: 3000
+  _health: 3000
   player: {fileID: 0}
-  _speed: 3
+  _speed: 4
   _attackDistance: 4
-  _attackDamage: 27.33
+  _attackDamage: 35
   _canMove: 1
   separationDistance: 0.05
   targetOffsetRadius: 0.05

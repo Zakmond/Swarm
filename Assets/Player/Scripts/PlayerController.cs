@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 dashDirection;
     public GameObject dustPrefab; // Assign the dust prefab in the Inspector
     // Cooldown variables
-    private float dashCooldown = 3f; // Cooldown duration in seconds
+    private float dashCooldown = 2f; // Cooldown duration in seconds
     private float dashCooldownTimer = 0f; // Timer to track cooldown
     public WeaponBase weaponBase;
     private PlayerStats playerStats;

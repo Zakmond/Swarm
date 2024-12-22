@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float bulletDamage = 50f;
+    public float baseDamage = 25f;
     public int TTL = 3;  // Time to live in seconds
     private bool objectHit = false;
     void OnEnable()
@@ -22,7 +23,7 @@ public class Bullet : MonoBehaviour
     }
     public void modifyDamage(float damageModifier)
     {
-        bulletDamage *= damageModifier;
+        bulletDamage = baseDamage * damageModifier;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

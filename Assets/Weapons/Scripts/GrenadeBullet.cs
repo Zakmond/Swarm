@@ -4,6 +4,7 @@ using UnityEngine;
 public class GrenadeBullet : MonoBehaviour
 {
     public float explosionDamage = 35f;
+    public float baseDamage = 35f;
     public float explosionRadius = 1f;
 
     private Vector2 startPosition;   // Where the grenade starts
@@ -63,7 +64,7 @@ public class GrenadeBullet : MonoBehaviour
     }
     public void modifyDamage(float damageModifier)
     {
-        explosionDamage *= damageModifier;
+        explosionDamage = baseDamage * damageModifier;
     }
     private void OnHitGround()
     {
