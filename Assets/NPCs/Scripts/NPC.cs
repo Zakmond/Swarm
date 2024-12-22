@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour, IDamageable
 {
+    public float bossMaxHealth = 100f;
     [SerializeField] private float _health = 100f;
     [SerializeField] private Transform player;
     [SerializeField] private float _speed = 2.0f;
@@ -16,6 +17,8 @@ public class NPC : MonoBehaviour, IDamageable
     [SerializeField] public float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
     [SerializeField] public LayerMask npcLayer;
     public NPCLevelManager npcLevelManager;
+    public bool isBoss = false;
+    public int reward = 0;
 
 
     public void UpdateNPC(float healthModifier, float speedModifier, float attackDistanceModifier, float attackDamageModifier)
@@ -47,12 +50,12 @@ public class NPC : MonoBehaviour, IDamageable
     {
         if (!_canMove) return;
         float distance = Vector2.Distance(transform.position, player.position);
-        
+
         if (distance > 0.1)
         {
             // to not make it glitch when it is exactly where the player is
             MoveTowardsPlayer();
-        
+
         }
         if (distance > _attackDistance)
         {
@@ -127,11 +130,24 @@ public class NPC : MonoBehaviour, IDamageable
 
         if (_health <= 0)
         {
-            Destroy(gameObject);
-            npcLevelManager.OnNPCKilled();
+            if (isBoss)
+            {
+                _animator.SetTrigger("death");
+                _canMove = false;
+            }
+            else
+            {
+                Destroy(gameObject);
+                npcLevelManager.OnNPCKilled(reward, isBoss: false);
+            }
         }
     }
 
+    public void OnBossDeath()
+    {
+        Destroy(gameObject);
+        npcLevelManager.OnNPCKilled(reward, isBoss: false);
+    }
     private void OnAttackHit()
     {
         // Check if the player is still within attack range when the hit happens

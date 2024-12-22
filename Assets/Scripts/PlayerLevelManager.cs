@@ -67,6 +67,7 @@ public class PlayerLevelManager : MonoBehaviour
                     fireRateModifier = 1.0f,
                     dodgeChanceModifier = 1.0f,
                     maxAmmoModifier = 1.0f,
+                    damageModifier = 1.0f
                 },
                 currency = 0
             };
@@ -99,7 +100,15 @@ public class PlayerLevelManager : MonoBehaviour
         playerData.stats = newStats;
         SavePlayerData();
     }
-
+    public void UpdateCurrency(int amount)
+    {
+        playerData.currency += amount;
+        SavePlayerData();
+    }
+    public int getCurrency()
+    {
+        return playerData.currency;
+    }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Check if the loaded scene is a gameplay scene

@@ -40,6 +40,7 @@ public class NPCLevelManager : MonoBehaviour
     public static NPCLevelManager Instance;
     public int mobsKilled = 0;
     public event Action<bool> OnWin;
+    public event Action<int> OnKill;
     public event Action<bool> OnLoss;
     public float levelTimer;
 
@@ -185,8 +186,14 @@ public class NPCLevelManager : MonoBehaviour
     }
 
 
-    public void OnNPCKilled()
+    public void OnNPCKilled(int reward, bool isBoss = false)
     {
+        OnKill?.Invoke(reward);
+
+        if (isBoss)
+        {
+            OnWin?.Invoke(true);
+        }
         mobsKilled += 1;
         Debug.Log($"Mobs killed: {mobsKilled}");
         Debug.Log($"Monster count: {mobCount}");

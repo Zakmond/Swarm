@@ -167,6 +167,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   npcLevelManager: {fileID: 0}
+  reward: 3
 --- !u!114 &7088243667163647519
 MonoBehaviour:
   m_ObjectHideFlags: 0

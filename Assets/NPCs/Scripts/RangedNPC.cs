@@ -17,7 +17,7 @@ public class RangedNPC : MonoBehaviour, IDamageable
     [SerializeField] public float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
     [SerializeField] public LayerMask npcLayer;
     public NPCLevelManager npcLevelManager;
-
+    public int reward = 0;
     public void UpdateNPC(float health, float speed, float attackDistance, float attackDamage)
     {
         _health *= health;
@@ -131,7 +131,7 @@ public class RangedNPC : MonoBehaviour, IDamageable
         {
 
             Destroy(gameObject);
-            npcLevelManager.OnNPCKilled();
+            npcLevelManager.OnNPCKilled(reward);
 
 
         }

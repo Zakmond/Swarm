@@ -1,0 +1,148 @@
+{
+  "levelNumber": 3,
+  "levelDuration": 120,
+  "monsterWaves": [
+    {
+      "spawnTime": 10,
+      "monsters": [
+        {
+          "type": "SkeletonNPC",
+          "count": 10,
+          "healthModifier": 1.3,
+          "speedModifier": 1.3,
+          "damageModifier": 1.3,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ]
+        },
+        {
+          "type": "GoblinNPC",
+          "count": 10,
+          "healthModifier": 1.2,
+          "speedModifier": 1.3,
+          "damageModifier": 1.2,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ]
+        }
+      ]
+    },
+    {
+      "spawnTime": 20,
+      "monsters": [
+        {
+          "type": "FlyingEyeNPC",
+          "count": 15,
+          "healthModifier": 1.3,
+          "speedModifier": 1.3,
+          "damageModifier": 1.3,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ]
+        },
+        {
+          "type": "MushroomNPC",
+          "count": 5,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ]
+        }
+      ]
+    },
+    {
+      "spawnTime": 10,
+      "monsters": [
+        {
+          "type": "SkeletonNPC",
+          "count": 7,
+          "healthModifier": 1.3,
+          "speedModifier": 1.3,
+          "damageModifier": 1.3,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        },
+        {
+          "type": "FlyingEyeNPC",
+          "count": 7,
+          "healthModifier": 1.3,
+          "speedModifier": 1.3,
+          "damageModifier": 1.3,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["4", "5", "6", "12", "13", "10", "11"]
+        },
+        {
+          "type": "GoblinNPC",
+          "count": 7,
+          "healthModifier": 1.2,
+          "speedModifier": 1.3,
+          "damageModifier": 1.2,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        }
+      ]
+    }
+  ]
+}

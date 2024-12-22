@@ -5,27 +5,35 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public RectTransform healthFill;          // Reference to HealthFill RectTransform
-    private PlayerController playerController; // Reference to PlayerController
-    private WeaponBase currentWeapon; // Reference to the player's weapon
+    public RectTransform healthFill;          
+    private PlayerController playerController;
+    private PlayerLevelManager playerLevelManager;
+    private NPCLevelManager npcLevelManager;
+    private WeaponBase currentWeapon;
     public TMP_Text timerText;
-    private Animator reloadAnimator; // Animator on reloadObj
+    public TMP_Text moneyTextObj;
+    private Animator reloadAnimator; 
     public GameObject reloadObj;
     public TMP_Text ammoText;
     public GameObject dodgeEffectObj;
+
     void Start()
     {
         // Find PlayerController in the scene
         playerController = FindObjectOfType<PlayerController>();
-
+        playerLevelManager = FindObjectOfType<PlayerLevelManager>();
+        npcLevelManager = FindObjectOfType<NPCLevelManager>();
+        UpdateCurrency(playerLevelManager.getCurrency()); // on level load
+        if (npcLevelManager != null)
+        {
+            npcLevelManager.OnKill += UpdateCurrency;
+        }
         if (playerController != null)
         {
-            // Subscribe to health change event
             playerController.OnHealthChanged += UpdateHealthBar;
             playerController.OnDodge += HandleDodge;
             UpdateHealthBar(playerController.GetHealthPercentage());
 
-            // Find the current weapon
             currentWeapon = playerController.GetComponentInChildren<WeaponBase>();
             if (currentWeapon != null)
             {
@@ -101,6 +109,11 @@ public class UIManager : MonoBehaviour
     void updateAmmoText(int currentAmmo, int maxAmmo)
     {
         ammoText.text = currentAmmo + "/" + maxAmmo;
+    }
+    void UpdateCurrency(int currency)
+    {
+        moneyTextObj.text = currency.ToString();
+        playerLevelManager.UpdateCurrency(currency);
     }
     private void OnDestroy()
     {
