@@ -7,7 +7,7 @@
       "monsters": [
         {
           "type": "FlyingEyeNPC",
-          "count": 15,
+          "count": 7,
           "healthModifier": 1.5,
           "speedModifier": 1.5,
           "damageModifier": 1.4,
@@ -62,7 +62,7 @@
       "monsters": [
         {
           "type": "FlyingEyeNPC",
-          "count": 10,
+          "count": 5,
           "healthModifier": 1.5,
           "speedModifier": 1.5,
           "damageModifier": 1.4,

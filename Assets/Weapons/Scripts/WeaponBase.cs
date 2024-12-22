@@ -15,6 +15,7 @@ public abstract class WeaponBase : MonoBehaviour
     public ObjectPool poolManager;
     public GameObject bulletPrefab;
     public Camera cam;
+    private bool reloading = false;
 
     protected abstract void Fire();
     void Awake()
@@ -59,7 +60,7 @@ public abstract class WeaponBase : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
-            if (ammo > 0)
+            if (ammo > 0 && !reloading)
             {
                 Fire();
                 ammo--;
@@ -90,9 +91,11 @@ public abstract class WeaponBase : MonoBehaviour
 
     private System.Collections.IEnumerator ReloadCoroutine()
     {
+        reloading = true;
         yield return new WaitForSeconds(reloadTime);
         ammo = maxAmmo; // Refill ammo
         OnAmmoChange?.Invoke(ammo, maxAmmo);
+        reloading = false;
 
     }
 

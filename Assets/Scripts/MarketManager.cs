@@ -55,11 +55,32 @@ public class MarketManager : MonoBehaviour
         }
         else if (itemData.type == "weapon")
         {
-            playerLevelManager.playerData.weapon = itemData.name;
+            ApplyWeapon(itemData.name);
         }
         playerLevelManager.SubTrackCurrency(itemData.price);
 
         coinText.text = playerLevelManager.GetCurrency().ToString();
+    }
+private void ApplyWeapon(string weaponName)
+    {
+        switch (weaponName)
+        {
+            case "assault_rifle_name":
+                playerLevelManager.playerData.weapon = "RifleHolder";
+                break;
+            case "shotgun_name":
+                playerLevelManager.playerData.weapon = "ShotgunHolder";
+                break;
+            case "grenade-launcher":
+                playerLevelManager.playerData.weapon = "GrenadelauncherHolder";
+                break;
+            case "sniper_name":
+                playerLevelManager.playerData.weapon = "SniperHolder";
+                break;
+            default:
+                Debug.LogWarning($"Unknown weapon: {weaponName}");
+                break;
+        }
     }
 private void ApplySkill(string ability, float effectValue)
     {
@@ -77,7 +98,7 @@ private void ApplySkill(string ability, float effectValue)
             case "fire_rate":
                 playerLevelManager.UpdateFireRateModifier(effectValue);
                 break;
-            case "dodge_chance":
+            case "dodge-skill":
                 playerLevelManager.UpdateDodgeChanceModifier(effectValue);
                 break;
             case "max_ammo":
