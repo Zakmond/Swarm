@@ -71,7 +71,7 @@ private void ApplyWeapon(string weaponName)
             case "shotgun_name":
                 playerLevelManager.playerData.weapon = "ShotgunHolder";
                 break;
-            case "grenade-launcher":
+            case "grenade_launcher_name":
                 playerLevelManager.playerData.weapon = "GrenadelauncherHolder";
                 break;
             case "sniper_name":
