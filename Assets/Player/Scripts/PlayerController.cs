@@ -30,7 +30,9 @@ public class PlayerController : MonoBehaviour
     // Cooldown variables
     private float dashCooldown = 3f; // Cooldown duration in seconds
     private float dashCooldownTimer = 0f; // Timer to track cooldown
-    private WeaponBase weaponBase;
+    public WeaponBase weaponBase;
+    private PlayerStats playerStats;
+
     void Start()
     {
         damageFlash = GetComponent<DamageFlash>();
@@ -41,6 +43,9 @@ public class PlayerController : MonoBehaviour
 
         weaponBase = GetComponentInChildren<WeaponBase>();
 
+
+        UpdateNPC(playerStats.maxHealthModifier, playerStats.speedModifier, playerStats.dodgeChanceModifier);
+        UpdateWeapon(playerStats.damageModifier, playerStats.fireRateModifier, playerStats.maxAmmoModifier);
 
     }
     void Update()
@@ -202,4 +207,8 @@ public class PlayerController : MonoBehaviour
         weaponBase.SetMaxAmmo(maxAmmoModifier);
     }
 
+    public void SetPlayerStats(PlayerStats playerStats)
+    {
+        this.playerStats = playerStats;
+    }
 }

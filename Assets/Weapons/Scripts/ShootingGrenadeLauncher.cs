@@ -29,4 +29,11 @@ public class ShootingGrenadeLauncher : WeaponBase
             }
         }
     }
+
+    protected override int GetBulletPoolSize(float FR)
+    {
+        float maxSeconds = bulletPrefab.GetComponent<GrenadeBullet>().TTL;
+        int maxBulletsInSeconds = Mathf.CeilToInt(maxSeconds / FR);
+        return maxBulletsInSeconds;
+    }
 }

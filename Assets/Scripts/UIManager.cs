@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public RectTransform healthFill;          
+    public RectTransform healthFill;
     private PlayerController playerController;
     private PlayerLevelManager playerLevelManager;
     private NPCLevelManager npcLevelManager;
     private WeaponBase currentWeapon;
     public TMP_Text timerText;
     public TMP_Text moneyTextObj;
-    private Animator reloadAnimator; 
+    private Animator reloadAnimator;
     public GameObject reloadObj;
     public TMP_Text ammoText;
     public GameObject dodgeEffectObj;
@@ -112,8 +112,9 @@ public class UIManager : MonoBehaviour
     }
     void UpdateCurrency(int currency)
     {
-        moneyTextObj.text = currency.ToString();
         playerLevelManager.UpdateCurrency(currency);
+        moneyTextObj.text = playerLevelManager.getCurrency().ToString();
+
     }
     private void OnDestroy()
     {

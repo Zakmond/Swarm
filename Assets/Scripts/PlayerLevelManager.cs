@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
-using UnityEngine.SceneManagement; // Required for SceneManager
+using UnityEngine.SceneManagement;
+using System; // Required for SceneManager
 
 public class PlayerLevelManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerLevelManager : MonoBehaviour
     public string weaponPrefabsPath = "Weapons"; // Folder under Resources where weapon prefabs are stored
 
     private GameObject currentPlayerInstance; // To keep track of the spawned player
-
+    [SerializeField] private string DEFAULT_WEAPON = "RifleHolder";
     private void Awake()
     {
         // Singleton pattern to persist across scenes
@@ -34,7 +35,7 @@ public class PlayerLevelManager : MonoBehaviour
         filePath = Path.Combine(Application.persistentDataPath, "playerConfig.json");
 
         // Load or create player data
-        LoadOrGeneratePlayerData();
+        GeneratePlayerData();
 
         // Subscribe to the sceneLoaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -46,64 +47,44 @@ public class PlayerLevelManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void LoadOrGeneratePlayerData()
+    private void GeneratePlayerData()
     {
-        if (File.Exists(filePath))
-        {
-            string json = File.ReadAllText(filePath);
-            playerData = JsonUtility.FromJson<PlayerData>(json);
-            Debug.Log("Player data loaded.");
-        }
-        else
-        {
-            playerData = new PlayerData
-            {
-                character = "none", // Default character will be set in SpawnPlayer
-                weapon = "none", // Default weapon
-                stats = new PlayerStats
-                {
-                    maxHealthModifier = 1.0f,
-                    speedModifier = 1.0f,
-                    fireRateModifier = 1.0f,
-                    dodgeChanceModifier = 1.0f,
-                    maxAmmoModifier = 1.0f,
-                    damageModifier = 1.0f
-                },
-                currency = 0
-            };
-            SavePlayerData();
-            Debug.Log("Player data generated.");
-        }
-    }
 
-    public void SavePlayerData()
-    {
-        string json = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(filePath, json);
-        Debug.Log("Player data saved.");
+        playerData = new PlayerData
+        {
+            character = "none", // Default character will be set in SpawnPlayer
+            weapon = DEFAULT_WEAPON,
+            stats = new PlayerStats
+            {
+                maxHealthModifier = 1.0f,
+                speedModifier = 1.0f,
+                fireRateModifier = 1.0f,
+                dodgeChanceModifier = 1.0f,
+                maxAmmoModifier = 1.0f,
+                damageModifier = 1.0f
+            },
+            currency = 0
+        };
+
     }
 
     public void UpdateCharacter(string characterName)
     {
         playerData.character = characterName;
-        SavePlayerData();
     }
 
     public void UpdateWeapon(string weaponName)
     {
         playerData.weapon = weaponName;
-        SavePlayerData();
     }
 
     public void UpdateStats(PlayerStats newStats)
     {
         playerData.stats = newStats;
-        SavePlayerData();
     }
     public void UpdateCurrency(int amount)
     {
         playerData.currency += amount;
-        SavePlayerData();
     }
     public int getCurrency()
     {
@@ -164,12 +145,7 @@ public class PlayerLevelManager : MonoBehaviour
         if (playerBehavior != null)
         {
             playerBehavior.UpdateNPC(
-                playerData.stats.maxHealthModifier,
-                playerData.stats.speedModifier,
-                playerData.stats.fireRateModifier,
-                playerData.stats.dodgeChanceModifier,
-                playerData.stats.maxAmmoModifier,
-                playerData.stats.damageModifier
+                playerData.stats
             );
         }
     }
@@ -183,7 +159,7 @@ public class PlayerLevelManager : MonoBehaviour
         }
 
         // Load the weapon prefab
-        string weaponToLoad = playerData.weapon == "none" ? "GrenadeLauncherHolder" : playerData.weapon;
+        string weaponToLoad = playerData.weapon == "none" ? DEFAULT_WEAPON : playerData.weapon;
         playerData.weapon = weaponToLoad;
         GameObject weaponPrefab = Resources.Load<GameObject>($"{weaponPrefabsPath}/{weaponToLoad}");
         if (weaponPrefab == null)

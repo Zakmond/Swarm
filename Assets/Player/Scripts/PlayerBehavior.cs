@@ -30,15 +30,14 @@ public class PlayerBehavior : MonoBehaviour
         playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _dodgeChanceModifier);
     }
 
-    public void UpdateNPC(float maxHealthModifier, float speedModifier, float fireRateModifier, float dodgeChanceModifier, float maxAmmoModifier, float damageModifier)
+    public void UpdateNPC(PlayerStats playerStats)
     {
-        _maxHealthModifier = maxHealthModifier;
-        _speedModifier = speedModifier;
-        _dodgeChanceModifier = dodgeChanceModifier;
-        _fireRateModifier = fireRateModifier;
-        _maxAmmoModifier = maxAmmoModifier;
-        _damageModifier = damageModifier;
-        playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _dodgeChanceModifier);
-        playerComponent.UpdateWeapon(_damageModifier, _fireRateModifier, _maxAmmoModifier);
+        _maxHealthModifier = playerStats.maxHealthModifier;
+        _speedModifier = playerStats.speedModifier;
+        _dodgeChanceModifier = playerStats.dodgeChanceModifier;
+        _fireRateModifier = playerStats.fireRateModifier;
+        _maxAmmoModifier = playerStats.maxAmmoModifier;
+        _damageModifier = playerStats.damageModifier;
+        playerComponent.SetPlayerStats(playerStats);
     }
 }

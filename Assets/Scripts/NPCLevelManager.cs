@@ -43,7 +43,7 @@ public class NPCLevelManager : MonoBehaviour
     public event Action<int> OnKill;
     public event Action<bool> OnLoss;
     public float levelTimer;
-
+    public bool inGame = false;
     private void Awake()
     {
         // Singleton pattern to persist across scenes
@@ -84,12 +84,14 @@ public class NPCLevelManager : MonoBehaviour
     {
         if (levelConfigFile != null)
         {
+            inGame = true;
             levelConfig = JsonUtility.FromJson<LevelConfig>(levelConfigFile.text);
             levelTimer = levelConfig.levelDuration;
             Debug.Log("Level configuration loaded.");
         }
         else
         {
+            inGame = false;
             Debug.LogError("No level configuration file assigned!");
         }
     }
@@ -99,7 +101,7 @@ public class NPCLevelManager : MonoBehaviour
 
         levelTimer -= Time.deltaTime;
 
-        if (levelTimer <= 0)
+        if (levelTimer <= 0 && inGame)
         {
             OnLoss?.Invoke(true);
 

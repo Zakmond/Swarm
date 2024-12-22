@@ -6658,6 +6658,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6043955820701391319, guid: 46c3109861fa63943acf056041d24d99, type: 3}
+      propertyPath: playerData.weapon
+      value: RifleHolder
+      objectReference: {fileID: 0}
     - target: {fileID: 7051884274829608397, guid: 46c3109861fa63943acf056041d24d99, type: 3}
       propertyPath: m_Name
       value: PlayerLevelManager

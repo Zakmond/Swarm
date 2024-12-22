@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelTransitionManager : MonoBehaviour
@@ -36,7 +38,7 @@ public class LevelTransitionManager : MonoBehaviour
         gunLabelText.text = gameManager.gunName;
         mobCountLabelText.text = gameManager.mobCount.ToString();
         timeRemainingLabelText.text = gameManager.timeRemaining.ToString();
-        nextStageLabelText.text = gameManager.levelWon == 1 ? "Go to market" : "Retry";
+        nextStageLabelText.text = gameManager.levelWon == 1 ? "Market" : "Retry";
 
         DisplayActiveModifiers();
     }
@@ -49,6 +51,7 @@ public class LevelTransitionManager : MonoBehaviour
         // Helper function to format and colorize modifiers
         static string FormatModifier(float value, string label)
         {
+            Debug.Log($"Value: {value} Label: {label}");
             if (value > 1f)
             {
                 return $"<color=#55BB5A>+{Mathf.RoundToInt((value - 1f) * 100)}% {label}</color>";
@@ -95,4 +98,13 @@ public class LevelTransitionManager : MonoBehaviour
         }
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    
+    public void GoToMarket()
+    {
+        SceneManager.LoadScene("Market Menu");
+    }
 }

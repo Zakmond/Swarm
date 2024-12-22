@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         gunName = playerLevelManager.playerData.weapon;
         modifiers = playerLevelManager.playerData.stats;
         level = npcLevelManager.levelConfig.levelNumber;
-
+        
         playerController = FindObjectOfType<PlayerController>();
         if (playerController != null)
         {

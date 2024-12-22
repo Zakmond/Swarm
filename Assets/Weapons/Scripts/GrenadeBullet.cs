@@ -11,7 +11,7 @@ public class GrenadeBullet : MonoBehaviour
     private float travelTime;        // How long the grenade will take to reach the target
     private float timer;             // Timer to track the grenade's progress
     private float maxLobHeight;      // Maximum height of the arc
-
+    public int TTL = 5;  // Time to live in seconds
     private bool isLaunched = false; // Whether the grenade is currently in motion
 
     [SerializeField] private LayerMask damageableLayer;

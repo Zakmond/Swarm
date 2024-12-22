@@ -124,7 +124,7 @@ public abstract class WeaponBase : MonoBehaviour
         ammo = maxAmmo;
         OnAmmoChange?.Invoke(ammo, maxAmmo);
     }
-    protected int GetBulletPoolSize(float FR)
+    protected virtual int GetBulletPoolSize(float FR)
     {
         float maxSeconds = bulletPrefab.GetComponent<Bullet>().TTL;
         int maxBulletsInSeconds = Mathf.CeilToInt(maxSeconds / FR);
