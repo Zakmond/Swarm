@@ -82,13 +82,41 @@ public class PlayerLevelManager : MonoBehaviour
     {
         playerData.stats = newStats;
     }
+    public void UpdateHealthModifier(float modifier)
+    {
+        playerData.stats.maxHealthModifier += modifier;
+    }
+    public void UpdateSpeedModifier(float modifier)
+    {
+        playerData.stats.speedModifier += modifier;
+    }
+    public void UpdateFireRateModifier(float modifier)
+    {
+        playerData.stats.fireRateModifier += modifier;
+    }
+    public void UpdateDodgeChanceModifier(float modifier)
+    {
+        playerData.stats.dodgeChanceModifier += modifier;
+    }
+    public void UpdateMaxAmmoModifier(float modifier)
+    {
+        playerData.stats.maxAmmoModifier += modifier;
+    }
+    public void UpdateDamageModifier(float modifier)
+    {
+        playerData.stats.damageModifier += modifier;
+    }
     public void UpdateCurrency(int amount)
     {
         playerData.currency += amount;
     }
-    public int getCurrency()
+    public int GetCurrency()
     {
         return playerData.currency;
+    }
+    public void SubTrackCurrency(int amount)
+    {
+        playerData.currency -= amount;
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

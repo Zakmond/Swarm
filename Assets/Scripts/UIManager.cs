@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
         playerLevelManager = FindObjectOfType<PlayerLevelManager>();
         npcLevelManager = FindObjectOfType<NPCLevelManager>();
-        UpdateCurrency(playerLevelManager.getCurrency()); // on level load
+        moneyTextObj.text = playerLevelManager.GetCurrency().ToString();
         if (npcLevelManager != null)
         {
             npcLevelManager.OnKill += UpdateCurrency;
@@ -61,8 +61,6 @@ public class UIManager : MonoBehaviour
             reloadObj.SetActive(true);
 
             reloadAnimator.SetFloat("speed", 1f / reloadTime);
-
-            reloadAnimator.SetTrigger("StartReload");
 
             StartCoroutine(DeactivateReloadObjAfterDelay(reloadTime));
         }
@@ -113,7 +111,7 @@ public class UIManager : MonoBehaviour
     void UpdateCurrency(int currency)
     {
         playerLevelManager.UpdateCurrency(currency);
-        moneyTextObj.text = playerLevelManager.getCurrency().ToString();
+        moneyTextObj.text = playerLevelManager.GetCurrency().ToString();
 
     }
     private void OnDestroy()

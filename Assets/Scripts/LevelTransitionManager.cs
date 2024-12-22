@@ -103,8 +103,20 @@ public class LevelTransitionManager : MonoBehaviour
         Application.Quit();
     }
     
-    public void GoToMarket()
-    {
-        SceneManager.LoadScene("Market Menu");
+    public void Advance()
+    {  
+        if (gameManager.levelWon == 1)
+        {
+            SceneManager.LoadScene("Market Menu");
+        }
+        else
+        {
+            // destroy singletons
+            Destroy(GameManager.Instance.gameObject);
+            Destroy(PlayerLevelManager.Instance.gameObject);
+            Destroy(LocalizationManager.Instance.gameObject);
+            Destroy(MarketConfig.Instance.gameObject);
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 }

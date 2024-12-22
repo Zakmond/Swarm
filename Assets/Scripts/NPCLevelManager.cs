@@ -38,25 +38,18 @@ public class NPCLevelManager : MonoBehaviour
     public Dictionary<string, Transform> spawnPoints = new();
     public int mobCount = 0;
     public static NPCLevelManager Instance;
+    public GameManager gameManager;
     public int mobsKilled = 0;
     public event Action<bool> OnWin;
     public event Action<int> OnKill;
     public event Action<bool> OnLoss;
+    public event Action<bool> OnLevelStart;
     public float levelTimer;
     public bool inGame = false;
     private void Awake()
     {
-        // Singleton pattern to persist across scenes
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep alive across scenes
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        Instance = this;
+
         foreach (Transform child in GameObject.Find("SpawnPoints").transform)
         {
             spawnPoints[child.name] = child;
@@ -64,6 +57,14 @@ public class NPCLevelManager : MonoBehaviour
     }
     private void Start()
     {
+        Debug.Log("NPC Level Manager started.");
+        gameManager = GameManager.Instance;
+        
+        if (gameManager.npcLevelManager == null)
+        {
+            gameManager.npcLevelManager = this;
+            gameManager.OnLevelStartNPC();
+        }
         // Load level configuration
         LoadLevelConfig();
 
@@ -88,6 +89,7 @@ public class NPCLevelManager : MonoBehaviour
             levelConfig = JsonUtility.FromJson<LevelConfig>(levelConfigFile.text);
             levelTimer = levelConfig.levelDuration;
             Debug.Log("Level configuration loaded.");
+            Debug.Log($"Level number: {levelConfig.levelNumber}");
         }
         else
         {
@@ -197,10 +199,9 @@ public class NPCLevelManager : MonoBehaviour
             OnWin?.Invoke(true);
         }
         mobsKilled += 1;
-        Debug.Log($"Mobs killed: {mobsKilled}");
-        Debug.Log($"Monster count: {mobCount}");
         if (mobsKilled >= mobCount)
         {
+            Debug.Log("All mobs killed.");
             OnWin?.Invoke(true);
         }
     }

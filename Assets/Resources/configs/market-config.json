@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "key": "assault_rifle",
+      "value": {
+        "type": "weapon",
+        "price": 0,
+        "name": "assault_rifle_name",
+        "description": "assault_rifle_description",
+        "ability": "",
+        "ability_effect": 0.0
+      }
+    },
+    {
+      "key": "shotgun",
+      "value": {
+        "type": "weapon",
+        "price": 500,
+        "name": "shotgun_name",
+        "description": "shotgun_description",
+        "ability": "",
+        "ability_effect": 0.0
+      }
+    },
+    {
+      "key": "grenade-launcher",
+      "value": {
+        "type": "weapon",
+        "price": 500,
+        "name": "grenade_launcher_name",
+        "description": "grenade_launcher_description",
+        "ability": "",
+        "ability_effect": 0.0
+      }
+    },
+    {
+      "key": "sniper",
+      "value": {
+        "type": "weapon",
+        "price": 1000,
+        "name": "sniper_name",
+        "description": "sniper_description",
+        "ability": "",
+        "ability_effect": 0.0
+      }
+    },
+    {
+      "key": "health-skill",
+      "value": {
+        "type": "skill",
+        "price": 50,
+        "name": "health_skill_name",
+        "description": "health_skill_description",
+        "ability": "max_health",
+        "ability_effect": 0.025
+      }
+    },
+    {
+      "key": "speed-skill",
+      "value": {
+        "type": "skill",
+        "price": 50,
+        "name": "speed-skill_name",
+        "description": "speed-skill_description",
+        "ability": "speed",
+        "ability_effect": 0.025
+      }
+    },
+    {
+      "key": "damage-skill",
+      "value": {
+        "type": "skill",
+        "price": 50,
+        "name": "damage-skill_name",
+        "description": "damage-skill_description",
+        "ability": "damage",
+        "ability_effect": 0.025
+      }
+    },
+    {
+      "key": "dodge-skill",
+      "value": {
+        "type": "skill",
+        "price": 50,
+        "name": "dodge-skill_name",
+        "description": "dodge-skill_description",
+        "ability": "dodge",
+        "ability_effect": 0.025
+      }
+    },
+    {
+      "key": "firerate-skill",
+      "value": {
+        "type": "skill",
+        "price": 50,
+        "name": "firerate-skill_name",
+        "description": "firerate-skill_description",
+        "ability": "firerate",
+        "ability_effect": 0.025
+      }
+    },
+    {
+      "key": "maxammo-skill",
+      "value": {
+        "type": "skill",
+        "price": 50,
+        "name": "maxammo-skill_name",
+        "description": "maxammo-skill_description",
+        "ability": "max_ammo",
+        "ability_effect": 0.025
+      }
+    }
+  ]
+}

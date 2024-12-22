@@ -343,14 +343,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Unyielding Ammo
-  weaponPrice: 10$
-  weaponDescription: 'Increase max ammo per clip. '
-  weaponSprite: {fileID: 21300000, guid: cce7a7cfd16a43b41b8cc8a882eaa6ed, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: firerate-skill
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &327131836
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +364,7 @@ GameObject:
   - component: {fileID: 327131839}
   - component: {fileID: 327131838}
   m_Layer: 5
-  m_Name: g1
+  m_Name: icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,8 +461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.001276, y: -108.37}
-  m_SizeDelta: {x: 360.6, y: 216.749}
+  m_AnchoredPosition: {x: -0.001276, y: -93}
+  m_SizeDelta: {x: 360.6, y: 186.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353158030
 MonoBehaviour:
@@ -483,9 +484,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fast single-bullet shooting automatic weapon.
-
-'
+  m_text: A reliable all-purpose rifle, perfect for sustained combat and mid-range
+    engagements
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 493f736a1bcff8d45984a0d831df7846, type: 2}
   m_sharedMaterial: {fileID: -2871914274342334121, guid: 493f736a1bcff8d45984a0d831df7846, type: 2}
@@ -1204,14 +1204,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: 'Fatal Damage '
-  weaponPrice: 10$
-  weaponDescription: Increase weapon damage
-  weaponSprite: {fileID: 21300000, guid: abd46c499fd67494ea2461f355126c22, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: dodge-skill
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &810263562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,14 +1434,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Evasion Prime
-  weaponPrice: 20$
-  weaponDescription: "Small chance to\_dodge\_an\_attack"
-  weaponSprite: {fileID: 21300000, guid: 2709c78cce023e4439cdb8db1f90f835, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: maxammo-skill
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &922664069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,7 +1525,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 922664072}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1232379331}
+        m_TargetAssemblyTypeName: MarketManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &922664072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,7 +1590,7 @@ GameObject:
   - component: {fileID: 1081363175}
   - component: {fileID: 1081363178}
   m_Layer: 5
-  m_Name: G3
+  m_Name: G2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1590,7 +1604,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081363173}
   m_LocalRotation: {x: -0, y: -0, z: -0.0003383174, w: -0.99999994}
-  m_LocalPosition: {x: 0, y: 0, z: 31.999992}
+  m_LocalPosition: {x: 0, y: 0, z: 32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1598,7 +1612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.039}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: -91}
+  m_AnchoredPosition: {x: -9, y: 87}
   m_SizeDelta: {x: 357.071, y: 117.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081363175
@@ -1708,14 +1722,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Assoult Shotgun
-  weaponPrice: 15$
-  weaponDescription: 'Slow three-pellet shooting weapon. '
-  weaponSprite: {fileID: 21300000, guid: 232013b7ac9688846a7ba5e780d9b589, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: shotgun
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &1203383463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,14 +1877,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Blazing Speed
-  weaponPrice: 15$
-  weaponDescription: 'Increase weapon fire rate. '
-  weaponSprite: {fileID: 21300000, guid: 5057f09cc3ef6ca46bc6928de31df875, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: speed-skill
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &1205901696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,7 +1898,7 @@ GameObject:
   - component: {fileID: 1205901699}
   - component: {fileID: 1205901698}
   m_Layer: 5
-  m_Name: GUN1
+  m_Name: name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2104,6 +2120,7 @@ RectTransform:
   - {fileID: 1338405954}
   - {fileID: 2128308535}
   - {fileID: 1782579800}
+  - {fileID: 2015671809}
   - {fileID: 1873232567}
   - {fileID: 634885607}
   - {fileID: 1541227912}
@@ -2143,6 +2160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad011e3930345c74da3f64fbb544c402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinText: {fileID: 1608735244}
 --- !u!4 &1232379332
 Transform:
   m_ObjectHideFlags: 0
@@ -2189,8 +2207,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2140380877}
-  - {fileID: 2025269273}
   - {fileID: 1081363174}
+  - {fileID: 2025269273}
   - {fileID: 1324431182}
   m_Father: {fileID: 1223748545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2383,14 +2401,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: AWP
-  weaponPrice: 10$
-  weaponDescription: AA
-  weaponSprite: {fileID: 21300000, guid: 62e03ae975df6004fa5a5fca127013fc, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: sniper
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &1338405953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,14 +2650,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Supreme Health
-  weaponPrice: 5$
-  weaponDescription: 'Increase Max Health. '
-  weaponSprite: {fileID: 21300000, guid: a1c15f95998b96e479526872559253c8, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: health-skill
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &1533172322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,7 +2875,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1541227914}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1232379331}
+        m_TargetAssemblyTypeName: MarketManager, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1541227914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,6 +2925,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541227911}
+  m_CullTransparentMesh: 1
+--- !u!1 &1608735242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608735243}
+  - component: {fileID: 1608735245}
+  - component: {fileID: 1608735244}
+  m_Layer: 5
+  m_Name: CoinText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1608735243
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608735242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015671809}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.000076293945}
+  m_SizeDelta: {x: -30, y: 89.943}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1608735244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608735242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 9999999
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 916db37583abbfb41bb23dec6b4cdea9, type: 2}
+  m_sharedMaterial: {fileID: 2537302359316670945, guid: 916db37583abbfb41bb23dec6b4cdea9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 35.58
+  m_fontSizeBase: 35.58
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1608735245
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608735242}
   m_CullTransparentMesh: 1
 --- !u!1 &1715512609
 GameObject:
@@ -3252,14 +3418,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Speed of Light
-  weaponPrice: 5$
-  weaponDescription: Increase Speed
-  weaponSprite: {fileID: 21300000, guid: 116e6b16378a10b44801651753ca11c6, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: damage-skill
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &1873232564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3495,82 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1223748545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2015671808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015671809}
+  - component: {fileID: 2015671811}
+  - component: {fileID: 2015671810}
+  m_Layer: 5
+  m_Name: CoinContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2015671809
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015671808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1608735243}
+  m_Father: {fileID: 1223748545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 600, y: 414.42}
+  m_SizeDelta: {x: -1572.4321, y: -990.3406}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2015671810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015671808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -327662841, guid: e44d68e7f8344c841a24f60a8a438df3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2015671811
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015671808}
+  m_CullTransparentMesh: 1
 --- !u!1 &2025269272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,7 +3585,7 @@ GameObject:
   - component: {fileID: 2025269274}
   - component: {fileID: 2025269277}
   m_Layer: 5
-  m_Name: G2
+  m_Name: G3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3364,7 +3607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.23}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.010986, y: 86.130005}
+  m_AnchoredPosition: {x: -1, y: -80}
   m_SizeDelta: {x: -64.661, y: -576.921}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025269274
@@ -3474,14 +3717,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Grenade Launcher
-  weaponPrice: 10$
-  weaponDescription: "Slow shooting serial\_damage."
-  weaponSprite: {fileID: 21300000, guid: 5b2e54ae2b92552499f1a60c8f447651, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: grenade-launcher
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1 &2128308534
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,14 +3962,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 634885606}
-  weaponNameText: {fileID: 1205901698}
-  weaponPriceText: {fileID: 1533172324}
-  weaponDescriptionText: {fileID: 353158030}
-  weaponImage: {fileID: 327131838}
-  weaponName: Assault Rifle
-  weaponPrice: 5$
-  weaponDescription: 'Fast single-bullet shooting automatic weapon. '
-  weaponSprite: {fileID: 21300000, guid: 4dd952ecc1e3b124e9e97954e50f5efc, type: 3}
+  itemNameText: {fileID: 1205901698}
+  itemPriceText: {fileID: 1533172324}
+  itemDescriptionText: {fileID: 353158030}
+  itemImage: {fileID: 327131838}
+  itemKey: assault_rifle
+  marketConfig: {fileID: 0}
+  localizationManager: {fileID: 0}
+  playerLevelManager: {fileID: 0}
+  marketManager: {fileID: 1232379331}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -41,8 +41,7 @@ public class GameManager : MonoBehaviour
         characterName = playerLevelManager.playerData.character;
         gunName = playerLevelManager.playerData.weapon;
         modifiers = playerLevelManager.playerData.stats;
-        level = npcLevelManager.levelConfig.levelNumber;
-        
+
         playerController = FindObjectOfType<PlayerController>();
         if (playerController != null)
         {
@@ -60,6 +59,8 @@ public class GameManager : MonoBehaviour
 
     void OnResultWin(bool result)
     {
+        level = npcLevelManager.levelConfig.levelNumber;
+
         if (result)
         {
 
@@ -70,6 +71,8 @@ public class GameManager : MonoBehaviour
 
     void OnResultLose(bool result)
     {
+        level = npcLevelManager.levelConfig.levelNumber;
+
         if (result)
         {
             Debug.Log("Player Lost");
@@ -77,6 +80,17 @@ public class GameManager : MonoBehaviour
             FinishLevel();
 
         }
+    }
+
+    public void OnLevelStartNPC()
+    {
+        levelWon = 0;
+        npcLevelManager.OnWin += OnResultWin;
+        npcLevelManager.OnLoss += OnResultLose;
+    }
+    public void OnLevelStartPlayer()
+    {
+        playerController.OnLoss += OnResultLose;
     }
 
     void FinishLevel()

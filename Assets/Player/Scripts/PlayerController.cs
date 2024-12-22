@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private float _health = 100f;
     // player's current _health
     private float _speed = 7f;
-
+    private float _speedModifier = 1f;
     private float _dodgeChance = 0.1f;
     private float _maxAmmoModifier = 1f;
     private float _damageModifier = 1f;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Animator an;
     private DamageFlash damageFlash;
     public event Action<float> OnHealthChanged;
+    public GameManager gameManager;
     public event Action<bool> OnLoss;
     public event Action<bool> OnDodge;
     private float dashSpeed = 15f; // Speed of the dash
@@ -35,6 +36,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameManager.Instance;
+        gameManager.playerController = this;
+        gameManager.OnLevelStartPlayer();
+        
         damageFlash = GetComponent<DamageFlash>();
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
@@ -131,7 +136,7 @@ public class PlayerController : MonoBehaviour
 
         while (elapsed < dashDuration)
         {
-            rb.velocity = dashDirection * dashSpeed;
+            rb.velocity = dashDirection * dashSpeed * _speedModifier;
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -197,6 +202,7 @@ public class PlayerController : MonoBehaviour
     {
         _maxHealth *= maxHealthModifier;
         _speed *= speedModifier;
+        _speedModifier = speedModifier;
         _dodgeChance *= dodgeChanceModifier;
     }
 
