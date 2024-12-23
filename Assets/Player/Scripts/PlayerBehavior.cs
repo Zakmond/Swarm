@@ -16,7 +16,6 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Awake()
     {
-        // Initialize playerComponent in Awake so it’s ready before UpdateNPC is called
         playerComponent = GetComponent<PlayerController>();
         if (playerComponent == null)
         {
@@ -26,7 +25,6 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Start()
     {
-        // Apply modifiers during Start
         playerComponent.UpdateNPC(_maxHealthModifier, _speedModifier, _dodgeChanceModifier);
     }
 

@@ -47,7 +47,11 @@ public class LocalizationTR : ILocalization
         {"nox_summary", "Hızlı hareket eden, hafif zırhlı bir kadın nişancı. Daha yüksek hız ve çeviklik, daha hızlı atış hızı ama daha düşük savunma sunar."},
         {"ares_summary", "Ağır zırhlı bir erkek savaşçı. Daha düşük hız ama daha fazla sağlık. Daha düşük atış hızı ama daha yüksek savunma sunar."},
         {"modifiers", "Değiştiriciler"},
-        {"player", "Oyuncu"}
+        {"player", "Oyuncu"},
+                {"RifleHolder", "Assault Rifle"},
+        {"ShotgunHolder", "Shotgun"},
+        {"GrenadelauncherHolder", "Grenade Launcher"},
+        {"SniperHolder", "Sniper"},
     };
 
     public string GetValue(string key)

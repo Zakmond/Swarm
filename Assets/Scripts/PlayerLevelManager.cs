@@ -134,6 +134,24 @@ public class PlayerLevelManager : MonoBehaviour
         }
 
         string characterToLoad = playerData.character == "none" ? "Ares" : playerData.character;
+        if (characterToLoad == "Ares")
+        {
+            playerData.stats.maxHealthModifier = 1.0f;
+            playerData.stats.speedModifier = 0.95f;
+            playerData.stats.fireRateModifier = 0.95f;
+            playerData.stats.dodgeChanceModifier = 1.0f;
+            playerData.stats.maxAmmoModifier = 1.1f;
+            playerData.stats.damageModifier = 1.1f;
+        }
+        else if (characterToLoad == "Nox")
+        {
+            playerData.stats.maxHealthModifier = 1.0f;
+            playerData.stats.speedModifier = 1.05f;
+            playerData.stats.fireRateModifier = 1.05f;
+            playerData.stats.dodgeChanceModifier = 1.05f;
+            playerData.stats.maxAmmoModifier = 1.0f;
+            playerData.stats.damageModifier = 0.95f;
+        }
         playerData.character = characterToLoad;
         GameObject playerPrefab = Resources.Load<GameObject>($"{playerPrefabsPath}/{characterToLoad}");
         if (playerPrefab == null)

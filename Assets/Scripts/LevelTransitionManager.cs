@@ -1,11 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.UI;
+
 
 public class LevelTransitionManager : MonoBehaviour
 {
@@ -43,7 +40,7 @@ public class LevelTransitionManager : MonoBehaviour
         }
 
         characterLabelText.text = gameManager.characterName;
-        gunLabelText.text = gameManager.gunName;
+        gunLabelText.text = localizationManager.GetLocalizedValue(gameManager.gunName);
         mobCountLabelText.text = gameManager.mobCount.ToString();
         timeRemainingLabelText.text = Mathf.RoundToInt(gameManager.timeRemaining).ToString();
         nextStageLabelText.text = gameManager.levelWon == 1 ? "Market" : "Retry";
@@ -59,7 +56,7 @@ public class LevelTransitionManager : MonoBehaviour
         mobsKilledText.text = localizationManager.GetLocalizedValue("mobs_killed");
         timeRemainingText.text = localizationManager.GetLocalizedValue("time_remaining");
         exitText.text = localizationManager.GetLocalizedValue("menu_exit");
-        
+
         levelSummaryLabelText.text = localizationManager.GetLocalizedValue("level_summary") + ":" + gameManager.level.ToString();
         resultLabelText.text = gameManager.levelWon == 1 ? localizationManager.GetLocalizedValue("victory") : localizationManager.GetLocalizedValue("defeat");
         nextStageLabelText.text = gameManager.levelWon == 1 ? localizationManager.GetLocalizedValue("market") : localizationManager.GetLocalizedValue("retry");
@@ -78,7 +75,7 @@ public class LevelTransitionManager : MonoBehaviour
             }
             else if (value < 1f)
             {
-                return $"<color=#D72048>-{Mathf.RoundToInt((value - 1f) * 100)}% {label}</color>";
+                return $"<color=#D72048>{Mathf.RoundToInt((value - 1f) * 100)}% {label}</color>";
             }
             return null;
         }

@@ -47,7 +47,11 @@ public class LocalizationEN : ILocalization
         {"nox_summary", "A fast-moving, lightly armored female marksman. Offers higher speed and agility, faster fire rate but lower defense."},
         {"ares_summary", "A heavy-armored male warrior. Has lower speed but more health. Lower fire rate but higher defense."},
         {"modifiers", "Modifiers"},
-        {"player", "Player"}
+        {"player", "Player"},
+        {"RifleHolder", "Assault Rifle"},
+        {"ShotgunHolder", "Shotgun"},
+        {"GrenadelauncherHolder", "Grenade Launcher"},
+        {"SniperHolder", "Sniper"},
     };
 
     public string GetValue(string key)

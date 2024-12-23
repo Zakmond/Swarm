@@ -6,11 +6,11 @@
         "spawnTime": 2,
         "monsters": [
           {
-            "type": "MushroomNPC",
-            "count": 4,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
+            "type": "BatNPC",
+            "count": 5,
+            "healthModifier": 1.5,
+            "speedModifier": 1.5,
+            "damageModifier": 1.5,
             "attackDistanceModifier": 1.0,
             "spawnPoints": [
               "1",
@@ -32,11 +32,11 @@
           },
           {
             "type": "GolemBlueNPC",
-            "count": 4,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
+            "count": 10,
+            "healthModifier": 1.5,
+            "speedModifier": 1.5,
+            "damageModifier": 1.5,
+            "attackDistanceModifier": 1.2,
             "spawnPoints": [
               "1",
               "2",
@@ -63,10 +63,10 @@
           {
             "type": "GolemOrangeNPC",
             "count": 5,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
+            "healthModifier": 1.5,
+            "speedModifier": 1.5,
+            "damageModifier": 1.5,
+            "attackDistanceModifier": 1.1,
             "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
           },
           {
@@ -80,19 +80,19 @@
           },
           {
             "type": "MushroomNPC",
-            "count": 5,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
+            "count": 8,
+            "healthModifier": 1.5,
+            "speedModifier": 1.5,
+            "damageModifier": 1.5,
             "attackDistanceModifier": 1.0,
             "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
           },
           {
             "type": "FlyingEyeNPC",
-            "count": 4,
-            "healthModifier": 1.2,
-            "speedModifier": 1.2,
-            "damageModifier": 1.2,
+            "count": 5,
+            "healthModifier": 1.3,
+            "speedModifier": 1.3,
+            "damageModifier": 1.3,
             "attackDistanceModifier": 1.0,
             "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
           }
@@ -122,9 +122,9 @@
           {
             "type": "FlyingEyeNPC",
             "count": 5,
-            "healthModifier": 1.2,
-            "speedModifier": 1.2,
-            "damageModifier": 1.2,
+            "healthModifier": 1.3,
+            "speedModifier": 1.3,
+            "damageModifier": 1.3,
             "attackDistanceModifier": 1.0,
             "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
           }

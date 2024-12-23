@@ -1,134 +1,130 @@
 {
-    "levelNumber": 20,
-    "levelDuration": 150,
-    "monsterWaves": [
-      {
-        "spawnTime": 2,
-        "monsters": [
-          {
-            "type": "MushroomNPC",
-            "count": 4,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "10",
-              "11",
-              "12",
-              "13",
-              "14",
-              "15"
-            ]
-          },
-          {
-            "type": "GolemBlueNPC",
-            "count": 4,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "10",
-              "11",
-              "12",
-              "13",
-              "14",
-              "15"
-            ]
-          }
-        ]
-      },
-      {
-        "spawnTime": 15,
-        "monsters": [
-          {
-            "type": "GolemOrangeNPC",
-            "count": 5,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
-          },
-          {
-            "type": "GolemBlueNPC",
-            "count": 5,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": ["4", "5", "6", "12", "13", "10", "11"]
-          },
-          {
-            "type": "MushroomNPC",
-            "count": 5,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
-          },
-          {
-            "type": "FlyingEyeNPC",
-            "count": 4,
-            "healthModifier": 1.2,
-            "speedModifier": 1.2,
-            "damageModifier": 1.2,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
-          }
-        ]
-      },
-      {
-        "spawnTime": 26,
-        "monsters": [
-          {
-            "type": "GolemBlueNPC",
-            "count": 5,
-            "healthModifier": 1.4,
-            "speedModifier": 1.4,
-            "damageModifier": 1.4,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
-          },
-          {
-            "type": "MushroomNPC",
-            "count": 5,
-            "healthModifier": 1.3,
-            "speedModifier": 1.3,
-            "damageModifier": 1.3,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
-          },
-          {
-            "type": "FlyingEyeNPC",
-            "count": 5,
-            "healthModifier": 1.2,
-            "speedModifier": 1.2,
-            "damageModifier": 1.2,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
-          }
-        ]
-      }
-    ]
-  }
+  "levelNumber": 20,
+  "levelDuration": 150,
+  "monsterWaves": [
+    {
+      "spawnTime": 2,
+      "monsters": [
+        {
+          "type": "GoblinNPC",
+          "count": 15,
+          "healthModifier": 1.8,
+          "speedModifier": 1.8,
+          "damageModifier": 1.8,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ]
+        },
+        {
+          "type": "SkeletonNPC",
+          "count": 15,
+          "healthModifier": 1.8,
+          "speedModifier": 1.8,
+          "damageModifier": 1.8,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ]
+        }
+      ]
+    },
+    {
+      "spawnTime": 25,
+      "monsters": [
+        {
+          "type": "ArcaneNPC",
+          "count": 7,
+          "healthModifier": 1.8,
+          "speedModifier": 1.8,
+          "damageModifier": 1.8,
+          "attackDistanceModifier": 1.1,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        },
+        {
+          "type": "BatNPC",
+          "count": 7,
+          "healthModifier": 1.8,
+          "speedModifier": 1.8,
+          "damageModifier": 1.8,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["4", "5", "6", "12", "13", "10", "11"]
+        },
+        {
+          "type": "MusroomNPC",
+          "count": 5,
+          "healthModifier": 1.7,
+          "speedModifier": 1.7,
+          "damageModifier": 1.7,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        }
+      ]
+    },
+    {
+      "spawnTime": 35,
+      "monsters": [
+        {
+          "type": "GolemBlueNPC",
+          "count": 15,
+          "healthModifier": 1.4,
+          "speedModifier": 1.4,
+          "damageModifier": 1.4,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        },
+        {
+          "type": "GolemOrangeNPC",
+          "count": 15,
+          "healthModifier": 1.3,
+          "speedModifier": 1.3,
+          "damageModifier": 1.3,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        }
+      ]
+    },
+    {
+      "spawnTime": 10,
+      "monsters": [
+        {
+          "type": "Bringer",
+          "count": 1,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        }
+      ]
+    }
+  ]
+}

@@ -6,18 +6,16 @@ public class ShotgunBullet : MonoBehaviour
 {
     public float bulletDamage = 35f;
     public float baseDamage = 35f;
-    public int TTL = 3;  // Time to live in seconds
+    public int TTL = 3; 
     private bool objectHit = false;
     void OnEnable()
     {
-        // disable the hit flag if this is a reused object
         objectHit = false;
         StartCoroutine(DeactivateAfterTime());
     }
 
     private IEnumerator DeactivateAfterTime()
     {
-        // wait for the specified lifetime before deactivating 
         yield return new WaitForSeconds(TTL);
         gameObject.SetActive(false);
     }
@@ -31,7 +29,6 @@ public class ShotgunBullet : MonoBehaviour
 
         RangedNPC rangedCharacter = null;
 
-        // Check if the collided object is an NPC or RangedNPC
         if (collision.TryGetComponent<NPC>(out NPC character) || collision.TryGetComponent<RangedNPC>(out rangedCharacter))
         {
             if (character != null)
@@ -45,7 +42,6 @@ public class ShotgunBullet : MonoBehaviour
             objectHit = true;
         }
 
-        // Deactivate the bullet
         gameObject.SetActive(false);
     }
 }

@@ -101,7 +101,7 @@ private void ApplySkill(string ability, float effectValue)
             case "fire_rate":
                 playerLevelManager.UpdateFireRateModifier(effectValue);
                 break;
-            case "dodge-skill":
+            case "dodge":
                 playerLevelManager.UpdateDodgeChanceModifier(effectValue);
                 break;
             case "max_ammo":
