@@ -19,7 +19,6 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        // Find PlayerController in the scene
         playerController = FindObjectOfType<PlayerController>();
         playerLevelManager = FindObjectOfType<PlayerLevelManager>();
         npcLevelManager = FindObjectOfType<NPCLevelManager>();
@@ -82,7 +81,6 @@ public class UIManager : MonoBehaviour
     }
     void UpdateHealthBar(float healthPercent)
     {
-        // Change the width of the health fill based on the health percentage
         float newWidth = Math.Max(0, healthPercent * 245);
         healthFill.sizeDelta = new Vector2(newWidth, healthFill.sizeDelta.y);
     }
@@ -116,7 +114,6 @@ public class UIManager : MonoBehaviour
     }
     private void OnDestroy()
     {
-        // Unsubscribe to prevent memory leaks
         if (playerController != null)
         {
             playerController.OnHealthChanged -= UpdateHealthBar;

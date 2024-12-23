@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MarketManager : MonoBehaviour
 {
 
-    private MarketConfig marketConfig; // Reference to market-config.json loader
+    private MarketConfig marketConfig; 
     private PlayerLevelManager playerLevelManager;
     private GameManager gameManager;
     private string itemKey;
@@ -21,7 +21,6 @@ public class MarketManager : MonoBehaviour
         coinText.text = playerLevelManager.GetCurrency().ToString();
     }
 
-    // Update is called once per frame
     void Update()
     {
 

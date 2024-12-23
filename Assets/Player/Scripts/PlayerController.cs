@@ -23,15 +23,14 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public event Action<bool> OnLoss;
     public event Action<bool> OnDodge;
-    private float dashSpeed = 15f; // Speed of the dash
-    private float dashDuration = 0.5f; // Duration of the dash
-    private bool isDashing = false; // Flag to prevent other actions during dash
+    private float dashSpeed = 15f; 
+    private float dashDuration = 0.5f;
+    private bool isDashing = false; 
     private Vector2 dashDirection;
-    public GameObject dustPrefab; // Assign the dust prefab in the Inspector
+    public GameObject dustPrefab; 
     // Cooldown variables
-    private float dashCooldown = 1.5f; // Cooldown duration in seconds
-    private float dashCooldownTimer = 0f; // Timer to track cooldown
-    public WeaponBase weaponBase;
+    private float dashCooldown = 1.5f; 
+    private float dashCooldownTimer = 0f;     public WeaponBase weaponBase;
     private PlayerStats playerStats;
 
     void Start()
@@ -73,13 +72,11 @@ public class PlayerController : MonoBehaviour
             an.SetBool("isShooting", false);
         }
 
-        // Handle cooldown timer
         if (dashCooldownTimer > 0)
         {
             dashCooldownTimer -= Time.deltaTime;
         }
 
-        // Check for dash input and cooldown
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && dashCooldownTimer <= 0)
         {
             StartDash();
@@ -101,27 +98,22 @@ public class PlayerController : MonoBehaviour
             dashDirection = new Vector2(an.GetFloat("DirectionX"), an.GetFloat("DirectionY")).normalized;
         }
 
-        // Set animator parameters for the dash
         an.SetFloat("DirectionX", dashDirection.x);
         an.SetFloat("DirectionY", dashDirection.y);
         an.SetTrigger("Dash");
 
         SpawnDust(dashDirection);
 
-        // Start cooldown
         dashCooldownTimer = dashCooldown;
 
-        // Start dash coroutine
         StartCoroutine(DashCoroutine());
     }
     void SpawnDust(Vector2 direction)
     {
         if (dustPrefab != null)
         {
-            // Instantiate the dust prefab
             GameObject dust = Instantiate(dustPrefab, tr.position, Quaternion.identity);
 
-            // Set the dust object's animator direction
             Animator dustAnimator = dust.GetComponent<Animator>();
             if (dustAnimator != null)
             {

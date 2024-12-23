@@ -13,8 +13,8 @@ public class NPC : MonoBehaviour, IDamageable
     [SerializeField] private bool _canMove = true;
     private DamageFlash _damageFlash;
     private Animator _animator;
-    [SerializeField] public float separationDistance = 0.2f;  // Distance to maintain between NPCs
-    [SerializeField] public float targetOffsetRadius = 0.1f;  // Radius for offsetting target positions
+    [SerializeField] public float separationDistance = 0.2f; 
+    [SerializeField] public float targetOffsetRadius = 0.1f;  
     [SerializeField] public LayerMask npcLayer;
     public NPCLevelManager npcLevelManager;
     public bool isBoss = false;
@@ -52,7 +52,6 @@ public class NPC : MonoBehaviour, IDamageable
 
         if (distance > 0.1)
         {
-            // to not make it glitch when it is exactly where the player is
             MoveTowardsPlayer();
 
         }
@@ -67,7 +66,6 @@ public class NPC : MonoBehaviour, IDamageable
         }
     }
 
-    // Modified MoveTowardsPlayer to add separation and target offsetting
     private void MoveTowardsPlayer()
     {
         Vector2 separationForce = GetSeparationForce();
@@ -79,7 +77,6 @@ public class NPC : MonoBehaviour, IDamageable
 
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + moveDirection, _speed * Time.deltaTime);
 
-        // Flip NPC based on its movement direction
         float playerXPos = player.position.x;
         float NPCXPos = transform.position.x;
         if (playerXPos > NPCXPos)
@@ -92,7 +89,6 @@ public class NPC : MonoBehaviour, IDamageable
         }
     }
 
-    // Calculate separation force to prevent NPCs from stacking
     private Vector2 GetSeparationForce()
     {
         Vector2 force = Vector2.zero;
@@ -103,17 +99,15 @@ public class NPC : MonoBehaviour, IDamageable
             if (npc.gameObject != this.gameObject)  // Ignore self
             {
                 Vector2 diff = (Vector2)(transform.position - npc.transform.position);
-                force += diff.normalized / diff.magnitude;  // Force inversely proportional to distance
+                force += diff.normalized / diff.magnitude; 
             }
         }
 
         return force;
     }
 
-    // Get a small random offset around the target to avoid stacking at the exact same point
     private Vector2 GetOffsetPosition()
     {
-        // Create a random offset within a small radius around the player
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
         return randomDirection * targetOffsetRadius;
     }
@@ -149,12 +143,10 @@ public class NPC : MonoBehaviour, IDamageable
     }
     private void OnAttackHit()
     {
-        // Check if the player is still within attack range when the hit happens
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance <= _attackDistance)
         {
-            // Apply damage to the player if they are still within range
-            PlayerController player_health = player.GetComponent<PlayerController>();  // Assume there's a Player_health component
+            PlayerController player_health = player.GetComponent<PlayerController>();
             if (player_health != null)
             {
                 player_health.OnHit(_attackDamage);

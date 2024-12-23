@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep alive across scenes
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
         if (playerController != null)
         {
-            // Subscribe to the health change event
             playerController.OnLoss += OnResultLose;
         }
         else

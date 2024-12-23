@@ -11,19 +11,18 @@ public class PlayerLevelManager : MonoBehaviour
 
     private string filePath;
 
-    public Vector3 playerSpawnPoint = Vector3.zero; // Assign the player spawn point in the scene
-    public string playerPrefabsPath = "Players"; // Folder under Resources where player prefabs are stored
-    public string weaponPrefabsPath = "Weapons"; // Folder under Resources where weapon prefabs are stored
+    public Vector3 playerSpawnPoint = Vector3.zero;
+    public string playerPrefabsPath = "Players"; 
+    public string weaponPrefabsPath = "Weapons"; 
 
-    private GameObject currentPlayerInstance; // To keep track of the spawned player
+    private GameObject currentPlayerInstance; 
     [SerializeField] private string DEFAULT_WEAPON = "RifleHolder";
     private void Awake()
     {
-        // Singleton pattern to persist across scenes
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep alive across scenes
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -31,19 +30,15 @@ public class PlayerLevelManager : MonoBehaviour
             return;
         }
 
-        // File path for the player configuration
         filePath = Path.Combine(Application.persistentDataPath, "playerConfig.json");
 
-        // Load or create player data
         GeneratePlayerData();
 
-        // Subscribe to the sceneLoaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe from the sceneLoaded event to avoid memory leaks
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -52,7 +47,7 @@ public class PlayerLevelManager : MonoBehaviour
 
         playerData = new PlayerData
         {
-            character = "none", // Default character will be set in SpawnPlayer
+            character = "none",
             weapon = DEFAULT_WEAPON,
             stats = new PlayerStats
             {
@@ -120,7 +115,6 @@ public class PlayerLevelManager : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Check if the loaded scene is a gameplay scene
         if (IsGameplayScene(scene.name))
         {
             SpawnPlayer();
@@ -129,19 +123,16 @@ public class PlayerLevelManager : MonoBehaviour
 
     private bool IsGameplayScene(string sceneName)
     {
-        // Check if the scene name starts with "Level"
-        return sceneName.StartsWith("level"); // Adjust this to match your naming convention
+        return sceneName.StartsWith("level"); 
     }
 
     public void SpawnPlayer()
     {
-        // Destroy any existing player instance before spawning a new one
         if (currentPlayerInstance != null)
         {
             Destroy(currentPlayerInstance);
         }
 
-        // Determine the player prefab to load
         string characterToLoad = playerData.character == "none" ? "Ares" : playerData.character;
         playerData.character = characterToLoad;
         GameObject playerPrefab = Resources.Load<GameObject>($"{playerPrefabsPath}/{characterToLoad}");
@@ -151,22 +142,18 @@ public class PlayerLevelManager : MonoBehaviour
             return;
         }
 
-        // Spawn the player
         currentPlayerInstance = Instantiate(playerPrefab, playerSpawnPoint, Quaternion.identity);
 
-        // Apply stats to the player (if necessary)
 
 
         Debug.Log($"Player {characterToLoad} spawned.");
 
-        // Notify the camera about the new player
         CameraFollow cameraFollow = Camera.main.GetComponent<CameraFollow>();
         if (cameraFollow != null)
         {
             cameraFollow.SetPlayerTransform(currentPlayerInstance.transform);
         }
 
-        // Spawn and attach the weapon
         SpawnWeapon();
 
         PlayerBehavior playerBehavior = currentPlayerInstance.GetComponent<PlayerBehavior>();
@@ -186,7 +173,6 @@ public class PlayerLevelManager : MonoBehaviour
             return;
         }
 
-        // Load the weapon prefab
         string weaponToLoad = playerData.weapon == "none" ? DEFAULT_WEAPON : playerData.weapon;
         playerData.weapon = weaponToLoad;
         GameObject weaponPrefab = Resources.Load<GameObject>($"{weaponPrefabsPath}/{weaponToLoad}");
@@ -196,7 +182,6 @@ public class PlayerLevelManager : MonoBehaviour
             return;
         }
 
-        // Instantiate the weapon as a child of the player instance
         GameObject weaponInstance = Instantiate(weaponPrefab, currentPlayerInstance.transform);
         Debug.Log($"Weapon {weaponToLoad} spawned and set as a child of the player.");
     }

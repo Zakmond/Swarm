@@ -12,16 +12,13 @@ public class NPCBehavior : MonoBehaviour
 
     private void Awake()
     {
-        // Try to get the NPC component
         npcComponent = GetComponent<NPC>() as IDamageable;
 
-        // If NPC component is not found, try to get the RangedNPC component
         if (npcComponent == null)
         {
             npcComponent = GetComponent<RangedNPC>() as IDamageable;
         }
 
-        // Check if neither component was found
         if (npcComponent == null)
         {
             Debug.LogError("Neither NPC nor RangedNPC component found on the GameObject.");

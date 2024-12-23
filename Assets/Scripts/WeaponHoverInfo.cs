@@ -12,7 +12,7 @@ public class WeaponHoverInfo : MonoBehaviour
     public TextMeshProUGUI itemPriceText;
     public TextMeshProUGUI itemDescriptionText;
     public UnityEngine.UI.Image itemImage;
-    public string itemKey; // New field to reference the item's key in the config
+    public string itemKey; 
 
     private static bool isPanelLocked = false;
     private static WeaponHoverInfo lockedItem = null;
