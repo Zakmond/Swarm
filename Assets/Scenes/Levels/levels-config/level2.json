@@ -3,7 +3,7 @@
   "levelDuration": 120,
   "monsterWaves": [
     {
-      "spawnTime": 10,
+      "spawnTime": 3,
       "monsters": [
         {
           "type": "SkeletonNPC",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "spawnTime": 15,
+      "spawnTime": 20,
       "monsters": [
         {
           "type": "FlyingEyeNPC",
