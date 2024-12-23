@@ -136,12 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750f7e4c612f5a14b84502b9f93fa40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossMaxHealth: 400
-  _health: 400
+  bossMaxHealth: 250
+  _health: 250
   player: {fileID: 0}
-  _speed: 2.5
-  _attackDistance: 2.5
-  _attackDamage: 25
+  _speed: 2
+  _attackDistance: 1.5
+  _attackDamage: 35
   _canMove: 1
   separationDistance: 0.05
   targetOffsetRadius: 0.05
@@ -151,6 +151,7 @@ MonoBehaviour:
   npcLevelManager: {fileID: 0}
   isBoss: 0
   reward: 5
+  inverse: 0
 --- !u!61 &8850208534335681373
 BoxCollider2D:
   m_ObjectHideFlags: 0

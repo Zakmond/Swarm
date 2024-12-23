@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
-{
-    public float bulletDamage = 50f;
-    public float baseDamage = 25f;
+{   
+    public bool canPierece = false;
+    public float bulletDamage = 20f;
+    public float baseDamage = 20f;
     public int TTL = 3;  // Time to live in seconds
     private bool objectHit = false;
     void OnEnable()
@@ -28,7 +29,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (objectHit) return;
+        if (objectHit && !canPierece) return;
 
         RangedNPC rangedCharacter = null;
 
@@ -47,6 +48,9 @@ public class Bullet : MonoBehaviour
         }
 
         // Deactivate the bullet
-        gameObject.SetActive(false);
+        if (!canPierece)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

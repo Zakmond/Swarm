@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ShotgunBullet : MonoBehaviour
 {
-    public float bulletDamage = 50f;
+    public float bulletDamage = 35f;
+    public float baseDamage = 35f;
     public int TTL = 3;  // Time to live in seconds
     private bool objectHit = false;
     void OnEnable()
@@ -20,7 +21,10 @@ public class ShotgunBullet : MonoBehaviour
         yield return new WaitForSeconds(TTL);
         gameObject.SetActive(false);
     }
-
+    public void modifyDamage(float damageModifier)
+    {
+        bulletDamage = baseDamage * damageModifier;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (objectHit) return;

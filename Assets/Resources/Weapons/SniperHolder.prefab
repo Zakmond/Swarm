@@ -110,6 +110,7 @@ MonoBehaviour:
   poolManager: {fileID: 0}
   bulletPrefab: {fileID: 3412337420019354117, guid: 2406bd10bc4af1f43a77b1d80127f398, type: 3}
   cam: {fileID: 0}
+  canPierece: 1
   bulletForce: 35
 --- !u!82 &7511708776079580800
 AudioSource:

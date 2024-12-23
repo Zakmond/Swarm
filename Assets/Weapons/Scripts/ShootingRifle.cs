@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ShootingRifle : WeaponBase
 {
+    public bool canPierece = false;
     public float bulletForce = 20f;
     protected override void Fire()
     {
@@ -10,6 +11,7 @@ public class ShootingRifle : WeaponBase
         audioSource.PlayOneShot(audioSource.clip);
         GameObject bulletObject = poolManager.GetPooledObject(bulletPrefab);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
+        bullet.canPierece = canPierece;
         bullet.modifyDamage(damageModifier);
         if (bulletObject != null)
         {

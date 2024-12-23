@@ -15,7 +15,7 @@
       "key": "shotgun",
       "value": {
         "type": "weapon",
-        "price": 400,
+        "price": 250,
         "name": "shotgun_name",
         "description": "shotgun_description",
         "ability": "",
@@ -26,7 +26,7 @@
       "key": "grenade-launcher",
       "value": {
         "type": "weapon",
-        "price": 400,
+        "price": 300,
         "name": "grenade_launcher_name",
         "description": "grenade_launcher_description",
         "ability": "",
@@ -37,7 +37,7 @@
       "key": "sniper",
       "value": {
         "type": "weapon",
-        "price": 1000,
+        "price": 750,
         "name": "sniper_name",
         "description": "sniper_description",
         "ability": "",
