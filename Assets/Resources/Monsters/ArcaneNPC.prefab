@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5800436094522878760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785810847904930601}
+  m_Layer: 6
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1785810847904930601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800436094522878760}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6090990659788986144}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9191456230333065919
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,11 +44,14 @@ GameObject:
   - component: {fileID: 8732410099960074346}
   - component: {fileID: 8265273869603515693}
   - component: {fileID: 1018946786083185434}
-  - component: {fileID: 6832627074578145453}
   - component: {fileID: 3516682807626054161}
   - component: {fileID: 2519048333351585230}
+  - component: {fileID: 4154283240778303720}
+  - component: {fileID: 7933425902174021555}
+  - component: {fileID: 3691864951324659113}
+  - component: {fileID: 7502979291729687613}
   m_Layer: 6
-  m_Name: Arcane
+  m_Name: ArcaneNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +69,8 @@ Transform:
   m_LocalPosition: {x: -3.762, y: 2.3561, z: 0}
   m_LocalScale: {x: 1.65, y: 1.7065499, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1785810847904930601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5013009053490436979
@@ -149,18 +184,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06954129, y: 0.014193729}
+  m_Offset: {x: -0.08483374, y: -0.00073212385}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.485365, y: 0.39491853}
+  m_Size: {x: 0.8109549, y: 1.032662}
   m_EdgeRadius: 0
 --- !u!95 &1018946786083185434
 Animator:
@@ -183,29 +218,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6832627074578145453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9191456230333065919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750f7e4c612f5a14b84502b9f93fa40a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 100
-  player: {fileID: 0}
-  _speed: 2
-  _attackDistance: 1
-  _attackDamage: 10
-  _canMove: 1
-  separationDistance: 0.05
-  targetOffsetRadius: 0.05
-  npcLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &3516682807626054161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,3 +248,89 @@ MonoBehaviour:
   _attackDamageModifier: 1
   _healthModifier: 1
   _speedModifier: 1
+--- !u!114 &4154283240778303720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191456230333065919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3770dd2ac6ce3f45a1a958651aa0d02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1785810847904930601}
+  poolManager: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  bulletForce: 20
+  fireRate: 1
+  rangedNPC: {fileID: 0}
+--- !u!114 &7933425902174021555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191456230333065919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36aec17fb1bb8f459fe3c5797456388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
+  player: {fileID: 0}
+  _speed: 2
+  _attackDistance: 15
+  _attackDamage: 10
+  _canMove: 1
+  separationDistance: 0.2
+  targetOffsetRadius: 0.1
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  npcLevelManager: {fileID: 0}
+  reward: 7
+--- !u!114 &3691864951324659113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191456230333065919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36aec17fb1bb8f459fe3c5797456388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
+  player: {fileID: 0}
+  _speed: 3.5
+  _attackDistance: 13
+  _attackDamage: 15
+  _canMove: 1
+  separationDistance: 0.2
+  targetOffsetRadius: 0.1
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  npcLevelManager: {fileID: 0}
+  reward: 7
+--- !u!114 &7502979291729687613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191456230333065919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3770dd2ac6ce3f45a1a958651aa0d02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1785810847904930601}
+  poolManager: {fileID: 0}
+  bulletPrefab: {fileID: 3814763615789186785, guid: 55f8db0eb08b82d45bae602e4dd19dc8, type: 3}
+  bulletForce: 20
+  fireRate: 1
+  rangedNPC: {fileID: 0}

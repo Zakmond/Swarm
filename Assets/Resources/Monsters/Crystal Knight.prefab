@@ -209,7 +209,8 @@ MonoBehaviour:
     m_Bits: 64
   npcLevelManager: {fileID: 0}
   isBoss: 1
-  reward: 0
+  reward: 50
+  inverse: 0
 --- !u!114 &3516682807626054161
 MonoBehaviour:
   m_ObjectHideFlags: 0
