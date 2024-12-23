@@ -19,8 +19,7 @@ public class NPC : MonoBehaviour, IDamageable
     public NPCLevelManager npcLevelManager;
     public bool isBoss = false;
     public int reward = 0;
-
-
+    public bool inverse = false;
     public void UpdateNPC(float healthModifier, float speedModifier, float attackDistanceModifier, float attackDamageModifier)
     {
         _health *= healthModifier;
@@ -85,11 +84,11 @@ public class NPC : MonoBehaviour, IDamageable
         float NPCXPos = transform.position.x;
         if (playerXPos > NPCXPos)
         {
-            transform.localScale = new Vector3(1, 1, 1);  // Face right
+            transform.localScale = new Vector3(inverse ? -1 : 1, 1, 1);  // Face right
         }
         else
         {
-            transform.localScale = new Vector3(-1, 1, 1); // Face left
+            transform.localScale = new Vector3(inverse ? 1 : -1, 1, 1); // Face left
         }
     }
 

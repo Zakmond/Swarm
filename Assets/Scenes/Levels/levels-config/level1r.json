@@ -1,9 +1,9 @@
 {
   "levelNumber": 1,
-  "levelDuration": 120,
+  "levelDuration": 1200,
   "monsterWaves": [
     {
-      "spawnTime": 5,
+      "spawnTime": 500,
       "monsters": [
         {
           "type": "SkeletonNPC",

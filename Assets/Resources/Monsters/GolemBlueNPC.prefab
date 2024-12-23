@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3516682807626054161}
   - component: {fileID: 2519048333351585230}
   m_Layer: 6
-  m_Name: Bat
+  m_Name: GolemBlueNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1265884562, guid: 291b250a40646b74eae85e9440c2c7d1, type: 3}
+  m_Sprite: {fileID: -713041228, guid: 030590220fa8b724592c92a058ae3c82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,18 +149,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04503572, y: 0.17309159}
+  m_Offset: {x: -0.040700912, y: -0.797823}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2}
+    oldSize: {x: 5, y: 3.5555556}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.749593, y: 1.4912959}
+  m_Size: {x: 1.7524834, y: 1.8852824}
   m_EdgeRadius: 0
 --- !u!95 &1018946786083185434
 Animator:
@@ -172,7 +172,7 @@ Animator:
   m_GameObject: {fileID: 9191456230333065919}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8bde80436af9a9e4e970328ccafd5226, type: 2}
+  m_Controller: {fileID: 9100000, guid: 13443b29f689f544f971ed9ccbf5815c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -195,17 +195,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750f7e4c612f5a14b84502b9f93fa40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  bossMaxHealth: 150
+  _health: 150
   player: {fileID: 0}
-  _speed: 2
-  _attackDistance: 1
-  _attackDamage: 10
+  _speed: 3
+  _attackDistance: 1.5
+  _attackDamage: 15
   _canMove: 1
   separationDistance: 0.05
   targetOffsetRadius: 0.05
   npcLayer:
     serializedVersion: 2
     m_Bits: 64
+  npcLevelManager: {fileID: 0}
+  isBoss: 0
+  reward: 0
 --- !u!114 &3516682807626054161
 MonoBehaviour:
   m_ObjectHideFlags: 0

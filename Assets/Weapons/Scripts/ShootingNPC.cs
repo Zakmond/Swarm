@@ -18,7 +18,6 @@ public class ShootingNPC : MonoBehaviour
 
     void Awake()
     {
-        // Automatically find the ObjectPool in the scene if not assigned
         if (poolManager == null)
         {
             poolManager = FindObjectOfType<ObjectPool>();
@@ -68,7 +67,7 @@ public class ShootingNPC : MonoBehaviour
         return maxBulletsInSeconds;
     }
 
-    private void Fire()
+    public void Fire()
     {
         GameObject bullet = poolManager.GetPooledObject(bulletPrefab);
         if (bullet != null)

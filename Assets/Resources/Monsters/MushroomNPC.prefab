@@ -139,8 +139,8 @@ MonoBehaviour:
   bossMaxHealth: 400
   _health: 400
   player: {fileID: 0}
-  _speed: 1
-  _attackDistance: 2
+  _speed: 2.5
+  _attackDistance: 2.5
   _attackDamage: 25
   _canMove: 1
   separationDistance: 0.05
