@@ -45,6 +45,8 @@ public class ShootingShotgun : WeaponBase
 
     protected override void Fire()
     {
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(audioSource.clip);
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos - (Vector2)firePoint.position;
         float baseAngle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;

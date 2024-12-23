@@ -4,10 +4,18 @@ using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class LevelTransitionManager : MonoBehaviour
 {
+    public TMP_Text playerText;
+    public TMP_Text gunText;
+    public TMP_Text modifiersText;
+    public TMP_Text mobsKilledText;
+    public TMP_Text timeRemainingText;
+    public TMP_Text exitText;
+
     public TMP_Text levelSummaryLabelText;
     public TMP_Text resultLabelText;
     public TMP_Text characterLabelText;
@@ -17,12 +25,13 @@ public class LevelTransitionManager : MonoBehaviour
     public TMP_Text nextStageLabelText;
     public List<TMP_Text> modifierPlaceholders;
     public GameManager gameManager;
+    public LocalizationManager localizationManager;
+
     void Start()
     {
         gameManager = GameManager.Instance;
+        localizationManager = LocalizationManager.Instance;
 
-
-        levelSummaryLabelText.text = "Level " + gameManager.level + " Summary";
         resultLabelText.text = gameManager.levelWon == 1 ? "Victory!" : "Defeat!";
         if (gameManager.levelWon == 1)
         {
@@ -36,10 +45,24 @@ public class LevelTransitionManager : MonoBehaviour
         characterLabelText.text = gameManager.characterName;
         gunLabelText.text = gameManager.gunName;
         mobCountLabelText.text = gameManager.mobCount.ToString();
-        timeRemainingLabelText.text = gameManager.timeRemaining.ToString();
+        timeRemainingLabelText.text = Mathf.RoundToInt(gameManager.timeRemaining).ToString();
         nextStageLabelText.text = gameManager.levelWon == 1 ? "Market" : "Retry";
-
+        Translate();
         DisplayActiveModifiers();
+    }
+
+    void Translate()
+    {
+        playerText.text = localizationManager.GetLocalizedValue("player");
+        gunText.text = localizationManager.GetLocalizedValue("gun");
+        modifiersText.text = localizationManager.GetLocalizedValue("modifiers");
+        mobsKilledText.text = localizationManager.GetLocalizedValue("mobs_killed");
+        timeRemainingText.text = localizationManager.GetLocalizedValue("time_remaining");
+        exitText.text = localizationManager.GetLocalizedValue("menu_exit");
+        
+        levelSummaryLabelText.text = localizationManager.GetLocalizedValue("level_summary") + ":" + gameManager.level.ToString();
+        resultLabelText.text = gameManager.levelWon == 1 ? localizationManager.GetLocalizedValue("victory") : localizationManager.GetLocalizedValue("defeat");
+        nextStageLabelText.text = gameManager.levelWon == 1 ? localizationManager.GetLocalizedValue("market") : localizationManager.GetLocalizedValue("retry");
     }
 
     private void DisplayActiveModifiers()
@@ -57,10 +80,9 @@ public class LevelTransitionManager : MonoBehaviour
             {
                 return $"<color=#D72048>-{Mathf.RoundToInt((value - 1f) * 100)}% {label}</color>";
             }
-            return null; // No display for neutral modifiers
+            return null;
         }
 
-        // Collect active modifiers with formatting
         string modifier;
         modifier = FormatModifier(gameManager.modifiers.maxHealthModifier, "Max Health");
         if (modifier != null) activeModifiers.Add(modifier);
@@ -85,11 +107,11 @@ public class LevelTransitionManager : MonoBehaviour
             if (i < activeModifiers.Count)
             {
                 modifierPlaceholders[i].text = activeModifiers[i];
-                modifierPlaceholders[i].gameObject.SetActive(true); 
+                modifierPlaceholders[i].gameObject.SetActive(true);
             }
             else
             {
-                modifierPlaceholders[i].gameObject.SetActive(false); 
+                modifierPlaceholders[i].gameObject.SetActive(false);
             }
         }
     }
@@ -98,9 +120,9 @@ public class LevelTransitionManager : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
     public void Advance()
-    {  
+    {
         if (gameManager.levelWon == 1)
         {
             SceneManager.LoadScene("Market Menu");

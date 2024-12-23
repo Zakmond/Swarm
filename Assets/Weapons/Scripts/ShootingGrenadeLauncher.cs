@@ -6,6 +6,9 @@ public class ShootingGrenadeLauncher : WeaponBase
     public float maxLobHeight = 2f;           // Maximum height of the lob
     protected override void Fire()
     {
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(audioSource.clip);
+
         Debug.Log("Fire Grenade");
         // Get the target position based on the mouse cursor
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);

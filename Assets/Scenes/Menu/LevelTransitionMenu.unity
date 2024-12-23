@@ -844,8 +844,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66
-  m_fontSizeBase: 66
+  m_fontSize: 45.76
+  m_fontSizeBase: 45.76
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2554,8 +2554,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66
-  m_fontSizeBase: 66
+  m_fontSize: 45.76
+  m_fontSizeBase: 45.76
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2638,7 +2638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -132.6, y: -142}
+  m_AnchoredPosition: {x: -132.6, y: -220}
   m_SizeDelta: {x: 459.8, y: 61.709}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1297010747
@@ -2688,8 +2688,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66
-  m_fontSizeBase: 66
+  m_fontSize: 45.76
+  m_fontSizeBase: 45.76
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3349,6 +3349,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e0756f8b78c99478c4c169004fa4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerText: {fileID: 201149296}
+  gunText: {fileID: 1062662713}
+  modifiersText: {fileID: 1981513222}
+  mobsKilledText: {fileID: 1297010747}
+  timeRemainingText: {fileID: 1949804136}
+  exitText: {fileID: 1931626856}
   levelSummaryLabelText: {fileID: 910111286}
   resultLabelText: {fileID: 1542441678}
   characterLabelText: {fileID: 53663351}
@@ -3364,6 +3370,7 @@ MonoBehaviour:
   - {fileID: 2009320519}
   - {fileID: 758784696}
   gameManager: {fileID: 0}
+  localizationManager: {fileID: 0}
 --- !u!4 &1769044836
 Transform:
   m_ObjectHideFlags: 0
@@ -3740,7 +3747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -132.6, y: -253.71}
+  m_AnchoredPosition: {x: -132.6, y: -331.71}
   m_SizeDelta: {x: 465.2, y: 61.709}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1949804136
@@ -3790,8 +3797,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66
-  m_fontSizeBase: 66
+  m_fontSize: 45.76
+  m_fontSizeBase: 45.76
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3874,7 +3881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 222.3, y: -253.71}
+  m_AnchoredPosition: {x: 222.3, y: -331.71}
   m_SizeDelta: {x: 250, y: 61.709}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1962659015
@@ -4058,8 +4065,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66
-  m_fontSizeBase: 66
+  m_fontSize: 45.76
+  m_fontSizeBase: 45.76
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4142,7 +4149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 225, y: -142}
+  m_AnchoredPosition: {x: 225, y: -219.99998}
   m_SizeDelta: {x: 250, y: 61.709}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1983703533

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 
 public class MarketManager : MonoBehaviour
 {
@@ -10,14 +11,17 @@ public class MarketManager : MonoBehaviour
     private MarketConfig marketConfig; 
     private PlayerLevelManager playerLevelManager;
     private GameManager gameManager;
+    public LocalizationManager localizationManager;
     private string itemKey;
     public TMP_Text coinText;
+    public TMP_Text continueText;
     void Start()
     {
+        localizationManager = LocalizationManager.Instance;
         marketConfig = MarketConfig.Instance;
         playerLevelManager = PlayerLevelManager.Instance;
         gameManager = GameManager.Instance;
-
+        continueText.text = localizationManager.GetLocalizedValue("continue");
         coinText.text = playerLevelManager.GetCurrency().ToString();
     }
 

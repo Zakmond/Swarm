@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GrenadeBullet : MonoBehaviour
 {
+    private AudioSource _audioSource;
     public float explosionDamage = 35f;
     public float baseDamage = 35f;
     public float explosionRadius = 1f;
@@ -81,6 +82,7 @@ public class GrenadeBullet : MonoBehaviour
     private void Explode()
     {
         ExplosionEffect();
+
         // Debug.Log("Explosion triggered!");
 
         // Detect all colliders in the explosion radius
@@ -104,5 +106,16 @@ public class GrenadeBullet : MonoBehaviour
         // Scale the explosion to match the radius
         explosionEffect.transform.localScale = Vector3.one;
 
+        // Instantiate and play the audio source at the explosion position
+        _audioSource = GetComponent<AudioSource>();
+        GameObject audioObject = new GameObject("ExplosionAudio");
+        audioObject.transform.position = transform.position;
+        AudioSource audioSource = audioObject.AddComponent<AudioSource>();
+        audioSource.clip = _audioSource.clip;
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.Play();
+
+        // Destroy the audio object after the clip has finished playing
+        Destroy(audioObject, audioSource.clip.length);
     }
 }

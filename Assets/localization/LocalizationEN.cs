@@ -5,18 +5,15 @@ public class LocalizationEN : ILocalization
 {
     private readonly Dictionary<string, string> localizedText = new Dictionary<string, string>
     {
-        { "menu_play", "Play" },
-        { "menu_options", "Options" },
+        { "menu_start", "Start" },
+        { "menu_settings", "Settings" },
         { "menu_exit", "Exit" },
-        { "menu_change_language", "Change Language" },
+        { "menu_languages", "Language" },
         { "menu_resume", "Resume" },
         { "menu_restart", "Restart" },
-        { "menu_settings", "Settings" },
-        { "menu_back", "Back" },
-        { "menu_pause", "Pause" },
-        { "menu_main_menu", "Main Menu" },
-        { "menu_yes", "Yes" },
-        { "menu_no", "No" },
+        { "menu_music", "Music"},
+        { "menu_support", "Support"},
+        { "menu_audio", "Audio"},
         { "assault_rifle_name", "Assault Rifle" },
         { "assault_rifle_description", "A versatile rifle for all combat ranges." },
         { "shotgun_name", "Shotgun" },
@@ -36,7 +33,21 @@ public class LocalizationEN : ILocalization
         { "firerate-skill_name", "Firerate Skill" },
         { "firerate-skill_description", "Speeds up your weapon's firing rate." },
         {"maxammo-skill_name", "Max Ammo Skill"},
-        {"maxammo-skill_description", "Increases your maximum ammo capacity."}
+        {"maxammo-skill_description", "Increases your maximum ammo capacity."},
+        {"continue", "continue"},
+        {"level_summary", "Level Summary"},
+        {"victory", "Victory!"},
+        {"defeat", "Defeat!"},
+        {"character", "Character"},
+        {"gun", "Gun"},
+        {"mobs_killed", "Mobs Killed"},
+        {"time_remaining", "Time Remaining"},
+        {"market", "Market"},
+        {"retry", "Retry"},
+        {"nox_summary", "A fast-moving, lightly armored female marksman. Offers higher speed and agility, faster fire rate but lower defense."},
+        {"ares_summary", "A heavy-armored male warrior. Has lower speed but more health. Lower fire rate but higher defense."},
+        {"modifiers", "Modifiers"},
+        {"player", "Player"}
     };
 
     public string GetValue(string key)

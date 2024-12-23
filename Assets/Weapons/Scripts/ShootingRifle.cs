@@ -6,6 +6,8 @@ public class ShootingRifle : WeaponBase
     public float bulletForce = 20f;
     protected override void Fire()
     {
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.PlayOneShot(audioSource.clip);
         GameObject bulletObject = poolManager.GetPooledObject(bulletPrefab);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         bullet.modifyDamage(damageModifier);

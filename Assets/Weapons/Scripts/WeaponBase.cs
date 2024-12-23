@@ -3,6 +3,9 @@ using System;
 
 public abstract class WeaponBase : MonoBehaviour
 {
+    protected AudioManager audioManager;
+    protected AudioSource audioSource;
+    public float baseVolume = 0.7f;
     public Transform firePoint;
     public float reloadTime = 2f;
     public event Action<float> OnReloadStarted;
@@ -42,11 +45,15 @@ public abstract class WeaponBase : MonoBehaviour
 
         ammo = maxAmmo;
         OnAmmoChange?.Invoke(ammo, maxAmmo);
+        audioManager = AudioManager.Instance;
 
 
     }
     protected virtual void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = baseVolume * audioManager.GetSFXVolume();
+        
         poolManager.IncreasePoolSize(bulletPrefab, GetBulletPoolSize(fireRate));
         ammo = maxAmmo;
         OnAmmoChange?.Invoke(ammo, maxAmmo);
