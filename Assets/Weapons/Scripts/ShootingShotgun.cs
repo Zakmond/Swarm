@@ -7,6 +7,7 @@ public class ShootingShotgun : WeaponBase
     public float spreadAngle = 30f; // Total spread angle (degrees)
     protected override void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         poolManager.IncreasePoolSize(bulletPrefab, GetBulletPoolSize(fireRate, numberOfPellets));
         ammo = maxAmmo;
     }
