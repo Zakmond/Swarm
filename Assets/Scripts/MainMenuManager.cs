@@ -10,7 +10,6 @@ public class MainMenuManager : MonoBehaviour
     public TMP_Text quitText;
     public TMP_Text languagesText;
     public TMP_Text musicButtonText;
-    public TMP_Text supportText;
     public TMP_Text audioText;
     public TMP_Text musicText;
     public LocalizationManager localizationManager;
@@ -34,7 +33,6 @@ public class MainMenuManager : MonoBehaviour
         languagesText.text = localizationManager.GetLocalizedValue("menu_languages");
         musicButtonText.text = localizationManager.GetLocalizedValue("menu_music");
         musicText.text = localizationManager.GetLocalizedValue("menu_music");
-        supportText.text = localizationManager.GetLocalizedValue("menu_support");
         audioText.text = localizationManager.GetLocalizedValue("menu_audio");
     }
     public void QuitGame()
