@@ -12,17 +12,19 @@ public class PlayerLevelManager : MonoBehaviour
     private string filePath;
 
     public Vector3 playerSpawnPoint = Vector3.zero;
-    public string playerPrefabsPath = "Players"; 
-    public string weaponPrefabsPath = "Weapons"; 
+    public string playerPrefabsPath = "Players";
+    public string weaponPrefabsPath = "Weapons";
 
-    private GameObject currentPlayerInstance; 
+    private GameObject currentPlayerInstance;
     [SerializeField] private string DEFAULT_WEAPON = "RifleHolder";
+
+    private bool firstTimeLoad = true;
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -123,7 +125,7 @@ public class PlayerLevelManager : MonoBehaviour
 
     private bool IsGameplayScene(string sceneName)
     {
-        return sceneName.StartsWith("level"); 
+        return sceneName.StartsWith("level");
     }
 
     public void SpawnPlayer()
@@ -134,23 +136,28 @@ public class PlayerLevelManager : MonoBehaviour
         }
 
         string characterToLoad = playerData.character == "none" ? "Ares" : playerData.character;
-        if (characterToLoad == "Ares")
+
+        if (firstTimeLoad)
         {
-            playerData.stats.maxHealthModifier = 1.0f;
-            playerData.stats.speedModifier = 0.95f;
-            playerData.stats.fireRateModifier = 0.95f;
-            playerData.stats.dodgeChanceModifier = 1.0f;
-            playerData.stats.maxAmmoModifier = 1.1f;
-            playerData.stats.damageModifier = 1.1f;
-        }
-        else if (characterToLoad == "Nox")
-        {
-            playerData.stats.maxHealthModifier = 1.0f;
-            playerData.stats.speedModifier = 1.05f;
-            playerData.stats.fireRateModifier = 1.05f;
-            playerData.stats.dodgeChanceModifier = 1.05f;
-            playerData.stats.maxAmmoModifier = 1.0f;
-            playerData.stats.damageModifier = 0.95f;
+            firstTimeLoad = false;
+            if (characterToLoad == "Ares")
+            {
+                playerData.stats.maxHealthModifier = 1.0f;
+                playerData.stats.speedModifier = 0.95f;
+                playerData.stats.fireRateModifier = 0.95f;
+                playerData.stats.dodgeChanceModifier = 1.0f;
+                playerData.stats.maxAmmoModifier = 1.1f;
+                playerData.stats.damageModifier = 1.1f;
+            }
+            else if (characterToLoad == "Nox")
+            {
+                playerData.stats.maxHealthModifier = 1.0f;
+                playerData.stats.speedModifier = 1.05f;
+                playerData.stats.fireRateModifier = 1.05f;
+                playerData.stats.dodgeChanceModifier = 1.05f;
+                playerData.stats.maxAmmoModifier = 1.0f;
+                playerData.stats.damageModifier = 0.95f;
+            }
         }
         playerData.character = characterToLoad;
         GameObject playerPrefab = Resources.Load<GameObject>($"{playerPrefabsPath}/{characterToLoad}");
