@@ -1,36 +1,108 @@
 {
-    "levelNumber": 9,
-    "levelDuration": 150,
-    "monsterWaves": [
-      {
-        "spawnTime": 2,
-        "monsters": [
-          {
-            "type": "ArcaneNPC",
-            "count": 1,
-            "healthModifier": 1.0,
-            "speedModifier": 1.0,
-            "damageModifier": 1.0,
-            "attackDistanceModifier": 1.0,
-            "spawnPoints": [
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "10",
-              "11",
-              "12",
-              "13",
-              "14",
-              "15"
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "levelNumber": 9,
+  "levelDuration": 150,
+  "monsterWaves": [
+    {
+      "spawnTime": 2,
+      "monsters": [
+        {
+          "type": "ArcaneNPC",
+          "count": 5,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
+            "11", "12", "13", "14", "15"
+          ]
+        },
+        {
+          "type": "BatNPC",
+          "count": 3,
+          "healthModifier": 1.1,
+          "speedModifier": 1.1,
+          "damageModifier": 1.1,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": [
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
+            "11", "12", "13", "14", "15"
+          ]
+        }
+      ]
+    },
+    {
+      "spawnTime": 15,
+      "monsters": [
+        {
+          "type": "GolemOrangeNPC",
+          "count": 4,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        },
+        {
+          "type": "GolemBlueNPC",
+          "count": 6,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["4", "5", "6", "12", "13", "10", "11"]
+        },
+        {
+          "type": "BatNPC",
+          "count": 3,
+          "healthModifier": 1.1,
+          "speedModifier": 1.1,
+          "damageModifier": 1.1,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        },
+        {
+          "type": "ArcaneNPC",
+          "count": 5,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        }
+      ]
+    },
+    {
+      "spawnTime": 25,
+      "monsters": [
+        {
+          "type": "GolemOrangeNPC",
+          "count": 5,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        },
+        {
+          "type": "BatNPC",
+          "count": 5,
+          "healthModifier": 1.1,
+          "speedModifier": 1.1,
+          "damageModifier": 1.1,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        },
+        {
+          "type": "ArcaneNPC",
+          "count": 5,
+          "healthModifier": 1.0,
+          "speedModifier": 1.0,
+          "damageModifier": 1.0,
+          "attackDistanceModifier": 1.0,
+          "spawnPoints": ["1", "2", "3", "12", "13", "14", "15"]
+        }
+      ]
+    }
+  ]
+}
