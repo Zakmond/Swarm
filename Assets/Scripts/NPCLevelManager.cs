@@ -9,11 +9,11 @@ public class NPCLevelManager : MonoBehaviour
     public class MonsterData
     {
         public string type;
-        public int count; 
-        public float healthModifier; 
+        public int count;
+        public float healthModifier;
         public float speedModifier;
-        public float damageModifier; 
-        public float attackDistanceModifier; 
+        public float damageModifier;
+        public float attackDistanceModifier;
         public String[] spawnPoints;
     }
 
@@ -21,7 +21,7 @@ public class NPCLevelManager : MonoBehaviour
     public class MonsterWave
     {
         public float spawnTime;
-        public MonsterData[] monsters; 
+        public MonsterData[] monsters;
     }
 
     [System.Serializable]
@@ -32,7 +32,7 @@ public class NPCLevelManager : MonoBehaviour
         public MonsterWave[] monsterWaves;
     }
 
-    public TextAsset levelConfigFile; 
+    public TextAsset levelConfigFile;
     public ObjectPool objectPool;
     public LevelConfig levelConfig;
     public Dictionary<string, Transform> spawnPoints = new();
@@ -46,6 +46,7 @@ public class NPCLevelManager : MonoBehaviour
     public event Action<bool> OnLevelStart;
     public float levelTimer;
     public bool inGame = false;
+    public List<string> iDsKilled = new();
     private void Awake()
     {
         Instance = this;
@@ -59,7 +60,7 @@ public class NPCLevelManager : MonoBehaviour
     {
         Debug.Log("NPC Level Manager started.");
         gameManager = GameManager.Instance;
-        
+
         if (gameManager.npcLevelManager == null)
         {
             gameManager.npcLevelManager = this;
@@ -175,15 +176,21 @@ public class NPCLevelManager : MonoBehaviour
                         instance.SetActive(true);
                     }
 
-                    yield return new WaitForSeconds(0.1f); 
+                    yield return new WaitForSeconds(0.1f);
                 }
             }
         }
     }
 
 
-    public void OnNPCKilled(int reward, bool isBoss = false)
+    public void OnNPCKilled(int reward, bool isBoss = false, string uniqueID = "")
     {
+        if (iDsKilled.Contains(uniqueID))
+        {
+            return;
+        }
+        iDsKilled.Add(uniqueID);
+
         OnKill?.Invoke(reward);
 
         if (isBoss)

@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a12341aedcec942999c3b897c8f859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionDamage: 35
-  baseDamage: 35
+  explosionDamage: 85
+  baseDamage: 85
   explosionRadius: 1
   TTL: 5
   damageableLayer:

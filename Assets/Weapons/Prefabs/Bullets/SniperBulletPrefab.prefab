@@ -172,6 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPierece: 0
-  bulletDamage: 75
-  baseDamage: 75
+  bulletDamage: 125
+  baseDamage: 125
   TTL: 5

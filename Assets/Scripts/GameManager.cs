@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
 
         npcLevelManager.OnWin += OnResultWin;
         npcLevelManager.OnLoss += OnResultLose;
+
+        playerLevelManager.onWeaponChanged += UpdateWeapon;
     }
 
     void OnResultWin(bool result)
@@ -62,6 +64,11 @@ public class GameManager : MonoBehaviour
             levelWon = 1;
             FinishLevel();
         }
+    }
+
+    void UpdateWeapon(string weaponName)
+    {
+        gunName = weaponName;
     }
 
     void OnResultLose(bool result)

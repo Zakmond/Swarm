@@ -69,16 +69,16 @@ private void ApplyWeapon(string weaponName)
         switch (weaponName)
         {
             case "assault_rifle_name":
-                playerLevelManager.playerData.weapon = "RifleHolder";
+                playerLevelManager.UpdateWeapon("RifleHolder");
                 break;
             case "shotgun_name":
-                playerLevelManager.playerData.weapon = "ShotgunHolder";
+                playerLevelManager.UpdateWeapon("ShotgunHolder");
                 break;
             case "grenade_launcher_name":
-                playerLevelManager.playerData.weapon = "GrenadelauncherHolder";
+                playerLevelManager.UpdateWeapon("GrenadelauncherHolder");
                 break;
             case "sniper_name":
-                playerLevelManager.playerData.weapon = "SniperHolder";
+                playerLevelManager.UpdateWeapon("SniperHolder");
                 break;
             default:
                 Debug.LogWarning($"Unknown weapon: {weaponName}");

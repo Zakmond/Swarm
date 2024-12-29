@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseVolume: 0.7
   firePoint: {fileID: 8054934053266345591}
-  reloadTime: 2
+  reloadTime: 1
   fireRate: 0.75
   ammo: 0
   maxAmmo: 15

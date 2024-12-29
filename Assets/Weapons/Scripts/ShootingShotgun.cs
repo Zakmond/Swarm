@@ -30,19 +30,19 @@ public class ShootingShotgun : WeaponBase
 
     protected int GetBulletPoolSize(float FR, int pelletsPerShot)
     {
-        float maxSeconds = bulletPrefab.GetComponent<Bullet>().TTL;
+        float maxSeconds = bulletPrefab.GetComponent<ShotgunBullet>().TTL;
         int maxBulletsInSeconds = Mathf.CeilToInt(maxSeconds / FR) * pelletsPerShot;
         return maxBulletsInSeconds;
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
-        {
-            Fire();
-            nextFireTime = Time.time + fireRate;
-        }
-    }
+    // void Update()
+    // {
+    //     if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
+    //     {
+    //         Fire();
+    //         nextFireTime = Time.time + fireRate;
+    //     }
+    // }
 
     protected override void Fire()
     {
@@ -70,7 +70,7 @@ public class ShootingShotgun : WeaponBase
             // Set bullet's position and rotation
             bullet.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, angle - 90f));
             bullet.SetActive(true);
-            bullet.GetComponent<Bullet>().modifyDamage(damageModifier);
+            bullet.GetComponent<ShotgunBullet>().modifyDamage(damageModifier);
             // Apply velocity to the bullet
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             Vector2 direction = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));

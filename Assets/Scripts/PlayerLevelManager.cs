@@ -19,6 +19,7 @@ public class PlayerLevelManager : MonoBehaviour
     [SerializeField] private string DEFAULT_WEAPON = "RifleHolder";
 
     private bool firstTimeLoad = true;
+    public event Action<string> onWeaponChanged;
     private void Awake()
     {
         if (Instance == null)
@@ -73,6 +74,7 @@ public class PlayerLevelManager : MonoBehaviour
     public void UpdateWeapon(string weaponName)
     {
         playerData.weapon = weaponName;
+        onWeaponChanged?.Invoke(weaponName);
     }
 
     public void UpdateStats(PlayerStats newStats)

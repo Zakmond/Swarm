@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class NPC : MonoBehaviour, IDamageable
 {
@@ -20,6 +22,8 @@ public class NPC : MonoBehaviour, IDamageable
     public bool isBoss = false;
     public int reward = 0;
     public bool inverse = false;
+    
+    public string uniqueID;
     public void UpdateNPC(float healthModifier, float speedModifier, float attackDistanceModifier, float attackDamageModifier)
     {
         _health *= healthModifier;
@@ -38,6 +42,8 @@ public class NPC : MonoBehaviour, IDamageable
         {
             player = playerController.transform;
         }
+
+        uniqueID = Guid.NewGuid().ToString();
     }
 
     private void Update()
@@ -131,7 +137,7 @@ public class NPC : MonoBehaviour, IDamageable
             else
             {
                 Destroy(gameObject);
-                npcLevelManager.OnNPCKilled(reward, isBoss: false);
+                npcLevelManager.OnNPCKilled(reward, isBoss: false, uniqueID);
             }
         }
     }
@@ -139,7 +145,7 @@ public class NPC : MonoBehaviour, IDamageable
     public void OnBossDeath()
     {
         Destroy(gameObject);
-        npcLevelManager.OnNPCKilled(reward, isBoss: false);
+        npcLevelManager.OnNPCKilled(reward, isBoss: false, uniqueID);
     }
     private void OnAttackHit()
     {

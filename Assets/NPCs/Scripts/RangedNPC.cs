@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class RangedNPC : MonoBehaviour, IDamageable
 {
@@ -18,6 +20,8 @@ public class RangedNPC : MonoBehaviour, IDamageable
     [SerializeField] public LayerMask npcLayer;
     public NPCLevelManager npcLevelManager;
     public int reward = 0;
+    public string uniqueID;
+
     public void UpdateNPC(float health, float speed, float attackDistance, float attackDamage)
     {
         _health *= health;
@@ -37,6 +41,9 @@ public class RangedNPC : MonoBehaviour, IDamageable
         {
             player = playerController.transform;
         }
+
+        uniqueID = Guid.NewGuid().ToString();
+
     }
 
     private void Update()
@@ -46,11 +53,11 @@ public class RangedNPC : MonoBehaviour, IDamageable
         float NPCXPos = transform.position.x;
         if (playerXPos > NPCXPos)
         {
-            transform.localScale = new Vector3(1, 1, 1);  
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else
         {
-            transform.localScale = new Vector3(-1, 1, 1); 
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
         FollowAndAttackPlayer();
@@ -93,10 +100,10 @@ public class RangedNPC : MonoBehaviour, IDamageable
 
         foreach (Collider2D npc in nearbyNPCs)
         {
-            if (npc.gameObject != this.gameObject) 
+            if (npc.gameObject != this.gameObject)
             {
                 Vector2 diff = (Vector2)(transform.position - npc.transform.position);
-                force += diff.normalized / diff.magnitude;  
+                force += diff.normalized / diff.magnitude;
             }
         }
 
@@ -122,7 +129,7 @@ public class RangedNPC : MonoBehaviour, IDamageable
         {
 
             Destroy(gameObject);
-            npcLevelManager.OnNPCKilled(reward);
+            npcLevelManager.OnNPCKilled(reward, false, uniqueID);
 
 
         }
@@ -133,7 +140,7 @@ public class RangedNPC : MonoBehaviour, IDamageable
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance <= _attackDistance)
         {
-            PlayerController playerHealth = player.GetComponent<PlayerController>();  
+            PlayerController playerHealth = player.GetComponent<PlayerController>();
             if (playerHealth != null)
             {
                 playerHealth.OnHit(_attackDamage);

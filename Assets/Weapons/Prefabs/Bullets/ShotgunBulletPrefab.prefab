@@ -161,6 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93ee4bb8cbf2584983d95f9b273263a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 40
-  baseDamage: 40
+  bulletDamage: 65
+  baseDamage: 65
   TTL: 1
